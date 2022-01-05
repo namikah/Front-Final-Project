@@ -5,7 +5,7 @@
 }
 
 .container {
-	max-width: 1150px;
+	max-width: 1150px !important;
 	margin: 0 auto;
 }
 
@@ -17,7 +17,7 @@
     .navbar{
         max-height: 80px;
         .logo{
-         max-width: calc(100%/12*2);
+         max-width: calc(100%/12*2) !important;
         }
         .menu{
             display: none;
@@ -26,9 +26,12 @@
             display: none;
         }
         .menu-icon{
-            max-width: calc(100%/12*2);
+            max-width: calc(100%/12*2) !important;
             display: inline !important;
             margin-right: 10px;
+        }
+        .menu-responsive{
+            // display: block !important;
         }
     }
 }
