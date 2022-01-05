@@ -64,56 +64,90 @@
 
 .navbar {
   height: 72px;
+  padding: 5px;
 }
 
-.navbar .menu ul {
+.navbar .menu > ul {
   list-style: none;
-  margin-bottom: 0;
+  margin: 0;
+  padding: 0;
 }
 
-.navbar .menu ul li {
-  font-family: "Nunito", sans-serif;
+.navbar .menu > ul li {
   cursor: pointer;
 }
 
-.navbar .menu ul li.discover-menu, .navbar .menu ul li.pages-menu {
+.navbar .menu > ul li.discover-menu, .navbar .menu > ul li.pages-menu {
   position: relative;
 }
 
-.navbar .menu ul li.discover-menu ul.sub-menu, .navbar .menu ul li.pages-menu ul.sub-menu {
-  padding-left: 15px;
-  width: 160px;
+.navbar .menu > ul li.discover-menu ul.sub-menu, .navbar .menu > ul li.pages-menu ul.sub-menu {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+  -webkit-transition: .5s;
+  transition: .5s;
   position: absolute;
-  background-color: #f7f7c7;
-}
-
-.navbar .menu ul li.discover-menu ul.sub-menu li, .navbar .menu ul li.pages-menu ul.sub-menu li {
-  border: 1px solid #fff;
+  padding: 0;
   margin: 0;
-  padding: 8px;
+  top: 40px;
+  list-style: none;
+  width: 200px;
+  height: auto;
+  background: #fff;
+  -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.089);
+          box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.089);
+  border-radius: 5px;
+  overflow: hidden;
 }
 
-.navbar .menu ul li i {
+.navbar .menu > ul li.discover-menu ul.sub-menu li, .navbar .menu > ul li.pages-menu ul.sub-menu li {
+  margin: 0;
+  padding: 10px 20px;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.navbar .menu > ul li.discover-menu ul.sub-menu li a, .navbar .menu > ul li.pages-menu ul.sub-menu li a {
+  letter-spacing: 1px;
+  color: #3b566e;
+  font-size: 13px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 300;
+}
+
+.navbar .menu > ul li.discover-menu:hover ul.sub-menu, .navbar .menu > ul li.pages-menu:hover ul.sub-menu {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.navbar .menu > ul li i {
   margin-left: 5px;
   font-size: 8px;
   color: #6f8ba4;
 }
 
-.navbar .menu ul li a {
+.navbar .menu > ul li a {
   text-decoration: none;
+  font-family: 'Nunito', sans-serif;
   color: #6f8ba4;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
-.navbar .login ul {
+.navbar .login > ul {
   list-style: none;
   margin-bottom: 0;
 }
 
-.navbar .login ul li {
+.navbar .login > ul li {
   cursor: pointer;
 }
 
-.navbar .login ul li a {
+.navbar .login > ul li a {
   text-decoration: none;
   width: 110px;
   height: 32px;
@@ -124,19 +158,20 @@
   padding: 8px 35px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  letter-spacing: 1px;
 }
 
-.navbar .login ul li a.sign-up {
+.navbar .login > ul li a.sign-up {
   color: #fff;
   background-color: #585ce9;
 }
 
-.navbar .login ul li a.sign-up:hover {
+.navbar .login > ul li a.sign-up:hover {
   color: #585ce9;
   background-color: #fff;
 }
 
-.navbar .login ul li a.sign-in:hover {
+.navbar .login > ul li a.sign-in:hover {
   color: #fff;
   background-color: #585ce9;
 }

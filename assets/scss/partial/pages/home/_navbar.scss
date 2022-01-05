@@ -1,5 +1,6 @@
 .navbar {
   height: 72px;
+  padding: 5px;
   .logo {
     a {
       img {
@@ -7,27 +8,50 @@
     }
   }
   .menu {
-     ul {
+    > ul {
       list-style: none;
-      margin-bottom: 0;
+      margin: 0;
+      padding: 0;
       li {
-        font-family: "Nunito", sans-serif;
         cursor: pointer;
         &.discover-menu,
         &.pages-menu {
           position: relative;
           ul.sub-menu {
-            padding-left: 15px;
-            width: 160px;
+            visibility: hidden;
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: .5s;
             position: absolute;
-            background-color: rgb(247, 247, 199);
+            padding: 0;
+            margin: 0;
+            top: 40px;
+            list-style: none;
+            width: 200px;
+            height: auto;
+            background: #fff;
+            box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.089);
+            border-radius: 5px;
+            overflow: hidden;
             li {
-              border: 1px solid #fff;
               margin: 0;
-              padding: 8px;
+              padding: 10px 20px;
+              border-bottom: 1px solid #f5f5f5;
               a {
+                letter-spacing: 1px;
+                color: #3b566e;
+                font-size: 13px;
+                font-family: 'Nunito', sans-serif;
+                font-weight: 300;
               }
             }
+          }
+          &:hover {
+            & ul.sub-menu {
+              opacity: 1;
+              visibility: visible;
+            transform: translateY(0);
+          }
           }
         }
         i {
@@ -37,13 +61,17 @@
         }
         a {
           text-decoration: none;
+          font-family: 'Nunito', sans-serif;
           color: #6f8ba4;
+          font-size: 14px;
+          font-weight: 600;
+          letter-spacing: 1px;
         }
       }
     }
   }
   .login {
-    ul {
+    > ul {
       list-style: none;
       margin-bottom: 0;
       li {
@@ -58,6 +86,7 @@
           font-weight: 700;
           padding: 8px 35px;
           transition: 0.5s;
+          letter-spacing: 1px;
           &.sign-up {
             color: #fff;
             background-color: #585ce9;
