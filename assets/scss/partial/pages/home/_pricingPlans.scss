@@ -1,0 +1,105 @@
+#pricing-plans {
+  background: #f7fafd;
+  padding: 80px 0;
+  .container {
+    .row {
+      .pricing-card {
+        border-radius: 5px;
+        box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.185);
+        height: 100%;
+        padding: 10px;
+        transition: 0.5s;
+        .top-title {
+          padding-top: 25px;
+          h4 {
+            color: #3b566e;
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 1px;
+          }
+        }
+        .count {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          background: #e4f1ff;
+          text-align: center;
+          align-items: center;
+          position: relative;
+          span {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            color: #585ce9;
+            font-size: 18px;
+          }
+        }
+        .price {
+          h2 {
+            color: #585ce9;
+            font-size: 34px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            span {
+              font-size: 15px;
+              font-weight: 500;
+            }
+          }
+        }
+        .plans {
+          text-align: center;
+          h6 {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            letter-spacing: 1px;
+            &.strikeout {
+              text-decoration: line-through;
+              opacity: 0.5;
+            }
+          }
+        }
+        .pricing-btn {
+          padding-bottom: 25px;
+          a {
+            text-decoration: none;
+            width: 110px;
+            height: 32px;
+            border: 1px solid #585ce9;
+            border-radius: 5px;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 8px 35px;
+            transition: 0.5s;
+            letter-spacing: 1px;
+            color: #fff;
+            background-color: #585ce9;
+            &:hover {
+              background-color: #3138ff;
+            }
+          }
+        }
+        &.middle-card {
+          z-index: 1;
+          position: relative;
+          &:after {
+            content: '';
+            position: absolute;
+            background-color: #585de9;
+            height: 100px;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: -1;
+          }
+          .top-title {
+            h4 {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
