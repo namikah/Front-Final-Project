@@ -1,3 +1,23 @@
+.navbar .login > ul li a, .bottom-header .container .row .left-side .context a, #pricing-plans .container .row .pricing-card .pricing-btn a, #parallax-text .row div a {
+  text-decoration: none;
+  width: 110px;
+  height: 32px;
+  border: 1px solid #585ce9;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 8px 35px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  letter-spacing: 1px;
+  color: #fff;
+  background-color: #585ce9;
+}
+
+.navbar .login > ul li a:hover, .bottom-header .container .row .left-side .context a:hover, #pricing-plans .container .row .pricing-card .pricing-btn a:hover, #parallax-text .row div a:hover {
+  background-color: #3138ff;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -349,26 +369,17 @@
   cursor: pointer;
 }
 
-.navbar .login > ul li a {
-  text-decoration: none;
-  width: 110px;
-  height: 32px;
-  border: 1px solid #585ce9;
-  border-radius: 5px;
-  font-size: 12px;
-  font-weight: 700;
-  padding: 8px 35px;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  letter-spacing: 1px;
-}
-
 .navbar .login > ul li a.sign-up {
   color: #fff;
   background-color: #585ce9;
 }
 
 .navbar .login > ul li a.sign-up:hover {
+  color: #585ce9;
+  background-color: #fff;
+}
+
+.navbar .login > ul li a.sign-in {
   color: #585ce9;
   background-color: #fff;
 }
@@ -498,25 +509,6 @@
   font-weight: 400;
   letter-spacing: 1px;
   padding-bottom: 20px;
-}
-
-.bottom-header .container .row .left-side .context a {
-  text-decoration: none;
-  width: 110px;
-  border: 1px solid #585ce9;
-  border-radius: 5px;
-  font-size: 12px;
-  font-weight: 700;
-  padding: 8px 35px;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  letter-spacing: 1px;
-  color: #fff;
-  background-color: #585ce9;
-}
-
-.bottom-header .container .row .left-side .context a:hover {
-  background-color: #2127e2;
 }
 
 .bottom-header .container .row .right-side {
@@ -1175,26 +1167,6 @@
   padding-bottom: 25px;
 }
 
-#pricing-plans .container .row .pricing-card .pricing-btn a {
-  text-decoration: none;
-  width: 110px;
-  height: 32px;
-  border: 1px solid #585ce9;
-  border-radius: 5px;
-  font-size: 12px;
-  font-weight: 700;
-  padding: 8px 35px;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  letter-spacing: 1px;
-  color: #fff;
-  background-color: #585ce9;
-}
-
-#pricing-plans .container .row .pricing-card .pricing-btn a:hover {
-  background-color: #3138ff;
-}
-
 #pricing-plans .container .row .pricing-card.middle-card {
   z-index: 1;
   position: relative;
@@ -1213,5 +1185,64 @@
 
 #pricing-plans .container .row .pricing-card.middle-card .top-title h4 {
   color: #fff;
+}
+
+#parallax-text {
+  padding: 80px 0;
+  background-image: url("../images/parallax.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-attachment: fixed;
+  min-height: 300px;
+  position: relative;
+}
+
+#parallax-text:after {
+  content: '';
+  background-color: #585de9a9;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+#parallax-text .row {
+  height: 100%;
+}
+
+#parallax-text .row div {
+  height: 100%;
+}
+
+#parallax-text .row div p {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 400;
+  text-align: center;
+  z-index: 999;
+  padding-bottom: 25px;
+}
+
+#parallax-text .row div p span {
+  text-decoration: underline;
+}
+
+#parallax-text .row div a {
+  color: #585ce9;
+  background-color: #fff;
+  width: 170px;
+  height: 45px;
+  z-index: 999;
+  padding-top: 12px;
+  text-align: center;
+}
+
+#parallax-text .row div a:hover {
+  background-color: #b7b9ff;
 }
 /*# sourceMappingURL=style.css.map */
