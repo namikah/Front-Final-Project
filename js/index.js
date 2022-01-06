@@ -5,5 +5,5 @@ $(".menu-icon").click(function (e) {
 
 $(".drop-menu").click(function (e) {
     e.preventDefault();
-    $(this).next(".sub-menu").toggle("menu-active");
+    $(this).next(".sub-menu").toggle();
 })

@@ -1,8 +1,9 @@
 .bottom-header {
 	.container {
 		.left-side {
+			padding: 0 10px;
 			.context {
-				width: 410px;
+				padding: 0 100px;
 				h1 {
 					font-weight: 400;
 					font-size: 28px;
@@ -42,6 +43,7 @@
 		}
 		.right-side {
 			height: 550px;
+			padding: 0 10px;
 			.card-1 {
 				.image-1 {
 					height: 55%;
