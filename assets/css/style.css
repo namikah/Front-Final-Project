@@ -39,12 +39,12 @@
     -webkit-transform: translateY(0) !important;
             transform: translateY(0) !important;
   }
-  #welcome-solutions .left-side {
+  .bottom-header .left-side {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
   }
-  #welcome-solutions .left-side .context {
+  .bottom-header .left-side .context {
     text-align: center;
     height: 300px;
   }
@@ -276,11 +276,11 @@
   font-family: 'Nunito', sans-serif;
 }
 
-#welcome-solutions .container .left-side .context {
+.bottom-header .container .left-side .context {
   width: 410px;
 }
 
-#welcome-solutions .container .left-side .context h1 {
+.bottom-header .container .left-side .context h1 {
   font-weight: 400;
   font-size: 28px;
   color: #1e3056;
@@ -289,11 +289,11 @@
   padding-bottom: 20px;
 }
 
-#welcome-solutions .container .left-side .context h1 span {
+.bottom-header .container .left-side .context h1 span {
   color: #585ce9;
 }
 
-#welcome-solutions .container .left-side .context p {
+.bottom-header .container .left-side .context p {
   color: #697ba2;
   font-size: 16px;
   font-weight: 400;
@@ -301,7 +301,7 @@
   padding-bottom: 20px;
 }
 
-#welcome-solutions .container .left-side .context a {
+.bottom-header .container .left-side .context a {
   text-decoration: none;
   width: 110px;
   height: 32px;
@@ -317,20 +317,20 @@
   background-color: #585ce9;
 }
 
-#welcome-solutions .container .left-side .context a:hover {
+.bottom-header .container .left-side .context a:hover {
   background-color: #2127e2;
 }
 
-#welcome-solutions .container .right-side {
+.bottom-header .container .right-side {
   height: 550px;
 }
 
-#welcome-solutions .container .right-side .card-1 .image-1 {
+.bottom-header .container .right-side .card-1 .image-1 {
   height: 55%;
   overflow: hidden;
 }
 
-#welcome-solutions .container .right-side .card-1 .image-1 img {
+.bottom-header .container .right-side .card-1 .image-1 img {
   -o-object-fit: cover;
      object-fit: cover;
   height: 100%;
@@ -339,17 +339,17 @@
   transition: .5s;
 }
 
-#welcome-solutions .container .right-side .card-1 .image-1 img:hover {
+.bottom-header .container .right-side .card-1 .image-1 img:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
-#welcome-solutions .container .right-side .card-1 .image-2 {
+.bottom-header .container .right-side .card-1 .image-2 {
   height: 45%;
   overflow: hidden;
 }
 
-#welcome-solutions .container .right-side .card-1 .image-2 img {
+.bottom-header .container .right-side .card-1 .image-2 img {
   -o-object-fit: cover;
      object-fit: cover;
   height: 100%;
@@ -358,17 +358,17 @@
   transition: .5s;
 }
 
-#welcome-solutions .container .right-side .card-1 .image-2 img:hover {
+.bottom-header .container .right-side .card-1 .image-2 img:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
-#welcome-solutions .container .right-side .card-2 .image-3 {
+.bottom-header .container .right-side .card-2 .image-3 {
   height: 45%;
   overflow: hidden;
 }
 
-#welcome-solutions .container .right-side .card-2 .image-3 img {
+.bottom-header .container .right-side .card-2 .image-3 img {
   -o-object-fit: cover;
      object-fit: cover;
   height: 100%;
@@ -377,17 +377,17 @@
   transition: .5s;
 }
 
-#welcome-solutions .container .right-side .card-2 .image-3 img:hover {
+.bottom-header .container .right-side .card-2 .image-3 img:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
-#welcome-solutions .container .right-side .card-2 .image-4 {
+.bottom-header .container .right-side .card-2 .image-4 {
   height: 55%;
   overflow: hidden;
 }
 
-#welcome-solutions .container .right-side .card-2 .image-4 img {
+.bottom-header .container .right-side .card-2 .image-4 img {
   -o-object-fit: cover;
      object-fit: cover;
   height: 100%;
@@ -396,7 +396,7 @@
   transition: .5s;
 }
 
-#welcome-solutions .container .right-side .card-2 .image-4 img:hover {
+.bottom-header .container .right-side .card-2 .image-4 img:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
