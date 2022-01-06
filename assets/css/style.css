@@ -11,7 +11,7 @@
 }
 
 .img-fluid {
-  max-width: 100% !important;
+  max-width: 100%;
 }
 
 @media only screen and (max-width: 992px) {
@@ -32,10 +32,17 @@
     display: inline !important;
     margin-right: 10px;
   }
+  .navbar .menu-active {
+    visibility: visible !important;
+    opacity: 1 !important;
+    display: block !important;
+    -webkit-transform: translateY(0) !important;
+            transform: translateY(0) !important;
+  }
 }
 
 .navbar {
-  padding: 5px;
+  padding: 5px 0px;
   height: 100px;
   position: relative;
 }
@@ -185,10 +192,14 @@
 }
 
 .navbar .menu-responsive {
-  display: none;
-  position: absolute;
-  top: 100%;
-  width: 100%;
+  visibility: hidden;
+  padding-top: 25px;
+  -webkit-transition: .3s all;
+  transition: .3s all;
+  opacity: 0;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  background: #fff;
 }
 
 .navbar .menu-responsive ul {
@@ -198,10 +209,32 @@
 }
 
 .navbar .menu-responsive ul li {
-  padding: 10px 0;
+  padding: 10px;
+  border-bottom: 1px solid #f5f5f5;
+  width: 100%;
 }
 
-.navbar .menu-responsive ul li ul {
+.navbar .menu-responsive ul li:hover {
+  background: #f5f5f5;
+}
+
+.navbar .menu-responsive ul li a {
+  text-decoration: none;
+  font-family: 'Nunito', sans-serif;
+  color: #6f8ba4dc;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.navbar .menu-responsive ul li i {
+  margin-left: 5px;
+  font-size: 8px;
+  color: #6f8ba4;
+  padding-right: 25px;
+}
+
+.navbar .menu-responsive ul .sub-menu {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -209,11 +242,11 @@
   width: 100%;
   overflow: hidden;
   background: #fff;
-  -webkit-transition: 0.3s all;
-  transition: 0.3s all;
+  -webkit-transition: .3s all;
+  transition: .3s all;
 }
 
-.navbar .menu-responsive ul li ul li {
+.navbar .menu-responsive ul .sub-menu li {
   margin: 0;
   border-bottom: 1px solid #f5f5f5;
   padding: 8px 20px;
@@ -221,7 +254,11 @@
   transition: 0.3s;
 }
 
-.navbar .menu-responsive ul li ul li a {
+.navbar .menu-responsive ul .sub-menu li:hover {
+  background: #f5f5f5;
+}
+
+.navbar .menu-responsive ul .sub-menu li a {
   text-decoration: none;
   font-size: 13px;
   font-weight: 300;
@@ -230,22 +267,128 @@
   font-family: 'Nunito', sans-serif;
 }
 
-.navbar .menu-responsive ul li:hover ul {
-  display: block;
+#welcome-solutions .container .left-side .context {
+  width: 410px;
 }
 
-.navbar .menu-responsive ul li .main-menu a {
-  text-decoration: none;
-  font-family: 'Nunito', sans-serif;
-  color: #6f8ba4dc;
-  font-size: 14px;
-  font-weight: 600;
+#welcome-solutions .container .left-side .context h1 {
+  font-weight: 400;
+  font-size: 28px;
+  color: #1e3056;
+  line-height: 45px;
   letter-spacing: 1px;
+  padding-bottom: 20px;
 }
 
-.navbar .menu-responsive ul li .main-menu i {
-  margin-left: 5px;
-  font-size: 8px;
-  color: #6f8ba4;
+#welcome-solutions .container .left-side .context h1 span {
+  color: #585ce9;
+}
+
+#welcome-solutions .container .left-side .context p {
+  color: #697ba2;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  padding-bottom: 20px;
+}
+
+#welcome-solutions .container .left-side .context a {
+  text-decoration: none;
+  width: 110px;
+  height: 32px;
+  border: 1px solid #585ce9;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 8px 35px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  letter-spacing: 1px;
+  color: #fff;
+  background-color: #585ce9;
+}
+
+#welcome-solutions .container .left-side .context a:hover {
+  background-color: #2127e2;
+}
+
+#welcome-solutions .container .right-side .card-1 {
+  height: 550px;
+}
+
+#welcome-solutions .container .right-side .card-1 .image-1 {
+  height: 55%;
+  overflow: hidden;
+}
+
+#welcome-solutions .container .right-side .card-1 .image-1 img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  border-radius: 5px;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+#welcome-solutions .container .right-side .card-1 .image-1 img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+#welcome-solutions .container .right-side .card-1 .image-2 {
+  height: 45%;
+  overflow: hidden;
+}
+
+#welcome-solutions .container .right-side .card-1 .image-2 img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  border-radius: 5px;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+#welcome-solutions .container .right-side .card-1 .image-2 img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+#welcome-solutions .container .right-side .card-2 .image-3 {
+  height: 45%;
+  overflow: hidden;
+}
+
+#welcome-solutions .container .right-side .card-2 .image-3 img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  border-radius: 5px;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+#welcome-solutions .container .right-side .card-2 .image-3 img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+#welcome-solutions .container .right-side .card-2 .image-4 {
+  height: 55%;
+  overflow: hidden;
+}
+
+#welcome-solutions .container .right-side .card-2 .image-4 img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  border-radius: 5px;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+#welcome-solutions .container .right-side .card-2 .image-4 img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 /*# sourceMappingURL=style.css.map */
