@@ -37,4 +37,13 @@
 			transform: translateY(0) !important;
 		}
 	}
+	#welcome-solutions{
+		.left-side{
+			align-items: center;
+			.context{
+				text-align: center;
+				height: 300px;
+			}
+		}
+	}
 }

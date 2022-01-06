@@ -39,6 +39,15 @@
     -webkit-transform: translateY(0) !important;
             transform: translateY(0) !important;
   }
+  #welcome-solutions .left-side {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #welcome-solutions .left-side .context {
+    text-align: center;
+    height: 300px;
+  }
 }
 
 .navbar {
@@ -312,7 +321,7 @@
   background-color: #2127e2;
 }
 
-#welcome-solutions .container .right-side .card-1 {
+#welcome-solutions .container .right-side {
   height: 550px;
 }
 
