@@ -32,10 +32,10 @@
     }
   }
   .menu-active {
-	visibility: visible !important;
-	opacity: 1 !important;
-	display: block !important;
-	transform: translateY(0) !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    display: block !important;
+    transform: translateY(0) !important;
   }
   .bottom-header {
     .left-side {
@@ -43,8 +43,31 @@
       .context {
         text-align: center;
         max-height: 300px;
-		margin-bottom: 50px;
+        margin-bottom: 50px;
       }
     }
+  }
+  #cloud-services {
+    .left-side {
+      width: calc(100% / 12 * 12) !important;
+      text-align: center;
+      .context {
+        .category {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          div {
+            width: calc(100% / 12 * 12) !important;
+          }
+        }
+      }
+      margin-bottom: 20px;
+    }
+	.right-side{
+		width: calc(100% / 12 * 12) !important;
+		justify-content: center;
+		align-items: center;
+	}
   }
 }
