@@ -1,0 +1,92 @@
+#our-team {
+  margin: 80px 0;
+  .container {
+    .row {
+      > div {
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .item-card {
+            margin: 0 !important;
+          box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.089);
+          min-width: 250px;
+          min-height: 270px;
+          position: relative;
+          border-radius: 5px;
+          &:after {
+            content: '';
+            position: absolute;
+            background-color: #585de9;
+            height: 60px;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: -9999;
+            transition: 0.5s;
+          }
+          &:hover {
+            &::after {
+              height: 110px;
+            }
+            .context {
+              i {
+                color: #ffffff;
+              }
+            }
+            .image{
+                transform: translateY(65%);
+            }
+          }
+          .context {
+            h5 {
+              color: rgb(255, 255, 255);
+              font-size: 16px;
+              font-weight: 400;
+              letter-spacing: 0.5px;
+              padding-top: 10px;
+            }
+            h6 {
+              color: rgb(255, 255, 255);
+              font-size: 12px;
+              font-weight: 400;
+              transition: 1.2s;
+              padding-bottom: 10px;
+              letter-spacing: 0.5px;
+              padding-bottom: 20px;
+            }
+            i {
+              transition: 0.5s;
+              text-decoration: none;
+              color: black;
+              font-size: 15px;
+              color: #585de9;
+              z-index: 1;
+              padding-right: 10px;
+              cursor: pointer;
+            }
+            p {
+              padding: 20px;
+            }
+          }
+
+          text-align: center;
+          .image {
+              transform: translateY(50%);
+            transition: .5s all;
+          }
+          img {
+            width: 100px;
+            height: 100px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 50%;
+            border: 5px solid #8689ee3d;
+            transition: 1.2s;
+          }
+        }
+      }
+    }
+  }
+}
