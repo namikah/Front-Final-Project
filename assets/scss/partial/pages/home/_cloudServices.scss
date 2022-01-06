@@ -20,7 +20,8 @@
           }
           .category {
             div {
-                border-radius: 5px;
+              box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.185);
+              border-radius: 5px;
               overflow: hidden;
               height: 40px;
               width: 250px;
@@ -46,8 +47,8 @@
                 a {
                   padding-left: 70px;
                 }
-                i{
-                    color: white;
+                i {
+                  color: white;
                 }
               }
               &:hover {
@@ -56,10 +57,10 @@
                   left: -30px;
                 }
                 a {
-                    padding-left: 70px;
+                  padding-left: 70px;
                 }
-                i{
-                    color: white;
+                i {
+                  color: white;
                 }
               }
               a {
@@ -71,36 +72,34 @@
                 font-size: 14px;
                 font-weight: 400;
                 background-color: white;
-                text-decoration: none;  
-                 color: #3B566E;
+                text-decoration: none;
+                color: #3b566e;
                 letter-spacing: 1px;
                 border-radius: 5px;
                 padding-left: 60px;
-            }
-              i{
-                  color: black;
-                  position: absolute;
-                  font-size: 10px;
-                  z-index: 9999;
-                  left: 30px;
-                  top: 50%;
-                  transform: translate(-50%,-50%);
-                  cursor: pointer;
+              }
+              i {
+                color: black;
+                position: absolute;
+                font-size: 10px;
+                z-index: 9999;
+                left: 30px;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                cursor: pointer;
               }
             }
           }
         }
       }
-      .right-side{
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          .cloud-mage{
-              img{
-
-              }
+      .right-side {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .cloud-mage {
+          img {
           }
-
+        }
       }
     }
   }

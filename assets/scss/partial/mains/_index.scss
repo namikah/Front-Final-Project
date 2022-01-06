@@ -70,4 +70,27 @@
 		align-items: center;
 	}
   }
+  #design-development {
+    .right-side {
+      width: calc(100% / 12 * 12) !important;
+      text-align: center;
+      .context {
+        .category {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          div {
+            width: calc(100% / 12 * 12) !important;
+          }
+        }
+      }
+    }
+	.left-side{
+		margin-bottom: 20px;
+		width: calc(100% / 12 * 12) !important;
+		justify-content: center;
+		align-items: center;
+	}
+  }
 }

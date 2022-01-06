@@ -1,0 +1,10 @@
+#welcome-cards {
+  margin-top: 50px;
+}
+
+#welcome-cards .container .row .card {
+  -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.089);
+          box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.089);
+  height: 100px;
+}
+/*# sourceMappingURL=welcomeCards.css.map */

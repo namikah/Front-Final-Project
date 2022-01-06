@@ -81,6 +81,38 @@
         -ms-flex-align: center;
             align-items: center;
   }
+  #design-development .right-side {
+    width: calc(100% / 12 * 12) !important;
+    text-align: center;
+  }
+  #design-development .right-side .context .category {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #design-development .right-side .context .category div {
+    width: calc(100% / 12 * 12) !important;
+  }
+  #design-development .left-side {
+    margin-bottom: 20px;
+    width: calc(100% / 12 * 12) !important;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .navbar {
@@ -560,6 +592,8 @@
 }
 
 #cloud-services .container .row .left-side .context .category div {
+  -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.185);
+          box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.185);
   border-radius: 5px;
   overflow: hidden;
   height: 40px;
@@ -620,7 +654,7 @@
   font-weight: 400;
   background-color: white;
   text-decoration: none;
-  color: #3B566E;
+  color: #3b566e;
   letter-spacing: 1px;
   border-radius: 5px;
   padding-left: 60px;
@@ -651,7 +685,6 @@
 }
 
 #design-development {
-  background: #f7fafd;
   padding: 80px 0;
 }
 
@@ -674,6 +707,8 @@
 }
 
 #design-development .container .row .right-side .context .category div {
+  -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.185);
+          box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.185);
   border-radius: 5px;
   overflow: hidden;
   height: 40px;
@@ -733,7 +768,7 @@
   font-size: 14px;
   font-weight: 400;
   background-color: white;
-  color: #3B566E;
+  color: #3b566e;
   text-decoration: none;
   letter-spacing: 1px;
   border-radius: 5px;
@@ -762,5 +797,72 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+#parallax-counter {
+  margin: 80px 0;
+  background-image: url("../images/parallax.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-attachment: fixed;
+  height: 300px;
+  position: relative;
+}
+
+#parallax-counter:after {
+  content: '';
+  background-color: #585de9a9;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+#parallax-counter .row {
+  height: 100%;
+}
+
+#parallax-counter .row div {
+  height: 100%;
+}
+
+#parallax-counter .row div h2 {
+  height: 100%;
+  text-align: center;
+  display: block;
+  color: white;
+  z-index: 999;
+  font-weight: 400;
+  font-size: 40px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+#parallax-counter .row div h2::after {
+  content: "---------------";
+  position: absolute;
+  color: white;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: block;
+  width: 200px;
+  font-size: 18px;
+}
+
+#parallax-counter .row div span {
+  height: 100%;
+  text-align: center;
+  display: inline-block;
+  color: white;
+  z-index: 999;
+  font-weight: 400;
+  font-size: 20px;
 }
 /*# sourceMappingURL=style.css.map */
