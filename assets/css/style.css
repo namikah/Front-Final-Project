@@ -1,4 +1,4 @@
-.navbar .login > ul li a, .bottom-header .container .row .left-side .context a, #pricing-plans .container .row .pricing-card .pricing-btn a, #parallax-text .row .parallax-context a, #blog-posts .container .row .blog-card .blog-btn a {
+.navbar .login > ul li a, .bottom-header .container .row .left-side .context a, #pricing-plans .container .row .pricing-card .pricing-btn a, #parallax-text .row .parallax-context a, #blog-posts .container .row .blog-card .blog-btn a, #questions .container .row .left-side .context a {
   text-decoration: none;
   width: 110px;
   height: 32px;
@@ -14,7 +14,7 @@
   background-color: #585ce9;
 }
 
-.navbar .login > ul li a:hover, .bottom-header .container .row .left-side .context a:hover, #pricing-plans .container .row .pricing-card .pricing-btn a:hover, #parallax-text .row .parallax-context a:hover, #blog-posts .container .row .blog-card .blog-btn a:hover {
+.navbar .login > ul li a:hover, .bottom-header .container .row .left-side .context a:hover, #pricing-plans .container .row .pricing-card .pricing-btn a:hover, #parallax-text .row .parallax-context a:hover, #blog-posts .container .row .blog-card .blog-btn a:hover, #questions .container .row .left-side .context a:hover {
   background-color: #3138ff;
 }
 
@@ -755,9 +755,7 @@
 }
 
 .bottom-header .container .row .right-side .card-2 .image-4 .context p {
-  display: inline;
   color: #fff;
-  background-color: #585ce9;
   z-index: 1;
 }
 
@@ -2122,5 +2120,80 @@ footer .container .row .footer-copyright {
 
 #faqs .container .row .faqs-context span {
   color: #f5f5f5;
+}
+
+#questions {
+  padding: 80px 0;
+}
+
+#questions .container .row .left-side {
+  padding: 0 10px 50px 0;
+}
+
+#questions .container .row .left-side .context {
+  padding: 0 20px;
+}
+
+#questions .container .row .left-side .context h1 {
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #3b566e;
+  line-height: 45px;
+  padding-bottom: 20px;
+}
+
+#questions .container .row .left-side .context h1 span {
+  color: #585ce9;
+}
+
+#questions .container .row .left-side .context p {
+  color: #3b566e;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  padding-bottom: 20px;
+}
+
+#questions .container .row .right-side .question-accordion .item {
+  cursor: pointer;
+  height: 50px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.089);
+          box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.089);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 20px;
+}
+
+#questions .container .row .right-side .question-accordion .item h6 {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+#questions .container .row .right-side .question-accordion .context {
+  display: none;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #3b566ea9;
+  background-color: #fff;
+  -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.089);
+          box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.089);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 20px;
+}
+
+#questions .container .row .right-side .question-accordion .context.active-context {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 /*# sourceMappingURL=style.css.map */
