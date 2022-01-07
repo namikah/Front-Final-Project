@@ -1,11 +1,12 @@
 .navbar {
+	position: relative;
 	margin: 0;
 	width: 100%;
-	padding: 10px 10px;
+	padding: 10px;
 	height: 100px;
-	position: relative;
-	z-index: 1;
+	z-index: 9999999999;
 	background-color: $main-color-light;
+	transition: .5s;
 	.menu-icon {
 		display: none;
 	}
@@ -141,7 +142,8 @@
 }
 .menu-responsive {
 	visibility: hidden;
-	position: absolute;
+	position: fixed;
+	top: 80px;
 	left: 0;
 	right: 0;
 	padding-top: 25px;
@@ -149,7 +151,7 @@
 	opacity: 0;
 	transform: translateY(-100%);
 	background: $main-color-light;
-	z-index: 0;
+	z-index: 999999999;
 	ul {
 		margin: 0;
 		padding: 0;
@@ -194,11 +196,17 @@
 				}
 				a {
 					text-decoration: none;
-          @include primary-font($font-size:13px,$font-weight:300);
+					@include primary-font($font-size:13px,$font-weight:300);
 					color: $main-color-dark;
 					font-family: $main-font-family;
 				}
 			}
 		}
 	}
+}
+.active-scroll {
+	position: fixed !important;
+	top: 0;
+	left: 0;
+	right: 0;
 }
