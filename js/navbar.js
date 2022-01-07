@@ -19,6 +19,7 @@ function navbarScrollEffect() {
             $(".navbar").css("transform", "translateY(0)");
             $(".navbar").css("opacity", "1");
             $(".navbar").css("box-shadow", "0 0px 0px 0 rgba(0, 0, 0, 0.00)");
+            $(".navbar").css("background-color", "transparent");
         }
         else if ($(this).scrollTop() > 80 && $(this).scrollTop() < 100) {
             $(".navbar").css("transition", "0s");
@@ -31,6 +32,7 @@ function navbarScrollEffect() {
             $(".navbar").css("transform", "translateY(0)");
             $(".navbar").css("opacity", "1");
             $(".navbar").css("box-shadow", "0 2px 28px 0 rgba(0, 0, 0, 0.2)");
+            $(".navbar").css("background-color", "#fff");
         }
     });
 }
