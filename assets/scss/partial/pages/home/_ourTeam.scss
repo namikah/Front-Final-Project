@@ -16,7 +16,7 @@
 					max-width: 500px;
 				}
 			}
-			> div {
+			.team-card {
 				border-radius: 5px;
 				@include primary-flex($j-content:center);
 				.item-card {
