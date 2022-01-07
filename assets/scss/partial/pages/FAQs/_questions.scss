@@ -34,7 +34,7 @@
             box-shadow: $main-box-shadow;
             display: flex;
             align-items: center;
-            padding: 10px 20px;
+            padding: 10px 30px;
             h6 {
               @include primary-font();
             }
@@ -46,11 +46,12 @@
             background-color: $main-color-light;
             box-shadow: $main-box-shadow;
             align-items: center;
-            padding: 10px 20px;
+            padding: 10px 30px;
             &.active-context{
                 display: flex;
             }
             p {
+                line-height: 30px;
             }
           }
         }
