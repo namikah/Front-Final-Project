@@ -1649,6 +1649,9 @@ footer .container .row .footer-copyright {
 }
 
 #about-us .container .row .about-us-context h1 {
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 1px;
   color: #f5f5f5;
   position: relative;
 }
@@ -1838,5 +1841,64 @@ footer .container .row .footer-copyright {
   padding: 10px 20px;
   color: #3b566ea9;
   line-height: 30px;
+}
+
+#features {
+  background-color: #f5f5f5;
+  padding: 80px 0;
+  background-image: url("../images/2.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-attachment: fixed;
+  min-height: 300px;
+  position: relative;
+}
+
+#features:after {
+  content: "";
+  background-color: #585de9a9;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+#features .container .row .features-context {
+  z-index: 1;
+}
+
+#features .container .row .features-context h1 {
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #f5f5f5;
+  position: relative;
+}
+
+#features .container .row .features-context h1::after {
+  content: "";
+  width: 20px;
+  position: absolute;
+  border: 1px solid #fff;
+  left: 50%;
+  top: 120%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#features .container .row .features-context a {
+  padding-top: 20px;
+  color: #f5f5f5;
+  text-decoration: none;
+  display: inline-block;
+}
+
+#features .container .row .features-context span {
+  color: #f5f5f5;
 }
 /*# sourceMappingURL=style.css.map */
