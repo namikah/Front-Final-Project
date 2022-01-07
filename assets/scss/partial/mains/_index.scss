@@ -42,15 +42,13 @@
 			align-items: center;
 			.context {
 				text-align: center;
-				// max-height: 300px;
 			}
 		}
-    .right-side {
-			// align-items: center;
-      margin-top: 50px;
-      img{
-        width: 350px !important;
-      }
+		.right-side {
+			margin-top: 50px;
+			img {
+				width: 350px !important;
+			}
 		}
 	}
 	#welcome-cards {
@@ -73,9 +71,9 @@
 			width: calc(100% / 12 * 12) !important;
 			text-align: center;
 			.context {
-        h2 {
-          font-size: 16px !important;
-        }
+				h2 {
+					font-size: 16px !important;
+				}
 				text-align: left;
 				.category {
 					display: flex;
@@ -101,9 +99,9 @@
 			text-align: center;
 			.context {
 				text-align: left;
-        h2 {
-          font-size: 16px !important;
-        }
+				h2 {
+					font-size: 16px !important;
+				}
 				.category {
 					display: flex;
 					flex-direction: column;
@@ -157,8 +155,8 @@
 			}
 		}
 	}
-  #blog-posts{
-    .row {
+	#blog-posts {
+		.row {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
@@ -171,5 +169,5 @@
 				justify-content: center;
 			}
 		}
-  }
+	}
 }
