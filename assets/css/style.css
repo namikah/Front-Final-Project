@@ -1975,7 +1975,7 @@ footer .container .row .footer-copyright {
   z-index: 0;
 }
 
-#our-services .container .row .services-card .image-box img {
+#our-services .container .row .services-card img {
   position: absolute;
   left: 50%;
   top: 50%;
