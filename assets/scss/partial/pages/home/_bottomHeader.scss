@@ -6,21 +6,17 @@
         .context {
           padding: 0 20px;
           h1 {
-            font-weight: 400;
-            font-size: 28px;
-            color: #1e3056;
+            @include primary-font($font-size:28px);
+            color: $main-color-dark;
             line-height: 45px;
-            letter-spacing: 1px;
             padding-bottom: 20px;
             span {
-              color: #585ce9;
+              color: $main-bg-color-dark;
             }
           }
           p {
-            color: #697ba2;
-            font-size: 16px;
-            font-weight: 400;
-            letter-spacing: 1px;
+            color: $main-color-dark;
+            @include primary-font();
             padding-bottom: 20px;
           }
           a {

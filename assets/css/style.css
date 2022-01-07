@@ -336,19 +336,19 @@
   font-weight: 300;
   color: #3b566e;
   letter-spacing: 1px;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
 .navbar .menu > ul li i {
   margin-left: 5px;
   font-size: 8px;
-  color: #6f8ba4;
+  color: #3b566e;
 }
 
 .navbar .menu > ul li a {
   text-decoration: none;
-  font-family: 'Nunito', sans-serif;
-  color: #6f8ba4dc;
+  font-family: "Nunito", sans-serif;
+  color: #3b566ea9;
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 1px;
@@ -427,6 +427,7 @@
   padding: 15px;
   border-bottom: 1px solid #f5f5f5;
   width: 100%;
+  cursor: pointer;
 }
 
 .menu-responsive ul li:hover {
@@ -435,8 +436,8 @@
 
 .menu-responsive ul li a {
   text-decoration: none;
-  font-family: 'Nunito', sans-serif;
-  color: #6f8ba4dc;
+  font-family: "Nunito", sans-serif;
+  color: #3b566e;
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 2px;
@@ -445,7 +446,7 @@
 .menu-responsive ul li i {
   margin-left: 5px;
   font-size: 8px;
-  color: #6f8ba4;
+  color: #3b566e;
   padding-right: 25px;
 }
 
@@ -477,9 +478,9 @@
   text-decoration: none;
   font-size: 13px;
   font-weight: 300;
-  color: #3b566e;
   letter-spacing: 1px;
-  font-family: 'Nunito', sans-serif;
+  color: #3b566e;
+  font-family: "Nunito", sans-serif;
 }
 
 .bottom-header .container .row .left-side {
@@ -491,11 +492,11 @@
 }
 
 .bottom-header .container .row .left-side .context h1 {
-  font-weight: 400;
   font-size: 28px;
-  color: #1e3056;
-  line-height: 45px;
+  font-weight: 400;
   letter-spacing: 1px;
+  color: #3b566e;
+  line-height: 45px;
   padding-bottom: 20px;
 }
 
@@ -504,7 +505,7 @@
 }
 
 .bottom-header .container .row .left-side .context p {
-  color: #697ba2;
+  color: #3b566e;
   font-size: 16px;
   font-weight: 400;
   letter-spacing: 1px;
@@ -598,8 +599,8 @@
 
 #welcome-cards .container .row .card {
   cursor: pointer;
-  -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.185);
-          box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.185);
+  -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.089);
+          box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.089);
   height: 100%;
   padding: 10px;
   -webkit-transition: 0.5s;
@@ -626,11 +627,8 @@
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  background: #e4f1ff;
+  background: #f5f5f5;
   text-align: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   position: relative;
 }
 
@@ -654,7 +652,7 @@
 }
 
 #welcome-cards .container .row .card p {
-  color: #6f8ba4;
+  color: #3b566ea9;
   font-size: 14px;
   font-weight: 400;
   letter-spacing: 1px;
@@ -663,7 +661,7 @@
 }
 
 #cloud-services {
-  background: #f7fafd;
+  background: #f5f5f5;
   padding: 80px 0;
 }
 
@@ -675,19 +673,20 @@
   color: #3b566e;
   font-size: 28px;
   font-weight: 400;
+  letter-spacing: 1px;
 }
 
 #cloud-services .container .row .left-side .context p {
   padding: 10px 0;
-  color: #6f8ba4;
+  color: #3b566ea9;
   font-size: 16px;
   font-weight: 400;
   letter-spacing: 1px;
 }
 
 #cloud-services .container .row .left-side .context .category div {
-  -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.185);
-          box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.185);
+  -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.089);
+          box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.089);
   border-radius: 5px;
   overflow: hidden;
   height: 40px;
@@ -700,7 +699,7 @@
   content: '';
   cursor: pointer;
   position: absolute;
-  background: #edf6ff;
+  background: #f5f5f5;
   width: 100px;
   height: 100px;
   left: -40px;
@@ -721,7 +720,7 @@
 }
 
 #cloud-services .container .row .left-side .context .category div.active-after i {
-  color: white;
+  color: #fff;
 }
 
 #cloud-services .container .row .left-side .context .category div:hover::after {
@@ -734,7 +733,7 @@
 }
 
 #cloud-services .container .row .left-side .context .category div:hover i {
-  color: white;
+  color: #fff;
 }
 
 #cloud-services .container .row .left-side .context .category div a {
@@ -746,16 +745,16 @@
   padding-top: 10px;
   font-size: 14px;
   font-weight: 400;
-  background-color: white;
+  letter-spacing: 1px;
+  background-color: #fff;
   text-decoration: none;
   color: #3b566e;
-  letter-spacing: 1px;
   border-radius: 5px;
   padding-left: 60px;
 }
 
 #cloud-services .container .row .left-side .context .category div i {
-  color: black;
+  color: #3b566e;
   position: absolute;
   font-size: 10px;
   z-index: 9999;
@@ -790,19 +789,20 @@
   color: #3b566e;
   font-size: 28px;
   font-weight: 400;
+  letter-spacing: 1px;
 }
 
 #design-development .container .row .right-side .context p {
   padding: 10px 0;
-  color: #6f8ba4;
+  color: #3b566ea9;
   font-size: 16px;
   font-weight: 400;
   letter-spacing: 1px;
 }
 
 #design-development .container .row .right-side .context .category div {
-  -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.185);
-          box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.185);
+  -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.089);
+          box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.089);
   border-radius: 5px;
   overflow: hidden;
   height: 40px;
@@ -815,7 +815,7 @@
   content: '';
   cursor: pointer;
   position: absolute;
-  background: #edf6ff;
+  background: #f5f5f5;
   width: 100px;
   height: 100px;
   left: -40px;
@@ -836,7 +836,7 @@
 }
 
 #design-development .container .row .right-side .context .category div.active-after i {
-  color: white;
+  color: #fff;
 }
 
 #design-development .container .row .right-side .context .category div:hover::after {
@@ -849,7 +849,7 @@
 }
 
 #design-development .container .row .right-side .context .category div:hover i {
-  color: white;
+  color: #fff;
 }
 
 #design-development .container .row .right-side .context .category div a {
@@ -861,16 +861,16 @@
   padding-top: 10px;
   font-size: 14px;
   font-weight: 400;
-  background-color: white;
+  letter-spacing: 1px;
+  background-color: #fff;
   color: #3b566e;
   text-decoration: none;
-  letter-spacing: 1px;
   border-radius: 5px;
   padding-left: 60px;
 }
 
 #design-development .container .row .right-side .context .category div i {
-  color: black;
+  color: #3b566e;
   position: absolute;
   font-size: 10px;
   z-index: 9999;
@@ -931,8 +931,9 @@
   display: block;
   color: white;
   z-index: 999;
-  font-weight: 400;
   font-size: 40px;
+  font-weight: 400;
+  letter-spacing: 1px;
   position: relative;
   padding-bottom: 15px;
 }
@@ -940,7 +941,7 @@
 #parallax-counter .row div h2::after {
   content: "---------------";
   position: absolute;
-  color: white;
+  color: #fff;
   top: 100%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -954,14 +955,36 @@
   height: 100%;
   text-align: center;
   display: inline-block;
-  color: white;
+  color: #fff;
   z-index: 999;
-  font-weight: 400;
   font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 1px;
 }
 
 #our-team {
   padding: 80px 0;
+}
+
+#our-team .container .row .our-team-title {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+#our-team .container .row .our-team-title h2 {
+  color: #3b566e;
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  padding-bottom: 15px;
+}
+
+#our-team .container .row .our-team-title p {
+  color: #3b566ea9;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  max-width: 500px;
 }
 
 #our-team .container .row > div {
@@ -991,7 +1014,7 @@
 #our-team .container .row > div .item-card:after {
   content: '';
   position: absolute;
-  background-color: #585de9;
+  background-color: #585ce9;
   height: 60px;
   top: 0;
   left: 0;
@@ -1006,7 +1029,7 @@
 }
 
 #our-team .container .row > div .item-card:hover .context i {
-  color: #ffffff;
+  color: #fff;
 }
 
 #our-team .container .row > div .item-card:hover .image {
@@ -1015,7 +1038,8 @@
 }
 
 #our-team .container .row > div .item-card .context h5 {
-  color: white;
+  color: #fff;
+  font-family: "Nunito", sans-serif;
   font-size: 16px;
   font-weight: 400;
   letter-spacing: 0.5px;
@@ -1023,13 +1047,12 @@
 }
 
 #our-team .container .row > div .item-card .context h6 {
-  color: white;
+  color: #fff;
   font-size: 12px;
   font-weight: 400;
+  letter-spacing: 0.5px;
   -webkit-transition: 1.2s;
   transition: 1.2s;
-  padding-bottom: 10px;
-  letter-spacing: 0.5px;
   padding-bottom: 20px;
 }
 
@@ -1037,9 +1060,9 @@
   -webkit-transition: 0.5s;
   transition: 0.5s;
   text-decoration: none;
-  color: black;
+  color: #3b566e;
   font-size: 15px;
-  color: #585de9;
+  color: #3b566e;
   z-index: 1;
   padding-right: 10px;
   cursor: pointer;
@@ -1063,7 +1086,7 @@
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 50%;
-  border: 5px solid #8689ee3d;
+  border: 5px solid #f5f5f5;
   -webkit-transition: 1.2s;
   transition: 1.2s;
 }
@@ -1095,8 +1118,8 @@
 
 #pricing-plans .container .row .pricing-card {
   border-radius: 5px;
-  -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.185);
-          box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.185);
+  -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.089);
+          box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.089);
   padding: 10px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -1117,11 +1140,8 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: #e4f1ff;
+  background: #fff;
   text-align: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   position: relative;
 }
 
@@ -1145,6 +1165,7 @@
 #pricing-plans .container .row .pricing-card .price h2 span {
   font-size: 15px;
   font-weight: 500;
+  letter-spacing: 1px;
 }
 
 #pricing-plans .container .row .pricing-card .plans {
@@ -1154,8 +1175,9 @@
 #pricing-plans .container .row .pricing-card .plans h6 {
   font-size: 14px;
   font-weight: 400;
-  line-height: 20px;
   letter-spacing: 1px;
+  color: #3b566e;
+  line-height: 20px;
 }
 
 #pricing-plans .container .row .pricing-card .plans h6.strikeout {
@@ -1223,6 +1245,7 @@
   color: #fff;
   font-size: 22px;
   font-weight: 400;
+  letter-spacing: 1px;
   text-align: center;
   z-index: 999;
   padding-bottom: 25px;
@@ -1243,6 +1266,7 @@
 }
 
 #parallax-text .row div a:hover {
-  background-color: #b7b9ff;
+  background-color: #585ce9;
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */
