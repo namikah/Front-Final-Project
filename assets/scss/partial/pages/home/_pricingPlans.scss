@@ -53,7 +53,7 @@
 						color: #585ce9;
 						@include primary-font($font-size:34px,$font-weight:700);
 						span {
-						@include primary-font($font-size:15px,$font-weight:500);
+							@include primary-font($font-size:15px,$font-weight:500);
 						}
 					}
 				}
@@ -61,7 +61,7 @@
 					text-align: center;
 					h6 {
 						@include primary-font($font-size:14px);
-            color: $main-color-dark;
+						color: $main-color-dark;
 						line-height: 20px;
 						&.strikeout {
 							text-decoration: line-through;

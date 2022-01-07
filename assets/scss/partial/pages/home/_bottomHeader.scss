@@ -1,89 +1,94 @@
 .bottom-header {
-  .container {
-    .row {
-      .left-side {
-        padding: 0 10px;
-        .context {
-          padding: 0 20px;
-          h1 {
-            @include primary-font($font-size:28px);
-            color: $main-color-dark;
-            line-height: 45px;
-            padding-bottom: 20px;
-            span {
-              color: $main-bg-color-dark;
-            }
-          }
-          p {
-            color: $main-color-dark;
-            @include primary-font();
-            padding-bottom: 20px;
-          }
-          a {
-            @extend %primary-btn;
-          }
-        }
-      }
-      .right-side {
-        height: 500px;
-        padding: 0 10px;
-        .card-1 {
-          .image-1 {
-            height: 55%;
-            overflow: hidden;
-            img {
-              object-fit: cover;
-              height: 100%;
-              border-radius: 5px;
-              transition: 0.5s;
-              &:hover {
-                transform: scale(1.1);
-              }
-            }
-          }
-          .image-2 {
-            height: 45%;
-            overflow: hidden;
-            img {
-              object-fit: cover;
-              height: 100%;
-              border-radius: 5px;
-              transition: 0.5s;
-              &:hover {
-                transform: scale(1.1);
-              }
-            }
-          }
-        }
-        .card-2 {
-          .image-3 {
-            height: 45%;
-            overflow: hidden;
-            img {
-              object-fit: cover;
-              height: 100%;
-              border-radius: 5px;
-              transition: 0.5s;
-              &:hover {
-                transform: scale(1.1);
-              }
-            }
-          }
-          .image-4 {
-            height: 55%;
-            overflow: hidden;
-            img {
-              object-fit: cover;
-              height: 100%;
-              border-radius: 5px;
-              transition: 0.5s;
-              &:hover {
-                transform: scale(1.1);
-              }
-            }
-          }
-        }
-      }
-    }
-  }
+	padding: 80px 0;
+	.container {
+		.row {
+			.left-side {
+				padding: 0 10px;
+				.context {
+					padding: 0 20px;
+					h1 {
+						@include primary-font($font-size:28px);
+						color: $main-color-dark;
+						line-height: 45px;
+						padding-bottom: 20px;
+						span {
+							color: $main-bg-color-dark;
+						}
+					}
+					p {
+						color: $main-color-dark;
+						@include primary-font();
+						padding-bottom: 20px;
+					}
+					a {
+						@extend %primary-btn;
+					}
+				}
+			}
+			.right-side {
+				height: 500px;
+				padding: 0 10px;
+				.card-1 {
+					.image-1 {
+						height: 55%;
+						border-radius: 5px;
+						overflow: hidden;
+						img {
+							object-fit: cover;
+							width: 221px;
+							height: 100%;
+							transition: 0.5s;
+							&:hover {
+								transform: scale(1.1);
+							}
+						}
+					}
+					.image-2 {
+						height: 45%;
+						overflow: hidden;
+						img {
+							object-fit: cover;
+							width: 221px;
+							height: 100%;
+							border-radius: 5px;
+							transition: 0.5s;
+							&:hover {
+								transform: scale(1.1);
+							}
+						}
+					}
+				}
+				.card-2 {
+					.image-3 {
+						height: 45%;
+						overflow: hidden;
+						img {
+							object-fit: cover;
+							width: 221px;
+							height: 100%;
+							border-radius: 5px;
+							transition: 0.5s;
+							&:hover {
+								transform: scale(1.1);
+							}
+						}
+					}
+					.image-4 {
+						height: 55%;
+						overflow: hidden;
+						img {
+							object-fit: cover;
+							width: 221px;
+							height: 100%;
+							border-radius: 5px;
+							transition: 0.5s;
+							&:hover {
+								transform: scale(1.1);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }

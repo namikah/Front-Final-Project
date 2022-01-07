@@ -1,658 +1,670 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/097358150c.js"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Document</title>
-  </head>
 
-  <body>
-    <header>
-      <div class="container">
-        <nav class="row navbar">
-          <div class="logo col-md-1">
-            <a href="#">
-              <img src="./assets/images/logo.png" alt="main-logo" />
-            </a>
-          </div>
-          <div class="menu col-md-6">
-            <ul class="d-flex justify-content-md-start align-items-end">
-              <li class="home-menu">
-                <a href="#">home</a>
-              </li>
-              <li class="discover-menu">
-                <a href="#">discover</a>
-                <i class="fas fa-chevron-down"></i>
-                <ul class="sub-menu">
-                  <li class="features-sub-menu">
-                    <a href="#">features</a>
-                  </li>
-                  <li>
-                    <a href="#">our team</a>
-                  </li>
-                  <li>
-                    <a href="#">pricing plans</a>
-                  </li>
-                  <li>
-                    <a href="#">latests blog</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="pages-menu">
-                <a href="#">pages</a>
-                <i class="fas fa-chevron-down"></i>
-                <ul class="sub-menu">
-                  <li>
-                    <a href="#">about us</a>
-                  </li>
-                  <li>
-                    <a href="#">features</a>
-                  </li>
-                  <li>
-                    <a href="#">FAQ's</a>
-                  </li>
-                  <li>
-                    <a href="#">blog</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="contact-menu">
-                <a href="#">contact</a>
-              </li>
-            </ul>
-          </div>
-          <div class="login col-md-4">
-            <ul class="d-flex justify-content-md-end align-items-end gap-3">
-              <li>
-                <a class="sign-in" href="#">sign in</a>
-              </li>
-              <li>
-                <a class="sign-up" href="#">sign up</a>
-              </li>
-            </ul>
-          </div>
-          <div class="menu-icon col-md-1">
-            <span>___</span>
-            <span>____</span>
-            <span>___</span>
-          </div>
-        </nav>
-        <div class="menu-responsive">
-          <ul
-            class="d-flex flex-column justify-content-md-center align-items-md-start"
-          >
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/097358150c.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <nav class="row navbar">
+        <div class="logo col-md-1">
+          <a href="#">
+            <img src="./assets/images/logo.png" alt="main-logo" />
+          </a>
+        </div>
+        <div class="menu col-md-6">
+          <ul class="d-flex justify-content-md-start align-items-end">
             <li class="home-menu">
-              <div class="main-menu">
-                <a href="#">home</a>
-              </div>
+              <a href="#">home</a>
             </li>
-            <li
-              class="discover-menu drop-menu d-flex justify-content-between align-items-center w-100"
-            >
+            <li class="discover-menu">
               <a href="#">discover</a>
               <i class="fas fa-chevron-down"></i>
+              <ul class="sub-menu">
+                <li class="features-sub-menu">
+                  <a href="#">features</a>
+                </li>
+                <li>
+                  <a href="#">our team</a>
+                </li>
+                <li>
+                  <a href="#">pricing plans</a>
+                </li>
+                <li>
+                  <a href="#">latests blog</a>
+                </li>
+              </ul>
             </li>
-            <ul class="sub-menu discover-sub-menu">
-              <li class="features-sub-menu">
-                <a href="#">features</a>
-              </li>
-              <li>
-                <a href="#">our team</a>
-              </li>
-              <li>
-                <a href="#">pricing plans</a>
-              </li>
-              <li>
-                <a href="#">latests blog</a>
-              </li>
-            </ul>
-            <li
-              class="pages-menu drop-menu d-flex justify-content-between align-items-start w-100"
-            >
+            <li class="pages-menu">
               <a href="#">pages</a>
               <i class="fas fa-chevron-down"></i>
+              <ul class="sub-menu">
+                <li>
+                  <a href="#">about us</a>
+                </li>
+                <li>
+                  <a href="#">features</a>
+                </li>
+                <li>
+                  <a href="#">FAQ's</a>
+                </li>
+                <li>
+                  <a href="#">blog</a>
+                </li>
+              </ul>
             </li>
-            <ul class="sub-menu pages-sub-menu">
-              <li>
-                <a href="#">about us</a>
-              </li>
-              <li>
-                <a href="#">features</a>
-              </li>
-              <li>
-                <a href="#">FAQ's</a>
-              </li>
-              <li>
-                <a href="#">blog</a>
-              </li>
-            </ul>
             <li class="contact-menu">
-              <div class="main-menu">
-                <a href="#">contact</a>
-              </div>
+              <a href="#">contact</a>
             </li>
           </ul>
         </div>
-        <div class="bottom-header mt-5">
-          <div class="container">
-            <div class="row">
-              <div
-                class="left-side col-md-6 d-flex flex-column justify-content-center align-items-md-start"
-              >
-                <div class="context">
-                  <h1>
-                    Industry Leading Managed Services and Staffing
-                    <span>Solutions</span>
-                  </h1>
-                  <p>
-                    Proven methods to capture business priorities and goals as
-                    well as current pain points that enables measurable business
-                    outcomes.
-                  </p>
-                  <a href="#" class="btn-learn-more">learn more</a>
+        <div class="login col-md-4">
+          <ul class="d-flex justify-content-md-end align-items-end gap-3">
+            <li>
+              <a class="sign-in" href="#">sign in</a>
+            </li>
+            <li>
+              <a class="sign-up" href="#">sign up</a>
+            </li>
+          </ul>
+        </div>
+        <div class="menu-icon col-md-1">
+          <span>___</span>
+          <span>____</span>
+          <span>___</span>
+        </div>
+      </nav>
+      <div class="menu-responsive">
+        <ul class="d-flex flex-column justify-content-md-center align-items-md-start">
+          <li class="home-menu">
+            <div class="main-menu">
+              <a href="#">home</a>
+            </div>
+          </li>
+          <li class="discover-menu drop-menu d-flex justify-content-between align-items-center w-100">
+            <a href="#">discover</a>
+            <i class="fas fa-chevron-down"></i>
+          </li>
+          <ul class="sub-menu discover-sub-menu">
+            <li class="features-sub-menu">
+              <a href="#">features</a>
+            </li>
+            <li>
+              <a href="#">our team</a>
+            </li>
+            <li>
+              <a href="#">pricing plans</a>
+            </li>
+            <li>
+              <a href="#">latests blog</a>
+            </li>
+          </ul>
+          <li class="pages-menu drop-menu d-flex justify-content-between align-items-start w-100">
+            <a href="#">pages</a>
+            <i class="fas fa-chevron-down"></i>
+          </li>
+          <ul class="sub-menu pages-sub-menu">
+            <li>
+              <a href="#">about us</a>
+            </li>
+            <li>
+              <a href="#">features</a>
+            </li>
+            <li>
+              <a href="#">FAQ's</a>
+            </li>
+            <li>
+              <a href="#">blog</a>
+            </li>
+          </ul>
+          <li class="contact-menu">
+            <div class="main-menu">
+              <a href="#">contact</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="bottom-header">
+        <div class="container">
+          <div class="row">
+            <div class="left-side col-lg-6 col-md-12 d-flex flex-column justify-content-center align-items-md-start">
+              <div class="context">
+                <h1>
+                  Industry Leading Managed Services and Staffing
+                  <span>Solutions</span>
+                </h1>
+                <p>
+                  Proven methods to capture business priorities and goals as
+                  well as current pain points that enables measurable business
+                  outcomes.
+                </p>
+                <a href="#" class="btn-learn-more">learn more</a>
+              </div>
+            </div>
+            <div class="right-side col-lg-6 col-md-12 d-flex justify-content-md-center gap-2">
+              <div class="card-1 d-flex flex-column justify-content-md-between align-items-md-center gap-2">
+                <div class="image-1">
+                  <img src="./assets/images/1.jpg" alt="" class="img-fluid" />
+                </div>
+                <div class="image-2">
+                  <img src="./assets/images/3.jpg" alt="" class="img-fluid" />
                 </div>
               </div>
-              <div class="right-side col-md-6 d-flex gap-2">
-                <div class="card-1 d-flex flex-column gap-2">
-                  <div class="image-1">
-                    <img src="./assets/images/1.jpg" alt="" class="img-fluid" />
-                  </div>
-                  <div class="image-2">
-                    <img src="./assets/images/3.jpg" alt="" class="img-fluid" />
-                  </div>
+              <div class="card-2 d-flex flex-column gap-2">
+                <div class="image-3">
+                  <img src="./assets/images/2.jpg" alt="" class="img-fluid" />
                 </div>
-                <div class="card-2 d-flex flex-column gap-2">
-                  <div class="image-3">
-                    <img src="./assets/images/2.jpg" alt="" class="img-fluid" />
-                  </div>
-                  <div class="image-4">
-                    <img src="./assets/images/1.jpg" alt="" class="img-fluid" />
-                  </div>
+                <div class="image-4">
+                  <img src="./assets/images/1.jpg" alt="" class="img-fluid" />
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </header>
-    <main>
-      <!-- welcome section start -->
-      <section id="welcome-cards">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-3 col-sm-3">
-              <div
-                class="card d-flex flex-column justify-content-md-center align-items-md-center gap-3"
-              >
-                <div class="item-icon">
-                  <i class="fa fa-cloud"></i>
+    </div>
+  </header>
+  <main>
+    <!-- welcome section start -->
+    <section id="welcome-cards">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card d-flex flex-column justify-content-md-center align-items-md-center gap-3">
+              <div class="item-icon">
+                <i class="fa fa-cloud"></i>
+              </div>
+              <h5>Cloud Solutions</h5>
+              <p>
+                Morbilling pharetra sapiening ut mattis viverra. Curabitur
+                magna.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card d-flex flex-column justify-content-md-center align-items-md-center gap-3">
+              <div class="item-icon">
+                <i class="fa fa-laptop"></i>
+              </div>
+              <h5>Network Services</h5>
+              <p>
+                Donec pellentesque turpis utium lorem imperdiet semper
+                viverra.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card d-flex flex-column justify-content-md-center align-items-md-center gap-3">
+              <div class="item-icon">
+                <i class="fa fa-video-camera"></i>
+              </div>
+              <h5>Webcast Services</h5>
+              <p>
+                Facilisis arcu ligula, malesuada id tincidunt laoreet,
+                facilisis at justo.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="card d-flex flex-column justify-content-md-center align-items-md-center gap-3">
+              <div class="item-icon">
+                <i class="fa fa-server"></i>
+              </div>
+              <h5>Disaster Recovery</h5>
+              <p>
+                Proin arcu ligula, malesuada id tincidunt laoreet, facilisis
+                at justo.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- welcome section end -->
+
+    <!-- Cloud Services section start -->
+    <section id="cloud-services">
+      <div class="container">
+        <div class="row">
+          <div class="left-side col-md-6 col-sm-12 d-flex flex-column justify-content-center align-items-md-start">
+            <div class="context">
+              <h2>Cloud Services</h2>
+              <p>
+                Phasellus vitae velit sit amet diam semper commodo quis quis
+                libero. Morbi consequat arcu augue, molestie faucibus metus
+                ullamcorper vel.
+              </p>
+              <div class="category row">
+                <div class="col-md-6 active-after">
+                  <a href="#">NearCloud</a>
+                  <i class="fas fa-chevron-right"></i>
                 </div>
-                <h5>Cloud Solutions</h5>
-                <p>
-                  Morbilling pharetra sapiening ut mattis viverra. Curabitur
-                  magna.
-                </p>
+                <div class="col-md-6">
+                  <a href="#">Office Cloud</a>
+                  <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="col-md-6">
+                  <a href="#">Backup Systems</a>
+                  <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="col-md-6">
+                  <a href="#">Hybrid Cloud</a>
+                  <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="col-md-6">
+                  <a href="#">API Cloud</a>
+                  <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="col-md-6">
+                  <a href="#">SDK Cloud</a>
+                  <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="col-md-6">
+                  <a href="#">Web Services</a>
+                  <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="col-md-6">
+                  <a href="#">Cloud Hosting</a>
+                  <i class="fas fa-chevron-right"></i>
+                </div>
               </div>
             </div>
-            <div class="col-md-3 col-sm-3">
-              <div
-                class="card d-flex flex-column justify-content-md-center align-items-md-center gap-3"
-              >
-                <div class="item-icon">
-                  <i class="fa fa-laptop"></i>
+          </div>
+          <div class="right-side col-md-6 col-sm-12">
+            <div class="cloud-mage">
+              <img src="./assets/images/blue-1.png" alt="" class="img-fluid" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Cloud Services section end -->
+
+    <!-- Design Development section start -->
+    <section id="design-development">
+      <div class="container">
+        <div class="row">
+          <div class="left-side col-md-6 col-sm-12">
+            <div class="cloud-mage">
+              <img src="./assets/images/blue-2.png" alt="" class="img-fluid" />
+            </div>
+          </div>
+          <div class="right-side col-md-6 col-sm-12 d-flex flex-column justify-content-center align-items-md-start">
+            <div class="context">
+              <h2>Design & Development</h2>
+              <p>
+                Phasellus vitae velit sit amet diam semper commodo quis quis
+                libero. Morbi consequat arcu augue, molestie faucibus metus
+                ullamcorper vel.
+              </p>
+              <div class="category row">
+                <div class="col-md-6 active-after">
+                  <a href="#">Web Design</a>
+                  <i class="fas fa-chevron-right"></i>
                 </div>
-                <h5>Network Services</h5>
-                <p>
-                  Donec pellentesque turpis utium lorem imperdiet semper
-                  viverra.
-                </p>
+                <div class="col-md-6">
+                  <a href="#">Mobile App Design</a>
+                  <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="col-md-6">
+                  <a href="#">Android Development</a>
+                  <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="col-md-6">
+                  <a href="#">iOS Development</a>
+                  <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="col-md-6">
+                  <a href="#">Back-End</a>
+                  <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="col-md-6">
+                  <a href="#">Front-End</a>
+                  <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="col-md-6">
+                  <a href="#">e-Commerce</a>
+                  <i class="fas fa-chevron-right"></i>
+                </div>
+                <div class="col-md-6">
+                  <a href="#">Print-Design</a>
+                  <i class="fas fa-chevron-right"></i>
+                </div>
               </div>
             </div>
-            <div class="col-md-3 col-sm-3">
-              <div
-                class="card d-flex flex-column justify-content-md-center align-items-md-center gap-3"
-              >
-                <div class="item-icon">
-                  <i class="fa fa-video-camera"></i>
-                </div>
-                <h5>Webcast Services</h5>
-                <p>
-                  Facilisis arcu ligula, malesuada id tincidunt laoreet,
-                  facilisis at justo.
-                </p>
-              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Design Development section end -->
+
+    <!-- Parallax counter section start -->
+    <section id="parallax-counter">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 d-flex flex-column justify-content-center align-items-center">
+            <h2>96</h2>
+            <span>
+              Project
+              <br />
+              Complate
+            </span>
+          </div>
+          <div class="col-md-3 d-flex flex-column justify-content-center align-items-center">
+            <h2>190</h2>
+            <span>
+              Happy
+              <br />
+              Customer
+            </span>
+          </div>
+          <div class="col-md-3 d-flex flex-column justify-content-md-center align-items-md-center">
+            <h2>12</h2>
+            <span>
+              Experienced
+              <br />
+              Staff
+            </span>
+          </div>
+          <div class="col-md-3 d-flex flex-column justify-content-md-center align-items-md-center">
+            <h2>46</h2>
+            <span>
+              Ongoing
+              <br />
+              Project
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Parallax counter section end -->
+
+    <!-- Our team section start -->
+    <section id="our-team">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="our-team-title d-flex flex-column justify-content-md-center align-items-md-center">
+              <h2>Our Team</h2>
+              <p>
+                Donec vulputate urna sed rutrum venenatis. Cras consequat magna quis arcu elementum, quis congue risus
+                volutpat.
+              </p>
             </div>
-            <div class="col-md-3 col-sm-3">
-              <div
-                class="card d-flex flex-column justify-content-md-center align-items-md-center gap-3"
-              >
-                <div class="item-icon">
-                  <i class="fa fa-server"></i>
-                </div>
-                <h5>Disaster Recovery</h5>
+          </div>
+          <div class="col-md-8 col-lg-3 col-sm-12">
+            <div class="item-card">
+              <div class="context">
+                <h5>Fletch Skinner</h5>
+                <h6>Product Strategist</h6>
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-linkedin"></i>
+                <i class="fab fa-github"></i>
                 <p>
                   Proin arcu ligula, malesuada id tincidunt laoreet, facilisis
-                  at justo.
+                  at justo. Sed at lorem.
                 </p>
+              </div>
+              <div class="image">
+                <img src="./assets/images/1 (1).jpg" alt="" />
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <!-- welcome section end -->
-
-      <!-- Cloud Services section start -->
-      <section id="cloud-services">
-        <div class="container">
-          <div class="row">
-            <div
-              class="left-side col-md-6 col-sm-12 d-flex flex-column justify-content-center align-items-md-start"
-            >
+          <div class="col-md-8 col-lg-3 col-sm-12">
+            <div class="item-card">
               <div class="context">
-                <h2>Cloud Services</h2>
+                <h5>Fletch Skinner</h5>
+                <h6>Product Strategist</h6>
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-linkedin"></i>
+                <i class="fab fa-github"></i>
                 <p>
-                  Phasellus vitae velit sit amet diam semper commodo quis quis
-                  libero. Morbi consequat arcu augue, molestie faucibus metus
-                  ullamcorper vel.
+                  Proin arcu ligula, malesuada id tincidunt laoreet, facilisis
+                  at justo. Sed at lorem.
                 </p>
-                <div class="category row">
-                  <div class="col-md-6 active-after">
-                    <a href="#">NearCloud</a>
-                    <i class="fas fa-chevron-right"></i>
-                  </div>
-                  <div class="col-md-6">
-                    <a href="#">Office Cloud</a>
-                    <i class="fas fa-chevron-right"></i>
-                  </div>
-                  <div class="col-md-6">
-                    <a href="#">Backup Systems</a>
-                    <i class="fas fa-chevron-right"></i>
-                  </div>
-                  <div class="col-md-6">
-                    <a href="#">Hybrid Cloud</a>
-                    <i class="fas fa-chevron-right"></i>
-                  </div>
-                  <div class="col-md-6">
-                    <a href="#">API Cloud</a>
-                    <i class="fas fa-chevron-right"></i>
-                  </div>
-                  <div class="col-md-6">
-                    <a href="#">SDK Cloud</a>
-                    <i class="fas fa-chevron-right"></i>
-                  </div>
-                  <div class="col-md-6">
-                    <a href="#">Web Services</a>
-                    <i class="fas fa-chevron-right"></i>
-                  </div>
-                  <div class="col-md-6">
-                    <a href="#">Cloud Hosting</a>
-                    <i class="fas fa-chevron-right"></i>
-                  </div>
-                </div>
               </div>
-            </div>
-            <div class="right-side col-md-6 col-sm-12">
-              <div class="cloud-mage">
-                <img
-                  src="./assets/images/blue-1.png"
-                  alt=""
-                  class="img-fluid"
-                />
+              <div class="image">
+                <img src="./assets/images/2 (1).jpg" alt="" />
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <!-- Cloud Services section end -->
-
-      <!-- Design Development section start -->
-      <section id="design-development">
-        <div class="container">
-          <div class="row">
-            <div class="left-side col-md-6 col-sm-12">
-              <div class="cloud-mage">
-                <img
-                  src="./assets/images/blue-2.png"
-                  alt=""
-                  class="img-fluid"
-                />
-              </div>
-            </div>
-            <div
-              class="right-side col-md-6 col-sm-12 d-flex flex-column justify-content-center align-items-md-start"
-            >
+          <div class="col-md-8 col-lg-3 col-sm-12">
+            <div class="item-card">
               <div class="context">
-                <h2>Design & Development</h2>
+                <h5>Fletch Skinner</h5>
+                <h6>Product Strategist</h6>
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-linkedin"></i>
+                <i class="fab fa-github"></i>
                 <p>
-                  Phasellus vitae velit sit amet diam semper commodo quis quis
-                  libero. Morbi consequat arcu augue, molestie faucibus metus
-                  ullamcorper vel.
-                </p>
-                <div class="category row">
-                  <div class="col-md-6 active-after">
-                    <a href="#">Web Design</a>
-                    <i class="fas fa-chevron-right"></i>
-                  </div>
-                  <div class="col-md-6">
-                    <a href="#">Mobile App Design</a>
-                    <i class="fas fa-chevron-right"></i>
-                  </div>
-                  <div class="col-md-6">
-                    <a href="#">Android Development</a>
-                    <i class="fas fa-chevron-right"></i>
-                  </div>
-                  <div class="col-md-6">
-                    <a href="#">iOS Development</a>
-                    <i class="fas fa-chevron-right"></i>
-                  </div>
-                  <div class="col-md-6">
-                    <a href="#">Back-End</a>
-                    <i class="fas fa-chevron-right"></i>
-                  </div>
-                  <div class="col-md-6">
-                    <a href="#">Front-End</a>
-                    <i class="fas fa-chevron-right"></i>
-                  </div>
-                  <div class="col-md-6">
-                    <a href="#">e-Commerce</a>
-                    <i class="fas fa-chevron-right"></i>
-                  </div>
-                  <div class="col-md-6">
-                    <a href="#">Print-Design</a>
-                    <i class="fas fa-chevron-right"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Design Development section end -->
-
-      <!-- Parallax counter section start -->
-      <section id="parallax-counter">
-        <div class="container">
-          <div class="row">
-            <div
-              class="col-md-3 d-flex flex-column justify-content-center align-items-center"
-            >
-              <h2>96</h2>
-              <span>
-                Project
-                <br />
-                Complate
-              </span>
-            </div>
-            <div
-              class="col-md-3 d-flex flex-column justify-content-center align-items-center"
-            >
-              <h2>190</h2>
-              <span>
-                Happy
-                <br />
-                Customer
-              </span>
-            </div>
-            <div
-              class="col-md-3 d-flex flex-column justify-content-md-center align-items-md-center"
-            >
-              <h2>12</h2>
-              <span>
-                Experienced
-                <br />
-                Staff
-              </span>
-            </div>
-            <div
-              class="col-md-3 d-flex flex-column justify-content-md-center align-items-md-center"
-            >
-              <h2>46</h2>
-              <span>
-                Ongoing
-                <br />
-                Project
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Parallax counter section end -->
-
-      <!-- Our team section start -->
-      <section id="our-team">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="our-team-title d-flex flex-column justify-content-md-center align-items-md-center">
-                <h2>Our Team</h2>
-                <p>
-                  Donec vulputate urna sed rutrum venenatis. Cras consequat magna quis arcu elementum, quis congue risus volutpat.
+                  Proin arcu ligula, malesuada id tincidunt laoreet, facilisis
+                  at justo. Sed at lorem.
                 </p>
               </div>
-            </div>
-            <div class="col-md-3">
-              <div class="item-card">
-                <div class="context">
-                  <h5>Fletch Skinner</h5>
-                  <h6>Product Strategist</h6>
-                  <i class="fab fa-facebook"></i>
-                  <i class="fab fa-twitter"></i>
-                  <i class="fab fa-linkedin"></i>
-                  <i class="fab fa-github"></i>
-                  <p>
-                    Proin arcu ligula, malesuada id tincidunt laoreet, facilisis
-                    at justo. Sed at lorem.
-                  </p>
-                </div>
-                <div class="image">
-                  <img src="./assets/images/1 (1).jpg" alt="" />
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="item-card">
-                <div class="context">
-                  <h5>Fletch Skinner</h5>
-                  <h6>Product Strategist</h6>
-                  <i class="fab fa-facebook"></i>
-                  <i class="fab fa-twitter"></i>
-                  <i class="fab fa-linkedin"></i>
-                  <i class="fab fa-github"></i>
-                  <p>
-                    Proin arcu ligula, malesuada id tincidunt laoreet, facilisis
-                    at justo. Sed at lorem.
-                  </p>
-                </div>
-                <div class="image">
-                  <img src="./assets/images/2 (1).jpg" alt="" />
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="item-card">
-                <div class="context">
-                  <h5>Fletch Skinner</h5>
-                  <h6>Product Strategist</h6>
-                  <i class="fab fa-facebook"></i>
-                  <i class="fab fa-twitter"></i>
-                  <i class="fab fa-linkedin"></i>
-                  <i class="fab fa-github"></i>
-                  <p>
-                    Proin arcu ligula, malesuada id tincidunt laoreet, facilisis
-                    at justo. Sed at lorem.
-                  </p>
-                </div>
-                <div class="image">
-                  <img src="./assets/images/3 (1).jpg" alt="" />
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="item-card">
-                <div class="context">
-                  <h5>Fletch Skinner</h5>
-                  <h6>Product Strategist</h6>
-                  <i class="fab fa-facebook"></i>
-                  <i class="fab fa-twitter"></i>
-                  <i class="fab fa-linkedin"></i>
-                  <i class="fab fa-github"></i>
-                  <p>
-                    Proin arcu ligula, malesuada id tincidunt laoreet, facilisis
-                    at justo. Sed at lorem.
-                  </p>
-                </div>
-                <div class="image">
-                  <img src="./assets/images/4.jpg" alt="" />
-                </div>
+              <div class="image">
+                <img src="./assets/images/3 (1).jpg" alt="" />
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <!-- Our team section end -->
-
-      <!-- section pricing-plans start -->
-      <section id="pricing-plans">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="pricing-plan-title d-flex flex-column justify-content-md-center align-items-md-center">
-                <h2>Pricing Plans</h2>
+          <div class="col-md-8 col-lg-3 col-sm-12">
+            <div class="item-card">
+              <div class="context">
+                <h5>Fletch Skinner</h5>
+                <h6>Product Strategist</h6>
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-linkedin"></i>
+                <i class="fab fa-github"></i>
                 <p>
-                  Donec vulputate urna sed rutrum venenatis. Cras consequat
-                  magna quis arcu elementum, quis congue risus volutpat.
+                  Proin arcu ligula, malesuada id tincidunt laoreet, facilisis
+                  at justo. Sed at lorem.
                 </p>
               </div>
-            </div>
-            <div class="col-md-4">
-              <div
-                class="pricing-card d-flex flex-column justify-content-md-between align-items-md-center gap-4"
-              >
-                <div class="top-title">
-                  <h4>BASIC PLAN</h4>
-                </div>
-                <div class="count">
-                  <span>1</span>
-                </div>
-                <div class="price">
-                  <h2>
-                    $ 13.90
-                    <span>/Month</span>
-                  </h2>
-                </div>
-                <div class="plans">
-                  <h6>Unlimited Website</h6>
-                  <h6>Unlimited Users</h6>
-                  <h6>5 GB Bandwidth</h6>
-                  <h6>Highest Speed</h6>
-                  <h6 class="strikeout">Data Security and Backupss</h6>
-                  <h6 class="strikeout">1 GB Storage</h6>
-                  <h6 class="strikeout">24x7 Great Support</h6>
-                  <h6 class="strikeout">Monthly Reports and Analytics</h6>
-                </div>
-                <div class="pricing-btn">
-                  <a href="#">SELECT PLAN</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div
-                class="pricing-card middle-card d-flex flex-column justify-content-md-between align-items-md-center gap-4"
-              >
-                <div class="top-title">
-                  <h4>ADVANCED PLAN</h4>
-                </div>
-                <div class="count">
-                  <span>2</span>
-                </div>
-                <div class="price">
-                  <h2>
-                    $ 23.90
-                    <span>/Month</span>
-                  </h2>
-                </div>
-                <div class="plans">
-                  <h6>Unlimited Website</h6>
-                  <h6>Unlimited Users</h6>
-                  <h6>5 GB Bandwidth</h6>
-                  <h6>Highest Speed</h6>
-                  <h6>Data Security and Backupss</h6>
-                  <h6>1 GB Storage</h6>
-                  <h6 class="strikeout">24x7 Great Support</h6>
-                  <h6 class="strikeout">Monthly Reports and Analytics</h6>
-                </div>
-                <div class="pricing-btn">
-                  <a href="#">SELECT PLAN</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div
-                class="pricing-card d-flex flex-column justify-content-md-between align-items-md-center gap-4"
-              >
-                <div class="top-title">
-                  <h4>EXPERT PLAN</h4>
-                </div>
-                <div class="count">
-                  <span>3</span>
-                </div>
-                <div class="price">
-                  <h2>
-                    $ 33.90
-                    <span>/Month</span>
-                  </h2>
-                </div>
-                <div class="plans">
-                  <h6>Unlimited Website</h6>
-                  <h6>Unlimited Users</h6>
-                  <h6>5 GB Bandwidth</h6>
-                  <h6>Highest Speed</h6>
-                  <h6>Data Security and Backupss</h6>
-                  <h6>1 GB Storage</h6>
-                  <h6>24x7 Great Support</h6>
-                  <h6>Monthly Reports and Analytics</h6>
-                </div>
-                <div class="pricing-btn">
-                  <a href="#">SELECT PLAN</a>
-                </div>
+              <div class="image">
+                <img src="./assets/images/4.jpg" alt="" />
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <!-- section pricing-plans end -->
+      </div>
+    </section>
+    <!-- Our team section end -->
 
-        <!-- Parallax text section start -->
-        <section id="parallax-text">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12 d-flex flex-column justify-content-center align-items-center">
-                <p>We design and develop <span>web apps</span> that delight your users and grow your business.</p>
-                <a href="#">CONTACT US</a>
+    <!-- section pricing-plans start -->
+    <section id="pricing-plans">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="pricing-plan-title d-flex flex-column justify-content-md-center align-items-md-center">
+              <h2>Pricing Plans</h2>
+              <p>
+                Donec vulputate urna sed rutrum venenatis. Cras consequat
+                magna quis arcu elementum, quis congue risus volutpat.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-8 col-lg-4 col-sm-12">
+            <div class="pricing-card d-flex flex-column justify-content-md-between align-items-md-center gap-4">
+              <div class="top-title">
+                <h4>BASIC PLAN</h4>
+              </div>
+              <div class="count">
+                <span>1</span>
+              </div>
+              <div class="price">
+                <h2>
+                  $ 13.90
+                  <span>/Month</span>
+                </h2>
+              </div>
+              <div class="plans">
+                <h6>Unlimited Website</h6>
+                <h6>Unlimited Users</h6>
+                <h6>5 GB Bandwidth</h6>
+                <h6>Highest Speed</h6>
+                <h6 class="strikeout">Data Security and Backupss</h6>
+                <h6 class="strikeout">1 GB Storage</h6>
+                <h6 class="strikeout">24x7 Great Support</h6>
+                <h6 class="strikeout">Monthly Reports and Analytics</h6>
+              </div>
+              <div class="pricing-btn">
+                <a href="#">SELECT PLAN</a>
               </div>
             </div>
           </div>
-        </section>
-        <!-- Parallax text section end -->
-    </main>
-    <footer></footer>
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-    ></script>
-    <script src="./js/index.js"></script>
-  </body>
+          <div class="col-md-8 col-lg-4 col-sm-12">
+            <div
+              class="pricing-card middle-card d-flex flex-column justify-content-md-between align-items-md-center gap-4">
+              <div class="top-title">
+                <h4>ADVANCED PLAN</h4>
+              </div>
+              <div class="count">
+                <span>2</span>
+              </div>
+              <div class="price">
+                <h2>
+                  $ 23.90
+                  <span>/Month</span>
+                </h2>
+              </div>
+              <div class="plans">
+                <h6>Unlimited Website</h6>
+                <h6>Unlimited Users</h6>
+                <h6>5 GB Bandwidth</h6>
+                <h6>Highest Speed</h6>
+                <h6>Data Security and Backupss</h6>
+                <h6>1 GB Storage</h6>
+                <h6 class="strikeout">24x7 Great Support</h6>
+                <h6 class="strikeout">Monthly Reports and Analytics</h6>
+              </div>
+              <div class="pricing-btn">
+                <a href="#">SELECT PLAN</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8 col-lg-4 col-sm-12">
+            <div class="pricing-card d-flex flex-column justify-content-md-between align-items-md-center gap-4">
+              <div class="top-title">
+                <h4>EXPERT PLAN</h4>
+              </div>
+              <div class="count">
+                <span>3</span>
+              </div>
+              <div class="price">
+                <h2>
+                  $ 33.90
+                  <span>/Month</span>
+                </h2>
+              </div>
+              <div class="plans">
+                <h6>Unlimited Website</h6>
+                <h6>Unlimited Users</h6>
+                <h6>5 GB Bandwidth</h6>
+                <h6>Highest Speed</h6>
+                <h6>Data Security and Backupss</h6>
+                <h6>1 GB Storage</h6>
+                <h6>24x7 Great Support</h6>
+                <h6>Monthly Reports and Analytics</h6>
+              </div>
+              <div class="pricing-btn">
+                <a href="#">SELECT PLAN</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- section pricing-plans end -->
+
+    <!-- Parallax text section start -->
+    <section id="parallax-text">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 d-flex flex-column justify-content-center align-items-center">
+            <p>We design and develop <span>web apps</span> that delight your users and grow your business.</p>
+            <a href="#">CONTACT US</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Parallax text section end -->
+
+    <!-- blog posts section start -->
+    <section id="blog-posts">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="blog-posts-title d-flex flex-column justify-content-md-center align-items-md-center">
+              <h2>Latest Blog Posts</h2>
+              <p>
+                Donec vulputate urna sed rutrum venenatis. Cras consequat magna quis arcu elementum, quis congue risus
+                volutpat.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-8 col-lg-4 col-sm-12">
+            <div class="blog-card d-flex flex-column justify-content-between align-items-center">
+              <div class="blog-image">
+                <img src="./assets/images/blog-1.jpg" alt="blog-image-electronics" class="img-fluid">
+              </div>
+              <div class="context">
+                <h4>Jirono Expands the Leadership Team with David Lin, Controller</h4>
+                <p>Mauris tellus sem, ultrices varius nisl at, convallis iaculis mauris. Sed eget sem vitae purus tempus dignissim.</p>
+              </div>
+              <div class="blog-btn">
+                <a href="#">READ MORE</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8 col-lg-4 col-sm-12">
+            <div class="blog-card d-flex flex-column justify-content-between align-items-center">
+              <div class="blog-image">
+                <img src="./assets/images/blog-2.jpg" alt="blog-image-electronics" class="img-fluid">
+              </div>
+              <div class="context">
+                <h4>Jirono Expands the Leadership Team with David Lin, Controller</h4>
+                <p>Mauris tellus sem, ultrices varius nisl at, convallis iaculis mauris. Sed eget sem vitae purus tempus dignissim.</p>
+              </div>
+              <div class="blog-btn">
+                <a href="#">READ MORE</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8 col-lg-4 col-sm-12">
+            <div class="blog-card d-flex flex-column justify-content-between align-items-center">
+              <div class="blog-image">
+                <img src="./assets/images/blog-3.jpg" alt="blog-image-electronics" class="img-fluid">
+              </div>
+              <div class="context">
+                <h4>Jirono Expands the Leadership Team with David Lin, Controller</h4>
+                <p>Mauris tellus sem, ultrices varius nisl at, convallis iaculis mauris. Sed eget sem vitae purus tempus dignissim.</p>
+              </div>
+              <div class="blog-btn">
+                <a href="#">READ MORE</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- blog posts section end -->
+  </main>
+  <footer></footer>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="./js/index.js"></script>
+</body>
+
 </html>
