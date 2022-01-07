@@ -21,7 +21,9 @@
 	.row {
 		height: 100%;
 		.parallax-context {
+			transition: .5s;
 			height: 100%;
+			z-index: 1;
 			h2 {
 				height: 100%;
 				text-align: center;
@@ -50,6 +52,9 @@
 				color: $main-color-light;
 				z-index: 999;
 				@include primary-font($font-size:20px);
+			}
+			&:hover{
+				transform: translateY(-20px);
 			}
 		}
 	}

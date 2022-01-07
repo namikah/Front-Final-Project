@@ -6,7 +6,14 @@
     .our-vision-context{
         position: relative;
         .our-right-side {
+            overflow: hidden;
+            z-index: 0;
             img {
+                transition: .5s all;
+                border-radius: 5px;
+                &:hover{
+                    transform: scale(1.1);
+                }
             }
           }
           .our-left-side {
@@ -17,6 +24,7 @@
               border-radius: 5px;
             min-height: 380px;
             width: 450px;
+            z-index: 1;
     
             background-color: $main-color-light;
             h4 {
