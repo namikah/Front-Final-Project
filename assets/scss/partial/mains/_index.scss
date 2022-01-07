@@ -188,6 +188,24 @@
 			}
 		}
 	}
+	#our-vision{
+		.container{
+			.row{
+				.our-vision-context{
+					display: flex !important;
+					flex-direction: column !important;
+					justify-content: center !important;
+					align-items: center;
+					.our-left-side{
+						width: 100% !important;
+						margin-bottom: 50px;
+						position: static !important;
+						transform: translate(0) !important;
+					}
+				}
+			}
+		}
+	}
 	footer {
 		.left-side-logo {
 			padding-bottom: 30px;

@@ -298,6 +298,28 @@
     -webkit-transform: translate(0) !important;
             transform: translate(0) !important;
   }
+  #our-vision .container .row .our-vision-context {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #our-vision .container .row .our-vision-context .our-left-side {
+    width: 100% !important;
+    margin-bottom: 50px;
+    position: static !important;
+    -webkit-transform: translate(0) !important;
+            transform: translate(0) !important;
+  }
   footer .left-side-logo {
     padding-bottom: 30px;
   }
@@ -1772,6 +1794,44 @@ footer .container .row .footer-copyright {
 }
 
 #our-mission .container .row .our-mission-context .our-right-side p {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  padding: 10px 20px;
+  color: #3b566ea9;
+  line-height: 30px;
+}
+
+#our-vision {
+  padding: 80px 0;
+  background-color: #f5f5f5;
+}
+
+#our-vision .container .row .our-vision-context {
+  position: relative;
+}
+
+#our-vision .container .row .our-vision-context .our-left-side {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 5px;
+  min-height: 380px;
+  width: 450px;
+  background-color: #fff;
+}
+
+#our-vision .container .row .our-vision-context .our-left-side h4 {
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  padding: 15px 20px 0 20px;
+  color: #3b566e;
+}
+
+#our-vision .container .row .our-vision-context .our-left-side p {
   font-size: 14px;
   font-weight: 400;
   letter-spacing: 0.5px;
