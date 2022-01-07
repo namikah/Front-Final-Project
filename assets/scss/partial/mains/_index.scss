@@ -170,6 +170,24 @@
 			}
 		}
 	}
+	#our-mission{
+		.container{
+			.row{
+				.our-mission-context{
+					display: flex !important;
+					flex-direction: column !important;
+					justify-content: center !important;
+					align-items: center;
+					.our-right-side{
+						width: 100% !important;
+						margin-top: 50px;
+						position: static !important;
+						transform: translate(0) !important;
+					}
+				}
+			}
+		}
+	}
 	footer {
 		.left-side-logo {
 			padding-bottom: 30px;
