@@ -3,13 +3,55 @@
   .container {
     .row {
       .contact-context {
-        background-image: linear-gradient(#585CE9 0%, #5C83E3 100%);          
+        background-image: linear-gradient(#585ce9 0%, #5c83e3 100%);
         transform: translateY(-50%);
         .contact-adress {
-            padding: 20px;
+          padding: 20px;
+          .adress {
+            color: $main-color-light;
+            i {
+              font-size: 12px;
+              padding-top: 10px;
+            }
+            p {
+              margin: 0;
+              line-height: 30px;
+            }
+          }
+          .phone {
+            color: $main-color-light;
+            i {
+              font-size: 12px;
+              padding-top: 8px;
+            }
+            .phone-side {
+              span {
+                display: inline-block;
+                line-height: 30px;
+              }
+            }
+          }
+          .email-adress {
+            color: $main-color-light;
+            .email {
+              i {
+                padding-top: 6px;
+              }
+              a {
+                text-decoration: none;
+                color: $main-color-light;
+              }
+            }
+          }
         }
-        .contact-icon {
-            padding: 20px;
+        .contact-icons {
+          padding: 20px;
+         a{
+             i{
+                font-size: 24px;
+                color: $main-color-light;
+             }
+         }
         }
       }
     }

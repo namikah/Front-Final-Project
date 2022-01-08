@@ -2265,8 +2265,8 @@ footer .container .row .footer-copyright {
 }
 
 #map .container .row .contact-context {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#585CE9), to(#5C83E3));
-  background-image: linear-gradient(#585CE9 0%, #5C83E3 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#585ce9), to(#5c83e3));
+  background-image: linear-gradient(#585ce9 0%, #5c83e3 100%);
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
@@ -2275,7 +2275,53 @@ footer .container .row .footer-copyright {
   padding: 20px;
 }
 
-#map .container .row .contact-context .contact-icon {
+#map .container .row .contact-context .contact-adress .adress {
+  color: #fff;
+}
+
+#map .container .row .contact-context .contact-adress .adress i {
+  font-size: 12px;
+  padding-top: 10px;
+}
+
+#map .container .row .contact-context .contact-adress .adress p {
+  margin: 0;
+  line-height: 30px;
+}
+
+#map .container .row .contact-context .contact-adress .phone {
+  color: #fff;
+}
+
+#map .container .row .contact-context .contact-adress .phone i {
+  font-size: 12px;
+  padding-top: 8px;
+}
+
+#map .container .row .contact-context .contact-adress .phone .phone-side span {
+  display: inline-block;
+  line-height: 30px;
+}
+
+#map .container .row .contact-context .contact-adress .email-adress {
+  color: #fff;
+}
+
+#map .container .row .contact-context .contact-adress .email-adress .email i {
+  padding-top: 6px;
+}
+
+#map .container .row .contact-context .contact-adress .email-adress .email a {
+  text-decoration: none;
+  color: #fff;
+}
+
+#map .container .row .contact-context .contact-icons {
   padding: 20px;
+}
+
+#map .container .row .contact-context .contact-icons a i {
+  font-size: 24px;
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */
