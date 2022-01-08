@@ -62,15 +62,15 @@
                       <a href="./features.html">features</a>
                     </li>
                     <li>
-                      <a href="#">FAQ's</a>
+                      <a href="./faqs.html">FAQ's</a>
                     </li>
                     <li>
-                      <a href="#">blog</a>
+                      <a href="./blog.html">blog</a>
                     </li>
                   </ul>
                 </li>
                 <li class="contact-menu">
-                  <a href="#">contact</a>
+                  <a href="./contact.html">contact</a>
                 </li>
               </ul>
             </div>
@@ -214,13 +214,13 @@
             >
               <div class="contact-adress row">
                 <div
-                  class="adress col-4 d-flex justify-content-between align-items-start gap-3"
+                  class="adress col-md-4 d-flex justify-content-start align-items-start gap-3"
                 >
                   <i class="fa fa-location-arrow"></i>
                   <p>455 West Orchard Street Kings Mountain, NC 28086</p>
                 </div>
                 <div
-                  class="phone col-4 d-flex justify-content-start align-items-start gap-3"
+                  class="phone col-md-4 d-flex justify-content-start align-items-start gap-3"
                 >
                   <i class="fa fa-phone"></i>
                   <div class="phone-side">
@@ -229,7 +229,7 @@
                   </div>
                 </div>
                 <div
-                  class="email-adress col-4 flex-column justify-content-start align-items-start"
+                  class="email-adress col-md-4 flex-column justify-content-start align-items-start"
                 >
                   <div class="email">
                     <i class="fa fa-envelope"></i>
@@ -258,29 +258,40 @@
 
       <!-- message us section start -->
       <section id="message-us">
-          <div class="container">
-              <div class="row">
-                  <div class="context col-md-4">
-                      <h4>Get in touch</h4>
-                      <p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam tempus magna vel turpis pharetra dictum. <br><br>Sed blandit tempus purus, sed sodales leo rutrum vel. Nam vulputate ipsum ac est congue, eget commodo magna lobortis.</p>
-                  </div>
-                  <div class="right-side-inputs col-md-8">
-                      <div class="name-email">
-                          <input class="name-surname-input" type="text">
-                          <input class="email-input" type="email">
-                      </div>
-                      <div class="your-message">
-                          <input type="text">
-                      </div>
-                      <div class="send-btn">
-                          <a class="btn-send" href="#"></a>
-                      </div>
-                  </div>
+        <div class="container">
+          <div class="row">
+            <div class="context col-md-4">
+              <h4>Get in touch</h4>
+              <p>
+                Orci varius natoque penatibus et magnis dis parturient montes,
+                nascetur ridiculus mus. Etiam tempus magna vel turpis pharetra
+                dictum. <br /><br />Sed blandit tempus purus, sed sodales leo
+                rutrum vel. Nam vulputate ipsum ac est congue, eget commodo
+                magna lobortis.
+              </p>
+            </div>
+            <div class="right-side-inputs col-md-8">
+              <div class="name-email d-flex justify-content-between align-items-center">
+                <input class="input-info name-surname-input" type="text" placeholder="Name, surname"/>
+                <input class="input-info email-input" type="email" placeholder="E-Mail"/>
               </div>
+              <div class="your-message">
+                <textarea
+                  name="message-us"
+                  id=""
+                  cols="50"
+                  rows="10"
+                  placeholder="Your Message"
+                ></textarea>
+              </div>
+              <div class="send-btn">
+                <a href="#">SEND</a>
+              </div>
+            </div>
           </div>
+        </div>
       </section>
       <!-- message us section end -->
-      
     </main>
     <footer>
       <div class="container">
