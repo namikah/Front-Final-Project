@@ -2200,4 +2200,79 @@ footer .container .row .footer-copyright {
 #questions .container .row .right-side .question-accordion .context p {
   line-height: 30px;
 }
+
+#contact {
+  background-color: #f5f5f5;
+  padding: 80px 0;
+  background-image: url("../images/2.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-attachment: fixed;
+  min-height: 300px;
+  position: relative;
+}
+
+#contact:after {
+  content: "";
+  background-color: #585de9a9;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+#contact .container .row .contact-context {
+  z-index: 1;
+}
+
+#contact .container .row .contact-context h1 {
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #f5f5f5;
+  position: relative;
+}
+
+#contact .container .row .contact-context h1::after {
+  content: "";
+  width: 20px;
+  position: absolute;
+  border: 1px solid #fff;
+  left: 50%;
+  top: 120%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#contact .container .row .contact-context a {
+  padding-top: 20px;
+  color: #f5f5f5;
+  text-decoration: none;
+  display: inline-block;
+}
+
+#contact .container .row .contact-context span {
+  color: #f5f5f5;
+}
+
+#map {
+  padding: 80px 0;
+}
+
+#map .container .row .contact-context {
+  background-color: #3434f8;
+}
+
+#map .container .row .contact-context .contact-adress {
+  padding: 20px;
+}
+
+#map .container .row .contact-context .contact-icon {
+  padding: 20px;
+}
 /*# sourceMappingURL=style.css.map */
