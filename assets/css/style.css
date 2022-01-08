@@ -2261,7 +2261,14 @@ footer .container .row .footer-copyright {
 }
 
 #map {
+  background-color: #f5f5f5;
   padding: 80px 0;
+}
+
+#map .container .row .map-top-side {
+  -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.089);
+          box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.089);
+  padding: 0;
 }
 
 #map .container .row .contact-context {
@@ -2328,5 +2335,27 @@ footer .container .row .footer-copyright {
 #map .container .row .contact-context .contact-icons a i {
   font-size: 24px;
   color: #fff;
+}
+
+#message-us {
+  padding: 80px 0;
+}
+
+#message-us .container .row .context {
+  color: #3b566e;
+}
+
+#message-us .container .row .context h4 {
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+#message-us .container .row .context p {
+  padding-top: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #3b566ea9;
 }
 /*# sourceMappingURL=style.css.map */
