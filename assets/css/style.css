@@ -2265,7 +2265,10 @@ footer .container .row .footer-copyright {
 }
 
 #map .container .row .contact-context {
-  background-color: #3434f8;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#585CE9), to(#5C83E3));
+  background-image: linear-gradient(#585CE9 0%, #5C83E3 100%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 #map .container .row .contact-context .contact-adress {
