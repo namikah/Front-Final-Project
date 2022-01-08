@@ -2298,8 +2298,12 @@ footer .container .row .footer-copyright {
   padding-top: 8px;
 }
 
+#map .container .row .contact-context .contact-adress .phone .phone-side {
+  display: inline;
+}
+
 #map .container .row .contact-context .contact-adress .phone .phone-side span {
-  display: inline-block;
+  display: block;
   line-height: 30px;
 }
 
@@ -2314,6 +2318,7 @@ footer .container .row .footer-copyright {
 #map .container .row .contact-context .contact-adress .email-adress .email a {
   text-decoration: none;
   color: #fff;
+  padding-left: 10px;
 }
 
 #map .container .row .contact-context .contact-icons {
