@@ -64,15 +64,96 @@
           }
         }
         a {
-          padding: 5px 8px;
+          padding: 7px 10px;
           border-radius: 5px;
           background-color: $main-bg-color-dark;
           position: absolute;
-          right: 0px;
+          right: -13px;
           top: 50%;
           transform: translate(-50%, -50%);
           i {
             color: $main-color-light;
+          }
+        }
+      }
+      .blog-category {
+        margin: 25px 0;
+        padding: 0;
+        border-radius: 5px;
+        background-color: $main-color-light;
+        // box-shadow: $main-box-shadow;
+        li {
+          border-radius: 5px;
+          overflow: hidden;
+          height: 50px;
+          margin: 8px;
+          position: relative;
+          &::after{
+            content: attr(data-id);
+            position: absolute;
+            text-align: center;
+            cursor: pointer;
+            padding-top: 2px;
+            font-size: 12px;
+            color: $main-color-light;
+            background-color: $main-bg-color-dark;
+            border-radius: 100px;
+            width: 35px;
+            height: 25px;
+            right: 0px;
+            top: 50%;
+            transform: translate(-50%,-50%);
+          }
+          &:hover {
+            a {
+              padding-left: 70px;
+            }
+          }
+          a {
+            transition: 0.3s;
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            padding-top: 13px;
+            @include primary-font($font-size: 14px);
+            background-color: $main-color-light;
+            text-decoration: none;
+            color: $main-color-dark;
+            border-radius: 5px;
+            padding-left: 60px;
+          }
+          i {
+            color: $main-color-dark;
+            position: absolute;
+            font-size: 10px;
+            z-index: 9999;
+            left: 30px;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+          }
+        }
+      }
+      .tags{
+        list-style: none;
+        margin: 25px 0;
+        padding: 0;
+        border-radius: 5px;
+        background-color: $main-color-light;
+        border-radius: 5px;
+        overflow: hidden;
+        padding: 30px 30px;
+        li {
+          display: inline;
+          padding: 3px;
+          line-height: 40px;
+          a{
+            border-radius: 5px;
+            background-color: $main-bg-color-light;
+            text-decoration: none;
+            padding: 6px 7px;
+            color: $main-color-dark;
+            @include primary-font($font-size:14px);
           }
         }
       }
