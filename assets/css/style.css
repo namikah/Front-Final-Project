@@ -2580,6 +2580,7 @@ footer .container .row .footer-copyright {
 }
 
 #blog-cards .container .row .blog-search .input-search {
+  width: 100% !important;
   padding-left: 20px;
   -webkit-transition: 0.5s all;
   transition: 0.5s all;
