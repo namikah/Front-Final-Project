@@ -18,7 +18,7 @@
   background-color: #3138ff;
 }
 
-#message-us .container .row .right-side-inputs .name-email .name-surname-input, #message-us .container .row .right-side-inputs .name-email .email-input {
+#message-us .container .row .right-side-inputs .name-email .name-surname-input, #message-us .container .row .right-side-inputs .name-email .email-input, #blog-cards .container .row .blog-search .input-search {
   width: 350px;
   height: 50px;
   border: 0px;
@@ -471,9 +471,15 @@
   margin-left: 5px;
   font-size: 8px;
   color: #3b566e;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
 }
 
 .navbar .menu > ul li a {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
   text-decoration: none;
   font-family: "Nunito", sans-serif;
   color: #3b566ea9;
@@ -2567,5 +2573,34 @@ footer .container .row .footer-copyright {
 
 #blog-cards .container .row .blog-card .blog-btn a {
   padding: 12px 40px;
+}
+
+#blog-cards .container .row .blog-search {
+  position: relative;
+}
+
+#blog-cards .container .row .blog-search .input-search {
+  padding-left: 20px;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+
+#blog-cards .container .row .blog-search .input-search:focus {
+  padding-left: 30px;
+}
+
+#blog-cards .container .row .blog-search a {
+  padding: 5px 8px;
+  border-radius: 5px;
+  background-color: #585ce9;
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#blog-cards .container .row .blog-search a i {
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */

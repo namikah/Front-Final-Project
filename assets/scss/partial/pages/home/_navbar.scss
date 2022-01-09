@@ -86,8 +86,14 @@
 					margin-left: 5px;
 					font-size: 8px;
 					color: $main-color-dark;
+					display: inline-block;
+					height: 100%;
+					width: 100%;
 				}
 				a {
+					display: inline-block;
+					height: 100%;
+					width: 100%;
 					text-decoration: none;
 					font-family: $main-font-family;
 					color: $secondary-color-dark;

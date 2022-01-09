@@ -52,6 +52,29 @@
           }
         }
       }
+      .blog-search {
+        position: relative;
+        .input-search {
+          @extend %primary-input-text;
+          padding-left: 20px;
+          transition: 0.5s all;
+          &:focus {
+            padding-left: 30px;
+          }
+        }
+        a {
+          padding: 5px 8px;
+          border-radius: 5px;
+          background-color: $main-bg-color-dark;
+          position: absolute;
+          right: 0px;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          i {
+            color: $main-color-light;
+          }
+        }
+      }
     }
   }
 }
