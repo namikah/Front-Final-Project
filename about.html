@@ -14,6 +14,7 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>About Us</title>
   </head>
@@ -185,7 +186,7 @@
                 </p>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="col-lg-3 col-md-6 col-sm-12" data-aos="zoom-in">
               <div
                 class="card d-flex flex-column justify-content-md-center align-items-md-center gap-3"
               >
@@ -199,7 +200,7 @@
                 </p>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="col-lg-3 col-md-6 col-sm-12"data-aos="zoom-in">
               <div
                 class="card d-flex flex-column justify-content-md-center align-items-md-center gap-3"
               >
@@ -213,7 +214,7 @@
                 </p>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="col-lg-3 col-md-6 col-sm-12" data-aos="zoom-in">
               <div
                 class="card d-flex flex-column justify-content-md-center align-items-md-center gap-3"
               >
@@ -227,7 +228,7 @@
                 </p>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="col-lg-3 col-md-6 col-sm-12" data-aos="zoom-in">
               <div
                 class="card d-flex flex-column justify-content-md-center align-items-md-center gap-3"
               >
@@ -251,7 +252,7 @@
         <div class="container">
           <div class="row align-items-center">
         <div class=" our-mission-context col-12">
-          <div class="our-left-side col-md-8 col-sm-12">
+          <div class="our-left-side col-md-8 col-sm-12" data-aos="fade-right">
             <img src="./assets/images/blog-3.jpg" class="img-fluid" alt="our-mission-image">
           </div>
           <div class="our-right-side col-md-8 col-sm-12 d-flex flex-column justify-content-center align-items-md-start">
@@ -299,7 +300,7 @@
             Cras malesuada a massa et aliquet. Nunc vel urna eu neque consectetur imperdiet. Sed pretium neque ligula, ac vehicula massa aliquet eu.
           </p>
         </div>
-        <div class="our-right-side col-md-8 col-sm-12">
+        <div class="our-right-side col-md-8 col-sm-12" data-aos="fade-left">
           <img src="./assets/images/app-about-us.jpg" class="img-fluid" alt="our-mission-image">
         </div>
       </div>
@@ -375,6 +376,16 @@
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset:0,
+        duration:1000,
+        mirror:false,
+        once:true,
+        delay:50
+      });
+    </script>
     <script src="./js/navbar.js"></script>
   </body>
 </html>
