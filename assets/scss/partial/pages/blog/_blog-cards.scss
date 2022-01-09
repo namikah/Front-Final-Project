@@ -71,9 +71,15 @@
           right: -13px;
           top: 50%;
           transform: translate(-50%, -50%);
-          i {
+          i{
             color: $main-color-light;
+            transition: .5s;
           }
+        &:hover{
+          i {
+            transform: scale(1.2);
+            }
+        }
         }
       }
       .blog-category {
@@ -88,7 +94,7 @@
           height: 50px;
           margin: 8px;
           position: relative;
-          &::after{
+          &::after {
             content: attr(data-id);
             position: absolute;
             text-align: center;
@@ -102,7 +108,7 @@
             height: 25px;
             right: 0px;
             top: 50%;
-            transform: translate(-50%,-50%);
+            transform: translate(-50%, -50%);
           }
           &:hover {
             a {
@@ -134,7 +140,7 @@
           }
         }
       }
-      .tags{
+      .tags {
         list-style: none;
         margin: 25px 0;
         padding: 0;
@@ -147,13 +153,62 @@
           display: inline;
           padding: 3px;
           line-height: 40px;
-          a{
+          a {
             border-radius: 5px;
             background-color: $main-bg-color-light;
             text-decoration: none;
             padding: 6px 7px;
             color: $main-color-dark;
-            @include primary-font($font-size:14px);
+            @include primary-font($font-size: 14px);
+          }
+        }
+      }
+      .blog-side-image {
+        height: 250px;
+        overflow: hidden;
+        position: relative;
+        border-radius: 5px;
+        img {
+          object-fit: cover;
+          background-position: center;
+          width: 221px;
+          height: 100%;
+          border-radius: 5px;
+          transition: 0.5s;
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+        .context {
+          padding: 0 10px;
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          background-color: #585de9d2;
+          z-index: 0;
+          p {
+            color: $main-color-light;
+            @include primary-font($font-size: 20px);
+            z-index: 1;
+          }
+          .contact-us-btn {
+            background-color: $main-bg-color-light;
+            border-radius: 5px;
+            transition: 0.5s;
+            &:hover {
+              a {
+                color: $main-color-light;
+              }
+            }
+            a {
+              background-color: $main-color-light;
+              color: $main-bg-color-dark;
+              text-decoration: none;
+              @include primary-font();
+              @extend %primary-btn;
+            }
           }
         }
       }
