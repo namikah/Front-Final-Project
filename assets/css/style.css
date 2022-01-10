@@ -1,4 +1,5 @@
-.navbar .container .login > ul li a, .bottom-header .container .row .left-side .context a, #pricing-plans .container .row .pricing-card .pricing-btn a, #parallax-text .row .parallax-context a, #blog-posts .container .row .blog-card .blog-btn a, #questions .container .row .left-side .context a, #message-us .container .row .right-side-inputs .send-btn a, #blog-cards .container .row .blog-card .blog-btn a, #blog-cards .container .row .blog-side-image .context .contact-us-btn a {
+@charset "UTF-8";
+.navbar .container .login > ul li a, .bottom-header .container .row .left-side .context a, #pricing-plans .container .row .pricing-card .pricing-btn a, #parallax-text .row .parallax-context a, #blog-posts .container .row .blog-card .blog-btn a, #questions .container .row .left-side .context a, #message-us .container .row .right-side-inputs .send-btn a, #blog-cards .container .row .blog-card .blog-btn a, #blog-cards .container .row .blog-side-image .context .contact-us-btn a, #blog-cards .container .row .submit-comment .send-btn a {
   text-decoration: none;
   width: 110px;
   height: 32px;
@@ -14,11 +15,11 @@
   background-color: #585ce9;
 }
 
-.navbar .container .login > ul li a:hover, .bottom-header .container .row .left-side .context a:hover, #pricing-plans .container .row .pricing-card .pricing-btn a:hover, #parallax-text .row .parallax-context a:hover, #blog-posts .container .row .blog-card .blog-btn a:hover, #questions .container .row .left-side .context a:hover, #message-us .container .row .right-side-inputs .send-btn a:hover, #blog-cards .container .row .blog-card .blog-btn a:hover, #blog-cards .container .row .blog-side-image .context .contact-us-btn a:hover {
+.navbar .container .login > ul li a:hover, .bottom-header .container .row .left-side .context a:hover, #pricing-plans .container .row .pricing-card .pricing-btn a:hover, #parallax-text .row .parallax-context a:hover, #blog-posts .container .row .blog-card .blog-btn a:hover, #questions .container .row .left-side .context a:hover, #message-us .container .row .right-side-inputs .send-btn a:hover, #blog-cards .container .row .blog-card .blog-btn a:hover, #blog-cards .container .row .blog-side-image .context .contact-us-btn a:hover, #blog-cards .container .row .submit-comment .send-btn a:hover {
   background-color: #3138ff;
 }
 
-#message-us .container .row .right-side-inputs .name-email .name-surname-input, #message-us .container .row .right-side-inputs .name-email .email-input, #blog-cards .container .row .blog-search .input-search {
+#message-us .container .row .right-side-inputs .name-email .name-surname-input, #message-us .container .row .right-side-inputs .name-email .email-input, #blog-cards .container .row .blog-search .input-search, #blog-cards .container .row .submit-comment .name-email .input-info, #blog-cards .container .row .submit-comment .your-message textarea {
   width: 350px;
   height: 50px;
   border: 0px;
@@ -904,6 +905,7 @@
 }
 
 #cloud-services .container .row .left-side .context .category div {
+  padding-right: 0;
   -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.089);
           box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.089);
   border-radius: 5px;
@@ -1020,6 +1022,7 @@
 }
 
 #design-development .container .row .right-side .context .category div {
+  padding-right: 0;
   -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.089);
           box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.089);
   border-radius: 5px;
@@ -2833,17 +2836,17 @@ footer .container .row .footer-copyright {
   color: #f5f5f5;
 }
 
-#blog-cards .container .row .left-side .blog-card .blog-images {
+#blog-cards .container .row .blog-card .blog-images {
   overflow: hidden;
   margin: 20px;
 }
 
-#blog-cards .container .row .left-side .blog-card .blog-images .image {
+#blog-cards .container .row .blog-card .blog-images .image {
   overflow: hidden;
   border-radius: 5px;
 }
 
-#blog-cards .container .row .left-side .blog-card .blog-images .image img {
+#blog-cards .container .row .blog-card .blog-images .image img {
   height: 200px;
   width: 220px;
   -o-object-fit: cover;
@@ -2852,8 +2855,133 @@ footer .container .row .footer-copyright {
   transition: 0.5s;
 }
 
-#blog-cards .container .row .left-side .blog-card .blog-images .image img:hover {
+#blog-cards .container .row .blog-card .blog-images .image img:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+#blog-cards .container .row .blog-card .context {
+  padding: 20px;
+}
+
+#blog-cards .container .row .blog-card .context p {
+  text-align: left;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 30px;
+}
+
+#blog-cards .container .row .blog-card .context-paragraph {
+  margin: 20px;
+  padding: 30px;
+  background-color: #e1ecf4;
+  border-radius: 5px;
+}
+
+#blog-cards .container .row .blog-card .context-paragraph p {
+  padding: 0 30px;
+  position: relative;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 30px;
+  color: #3b566ea9;
+}
+
+#blog-cards .container .row .blog-card .context-paragraph p::before {
+  content: "“";
+  font-size: 80px;
+  color: #3b566e;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#blog-cards .container .row .blog-card .context-paragraph p::after {
+  content: "“";
+  font-size: 80px;
+  color: #3b566e;
+  position: absolute;
+  top: 100%;
+  right: 0;
+}
+
+#blog-cards .container .row .blog-card .context-paragraph h4 {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 30px;
+  color: #3b566ea9;
+}
+
+#blog-cards .container .row .blog-card .share-social .left-share span {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 30px;
+  color: #3b566ea9;
+}
+
+#blog-cards .container .row .blog-card .share-social .right-social a {
+  text-decoration: none;
+  padding: 5px;
+}
+
+#blog-cards .container .row .submit-comment {
+  margin-top: 20px;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 30px;
+}
+
+#blog-cards .container .row .submit-comment h2 {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #3b566ea9;
+  line-height: 30px;
+}
+
+#blog-cards .container .row .submit-comment .name-email {
+  padding-top: 20px;
+}
+
+#blog-cards .container .row .submit-comment .name-email .input-info {
+  padding-left: 20px;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+
+#blog-cards .container .row .submit-comment .name-email .input-info:focus {
+  padding-left: 30px;
+}
+
+#blog-cards .container .row .submit-comment .your-message {
+  padding: 30px 0;
+}
+
+#blog-cards .container .row .submit-comment .your-message textarea {
+  width: 100%;
+  height: 150px;
+  resize: none;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 20px;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+
+#blog-cards .container .row .submit-comment .your-message textarea:focus {
+  padding-left: 30px;
+}
+
+#blog-cards .container .row .submit-comment .send-btn {
+  padding-bottom: 15px;
+}
+
+#blog-cards .container .row .submit-comment .send-btn a {
+  padding: 12px 40px;
 }
 /*# sourceMappingURL=style.css.map */

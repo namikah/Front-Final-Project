@@ -1,27 +1,132 @@
 #blog-cards {
-  .container {
-    .row {
-     .left-side{
-        .blog-card {
-            .blog-images {
-              overflow: hidden;
-              margin: 20px;
-              .image {
-                overflow: hidden;
-                border-radius: 5px;
-                img {
-                  height: 200px;
-                  width: 220px;
-                  object-fit: cover;
-                  transition: 0.5s;
-                  &:hover {
-                    transform: scale(1.1);
-                  }
-                }
+	.container {
+		.row {
+			.blog-card {
+				.blog-images {
+					overflow: hidden;
+					margin: 20px;
+					.image {
+						overflow: hidden;
+						border-radius: 5px;
+						img {
+							height: 200px;
+							width: 220px;
+							object-fit: cover;
+							transition: 0.5s;
+							&:hover {
+								transform: scale(1.1);
+							}
+						}
+					}
+				}
+				.context {
+					padding: 20px;
+					p {
+						text-align: left;
+						@include primary-font();
+						line-height: 30px;
+					}
+				}
+				.context-paragraph {
+					margin: 20px;
+					padding: 30px;
+					background-color: #e1ecf4;
+					border-radius: 5px;
+					p {
+						padding: 0 30px;
+						position: relative;
+						text-align: left;
+						@include primary-font();
+						line-height: 30px;
+						color: $secondary-color-dark;
+						&::before {
+							content: "“";
+							font-size: 80px;
+							color: $main-color-dark;
+							position: absolute;
+							top: 0;
+							left: 0;
+						}
+						&::after {
+							content: "“";
+							font-size: 80px;
+							color: $main-color-dark;
+							position: absolute;
+							top: 100%;
+							right: 0;
+						}
+					}
+					h4 {
+						@include primary-font();
+						line-height: 30px;
+						color: $secondary-color-dark;
+					}
+				}
+				.share-social {
+					.left-share {
+						span {
+							@include primary-font();
+							line-height: 30px;
+							color: $secondary-color-dark;
+						}
+					}
+          .right-social{
+            a{
+              text-decoration: none;
+              padding: 5px;
+              i{
+
               }
             }
           }
-     }
-    }
-  }
+				}
+			}
+      .submit-comment{
+        margin-top: 20px;
+        border-radius: 5px;
+        background-color: $main-color-light;
+        padding: 30px;
+        h2{
+          @include primary-font($font-size:20px,$font-weight:600);
+          color: $secondary-color-dark;
+          line-height: 30px;
+        }
+        .name-email {
+          padding-top: 20px;
+          .input-info {
+            @extend %primary-input-text;
+            padding-left: 20px;
+            transition: 0.5s all;
+            &:focus {
+              padding-left: 30px;
+            }
+          }
+        }
+        .your-message {
+          padding: 30px 0;
+          textarea {
+            width: 100%;
+            height: 150px;
+            resize: none;
+            @extend %primary-input-text;
+            border: 1px solid $main-color-light;
+            border-radius: 5px;
+            padding: 20px;
+            transition: 0.5s all;
+            &:focus {
+              padding-left: 30px;
+            }
+          }
+        }
+        .send-btn {
+          padding-bottom: 15px;
+          a {
+            @extend %primary-btn;
+            padding: 12px 40px;
+          }
+        }
+      }
+    
+		}
+	}
 }

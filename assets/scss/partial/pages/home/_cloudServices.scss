@@ -7,17 +7,18 @@
 				padding: 0 30px;
 				.context {
 					h2 {
-						color:  $main-color-dark;
-            @include primary-font($font-size:28px);
+						color: $main-color-dark;
+						@include primary-font($font-size:28px);
 					}
 					p {
 						padding: 10px 0;
 
 						color: $secondary-color-dark;
-            @include primary-font();
+						@include primary-font();
 					}
 					.category {
 						div {
+							padding-right: 0;
 							box-shadow: $main-box-shadow;
 							border-radius: 5px;
 							overflow: hidden;
@@ -89,7 +90,7 @@
 				}
 			}
 			.right-side {
-			@include primary-flex($j-content:center,$a-item:center);
+				@include primary-flex($j-content:center,$a-item:center);
 			}
 		}
 	}
