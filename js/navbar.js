@@ -1,3 +1,4 @@
+JSON.parse(localStorage.getItem("Users"));
 $(".menu-icon").click(function (e) {
     e.preventDefault();
     $(".menu-responsive").toggleClass("menu-active");
