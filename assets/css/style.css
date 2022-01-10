@@ -2961,6 +2961,10 @@ footer .container .row .footer-copyright {
   line-height: 30px;
 }
 
+#blog-cards .container .row .submit-comment h2 span {
+  color: #585ce9;
+}
+
 #blog-cards .container .row .submit-comment .name-email {
   padding-top: 20px;
 }

@@ -1,3 +1,8 @@
+if(localStorage.getItem("login") === "true"){
+    $(".name-email input").css("display","none");
+    $(".name-email").append(`<h2>by, <span>${localStorage.getItem("active-user")}</span></h2>`);
+ }
+
 let arr = readLocalStorage();
 if (!arr) arr = [];
 
@@ -8,15 +13,20 @@ if (arr.length > 0) {
 $(".send-btn a").click(function (e) {
     e.preventDefault(); 
 
-
     let obj = {
         name: $(".name-input").val(),
         email: $(".email-input").val(),
         comment: $("#your-comment").val(),
         date: new Date().toLocaleDateString("en-us", { year: 'numeric', month: 'short', day: 'numeric', time:'short' })
     }
-
+    
     if(!$(".name-input").val()) obj.name ="Unknown";
+    
+    if(localStorage.getItem("login") === "true")
+    {
+        obj.name = localStorage.getItem("active-user");
+    }
+
 
     addCommentToLocal(obj);
 

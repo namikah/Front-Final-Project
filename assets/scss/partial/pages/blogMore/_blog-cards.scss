@@ -89,6 +89,9 @@
           @include primary-font($font-size: 20px, $font-weight: 600);
           color: $secondary-color-dark;
           line-height: 30px;
+          span{
+          color: $main-bg-color-dark;
+          }
         }
         .name-email {
           padding-top: 20px;
