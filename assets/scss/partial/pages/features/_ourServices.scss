@@ -6,7 +6,7 @@
       .services-card {
         background-color: $main-color-light;
         box-shadow: $main-box-shadow;
-        height: 220px;
+        min-height: 220px;
         border-radius: 5px;
         margin-bottom: 22px;
         &:hover{

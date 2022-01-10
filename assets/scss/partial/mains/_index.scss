@@ -50,6 +50,11 @@
         width: 350px !important;
       }
     }
+    &::after{
+      display: none !important;
+      width: 0;
+      height: 0;
+    }
   }
   #welcome-cards {
     .row {
@@ -237,11 +242,22 @@
 }
   }
   #blog-cards{
-    .blog-card{
-      
+    .submit-comment{
+      text-align: center;
+      padding: 15px !important;
+      .name-email{
+        flex-direction: column;
+      }
     }
     .blog-search{
       margin-top: 30px;
+    }
+    .blog-comments{
+      .comments{
+        li{
+          flex-direction: column !important;
+        }
+      }
     }
   }
 }

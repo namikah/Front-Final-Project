@@ -29,7 +29,7 @@
         .question-accordion {
           .item {
             cursor: pointer;
-            height: 50px;
+            min-height: 50px;
             background-color: $main-color-light;
             box-shadow: $main-box-shadow;
             display: flex;

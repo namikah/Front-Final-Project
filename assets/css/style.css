@@ -19,8 +19,8 @@
   background-color: #3138ff;
 }
 
-#message-us .container .row .right-side-inputs .name-email .name-surname-input, #message-us .container .row .right-side-inputs .name-email .email-input, #blog-cards .container .row .blog-search .input-search, #blog-cards .container .row .submit-comment .name-email .input-info, #blog-cards .container .row .submit-comment .your-message textarea {
-  width: 350px;
+#message-us .container .row .right-side-inputs .name-email .name-surname-input, #message-us .container .row .right-side-inputs .name-email .email-input, #blog-cards .container .row .blog-search .input-search, #blog-cards .container .row .submit-comment .name-email .input-info, #blog-cards .container .row .submit-comment .your-comment textarea {
+  width: 100%;
   height: 50px;
   border: 0px;
   -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.089);
@@ -83,6 +83,11 @@
   }
   .bottom-header .right-side img {
     width: 350px !important;
+  }
+  .bottom-header::after {
+    display: none !important;
+    width: 0;
+    height: 0;
   }
   #welcome-cards .row {
     display: -webkit-box;
@@ -362,8 +367,24 @@
   #message-us .right-side-inputs .name-email .input-info {
     width: 100% !important;
   }
+  #blog-cards .submit-comment {
+    text-align: center;
+    padding: 15px !important;
+  }
+  #blog-cards .submit-comment .name-email {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
   #blog-cards .blog-search {
     margin-top: 30px;
+  }
+  #blog-cards .blog-comments .comments li {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
   }
 }
 
@@ -2058,7 +2079,7 @@ footer .container .row .footer-copyright {
   background-color: #fff;
   -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.089);
           box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.089);
-  height: 220px;
+  min-height: 220px;
   border-radius: 5px;
   margin-bottom: 22px;
 }
@@ -2198,7 +2219,7 @@ footer .container .row .footer-copyright {
 
 #questions .container .row .right-side .question-accordion .item {
   cursor: pointer;
-  height: 50px;
+  min-height: 50px;
   background-color: #fff;
   -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.089);
           box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.089);
@@ -2958,11 +2979,12 @@ footer .container .row .footer-copyright {
   padding-left: 30px;
 }
 
-#blog-cards .container .row .submit-comment .your-message {
+#blog-cards .container .row .submit-comment .your-comment {
+  border-radius: 5px;
   padding: 30px 0;
 }
 
-#blog-cards .container .row .submit-comment .your-message textarea {
+#blog-cards .container .row .submit-comment .your-comment textarea {
   width: 100%;
   height: 150px;
   resize: none;
@@ -2973,7 +2995,7 @@ footer .container .row .footer-copyright {
   transition: 0.5s all;
 }
 
-#blog-cards .container .row .submit-comment .your-message textarea:focus {
+#blog-cards .container .row .submit-comment .your-comment textarea:focus {
   padding-left: 30px;
 }
 
@@ -2983,5 +3005,67 @@ footer .container .row .footer-copyright {
 
 #blog-cards .container .row .submit-comment .send-btn a {
   padding: 12px 40px;
+}
+
+#blog-cards .container .row .blog-comments {
+  margin-top: 20px;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 30px;
+}
+
+#blog-cards .container .row .blog-comments h2 {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #3b566ea9;
+  line-height: 30px;
+}
+
+#blog-cards .container .row .blog-comments .comments {
+  padding: 0;
+  padding-top: 20px;
+}
+
+#blog-cards .container .row .blog-comments .comments li {
+  min-height: 100px;
+}
+
+#blog-cards .container .row .blog-comments .comments li .profile-image {
+  min-width: 70px;
+  min-height: 70px;
+}
+
+#blog-cards .container .row .blog-comments .comments li .profile-image img {
+  border-radius: 5px;
+}
+
+#blog-cards .container .row .blog-comments .comments li .context {
+  padding-top: 10px;
+}
+
+#blog-cards .container .row .blog-comments .comments li .context h4 {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #3b566e;
+  line-height: 30px;
+}
+
+#blog-cards .container .row .blog-comments .comments li .context span {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #3b566ea9;
+  line-height: 30px;
+}
+
+#blog-cards .container .row .blog-comments .comments li .context p {
+  padding-top: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #3b566ea9;
+  line-height: 30px;
 }
 /*# sourceMappingURL=style.css.map */
