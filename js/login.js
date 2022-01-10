@@ -1,3 +1,8 @@
+if(localStorage.getItem("login") === "true"){
+   $(".user-login-enter").empty();
+   $(".user-login-enter").append(`<p>You are already registered</p>`);
+}
+
 $(".login-button").click(function (e) {
     e.preventDefault();
 

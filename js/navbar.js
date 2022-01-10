@@ -1,4 +1,14 @@
-JSON.parse(localStorage.getItem("Users"));
+if(localStorage.getItem("login") === "true"){
+    $(".login-menu").empty();
+    $(".login-menu").append(`<li>
+    <a class="sign-out" href="./login.html">SIGN OUT</a>
+  </li>`);
+ }
+ $(".sign-out").click(function(e){
+    localStorage.setItem("login","false");
+    window.location.href = "./index.html";
+ })
+
 $(".menu-icon").click(function (e) {
     e.preventDefault();
     $(".menu-responsive").toggleClass("menu-active");

@@ -3079,6 +3079,13 @@ footer .container .row .footer-copyright {
   letter-spacing: 1px;
 }
 
+#user-login .user-login-enter p {
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #3b566e;
+}
+
 #user-register .user-register-enter {
   padding: 80px 0;
 }
