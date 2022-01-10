@@ -1,0 +1,12 @@
+#user-login {
+  .user-login-enter {
+    padding: 80px 0;
+    input {
+      width: 200px;
+    }
+    .login-button {
+      @include primary-font();
+      @extend %primary-btn;
+    }
+  }
+}
