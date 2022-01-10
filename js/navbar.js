@@ -8,6 +8,7 @@ if(localStorage.getItem("login") === "true"){
  }
  $(".sign-out").click(function(e){
     localStorage.setItem("login","false");
+    localStorage.removeItem("active-user");
     window.location.href = "";
  })
 

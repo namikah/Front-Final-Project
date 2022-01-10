@@ -24,7 +24,7 @@ $(".register-button").click(function (e) {
 
     writeLocalStorage(users);
 
-    window.location.href = "./index.html";
+    window.location.href = "./login.html";
 })
 
 $(".user-register-enter .log-in").click(function (e) {

@@ -64,11 +64,11 @@ function createNewComment(obj){
 }
 //read local storage and return array
 function readLocalStorage() {
-    return JSON.parse(localStorage.getItem(localStorage.getItem("comments")));
+    return JSON.parse(localStorage.getItem("comments"));
 }
 //write new array to local storage
 function writeLocalStorage(arr) {
-    localStorage.setItem(localStorage.getItem("comments"), JSON.stringify(arr));
+    localStorage.setItem("comments", JSON.stringify(arr));
 }
 //reset input value
 function resetInputValue(){
