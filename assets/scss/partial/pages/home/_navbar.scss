@@ -7,144 +7,146 @@
 	z-index: 9999999999;
 	background-color: transparent;
 	transition: .5s;
-	.menu-icon {
-		display: none;
-	}
-	.logo {
-		padding: 0;
-		margin: 0;
-	}
-	.menu {
-		> ul {
-			margin: 0;
-			padding: 0 20px;
-			list-style: none;
-			li {
-				padding: 20px;
-				cursor: pointer;
-				position: relative;
-				height: 100%;
-				z-index: 1;
-				&:hover {
-					& ul.sub-menu {
-						opacity: 1;
-						visibility: visible;
-						transform: translateY(0);
-					}
-				}
-				ul {
-					z-index: 0;
-					top: 100%;
-					left: 0;
-					margin: 0;
-					padding: 0;
-					opacity: 0;
-					width: 200px;
-					height: auto;
-					list-style: none;
-					overflow: hidden;
-					position: absolute;
-					visibility: hidden;
-					background: $main-color-light;
-					border-radius: 5px;
-					transition: 0.3s all;
-					transform: translateY(-40px);
-					box-shadow: $main-box-shadow;
-					li {
-						margin: 0;
-						padding: 8px 20px;
-						border-bottom: 1px solid $main-bg-color-light;
-						position: relative;
-						transition: 0.3s;
-						&::before {
-							content: '';
-							position: absolute;
-							left: 0;
-							width: 0;
-							top: 0;
-							bottom: 0;
-							background-color: $main-bg-color-dark;
-							transition: 0.3s;
-						}
-						&:hover {
-							background: $main-bg-color-light;
-							padding-left: 25px;
-							&::before {
-								width: 3px;
-							}
-						}
-						a {
-							font-size: 13px;
-							font-weight: 300;
-							color: $main-color-dark;
-							letter-spacing: 1px;
-							font-family: $main-font-family;
-						}
-					}
-				}
-				i {
-					margin-left: 5px;
-					font-size: 8px;
-					color: $main-color-dark;
-					display: inline-block;
-					height: 100%;
-					width: 100%;
-				}
-				a {
-					display: inline-block;
-					height: 100%;
-					width: 100%;
-					text-decoration: none;
-					font-family: $main-font-family;
-					color: $secondary-color-dark;
-					@include primary-font($font-size:14px,$font-weight:600);
-				}
-			}
+	.container{
+		.menu-icon {
+			display: none;
 		}
-	}
-	.login {
-		padding: 0;
-		> ul {
-			list-style: none;
-			margin-bottom: 0;
+		.logo {
 			padding: 0;
 			margin: 0;
-			li {
-				cursor: pointer;
-				a {
-					@extend %primary-btn;
-					&.sign-up {
-						color: $main-color-light;
-						background-color: $main-bg-color-dark;
-						&:hover {
-							color: $main-bg-color-dark;
-							background-color: $main-color-light;
+		}
+		.menu {
+			> ul {
+				margin: 0;
+				padding: 0 20px;
+				list-style: none;
+				li {
+					padding: 20px;
+					cursor: pointer;
+					position: relative;
+					height: 100%;
+					z-index: 1;
+					&:hover {
+						& ul.sub-menu {
+							opacity: 1;
+							visibility: visible;
+							transform: translateY(0);
 						}
 					}
-					&.sign-in {
-						color: $main-bg-color-dark;
-						background-color: $main-color-light;
-						&:hover {
+					ul {
+						z-index: 0;
+						top: 100%;
+						left: 0;
+						margin: 0;
+						padding: 0;
+						opacity: 0;
+						width: 200px;
+						height: auto;
+						list-style: none;
+						overflow: hidden;
+						position: absolute;
+						visibility: hidden;
+						background: $main-color-light;
+						border-radius: 5px;
+						transition: 0.3s all;
+						transform: translateY(-40px);
+						box-shadow: $main-box-shadow;
+						li {
+							margin: 0;
+							padding: 8px 20px;
+							border-bottom: 1px solid $main-bg-color-light;
+							position: relative;
+							transition: 0.3s;
+							&::before {
+								content: '';
+								position: absolute;
+								left: 0;
+								width: 0;
+								top: 0;
+								bottom: 0;
+								background-color: $main-bg-color-dark;
+								transition: 0.3s;
+							}
+							&:hover {
+								background: $main-bg-color-light;
+								padding-left: 25px;
+								&::before {
+									width: 3px;
+								}
+							}
+							a {
+								font-size: 13px;
+								font-weight: 300;
+								color: $main-color-dark;
+								letter-spacing: 1px;
+								font-family: $main-font-family;
+							}
+						}
+					}
+					i {
+						margin-left: 5px;
+						font-size: 8px;
+						color: $main-color-dark;
+						display: inline-block;
+						height: 100%;
+						width: 100%;
+					}
+					a {
+						display: inline-block;
+						height: 100%;
+						width: 100%;
+						text-decoration: none;
+						font-family: $main-font-family;
+						color: $secondary-color-dark;
+						@include primary-font($font-size:14px,$font-weight:600);
+					}
+				}
+			}
+		}
+		.login {
+			padding: 0;
+			> ul {
+				list-style: none;
+				margin-bottom: 0;
+				padding: 0;
+				margin: 0;
+				li {
+					cursor: pointer;
+					a {
+						@extend %primary-btn;
+						&.sign-up {
 							color: $main-color-light;
 							background-color: $main-bg-color-dark;
+							&:hover {
+								color: $main-bg-color-dark;
+								background-color: $main-color-light;
+							}
+						}
+						&.sign-in {
+							color: $main-bg-color-dark;
+							background-color: $main-color-light;
+							&:hover {
+								color: $main-color-light;
+								background-color: $main-bg-color-dark;
+							}
 						}
 					}
 				}
 			}
 		}
-	}
-	.menu-icon {
-		cursor: pointer;
-		padding: 0;
-		margin: 0;
-		span {
-			display: block;
-			line-height: 10px;
-			font-weight: 900;
-			color: $main-color-dark;
+		.menu-icon {
+			cursor: pointer;
+			padding: 0;
+			margin: 0;
+			span {
+				display: block;
+				line-height: 10px;
+				font-weight: 900;
+				color: $main-color-dark;
+			}
 		}
+		position: relative;
 	}
-	position: relative;
 }
 .menu-responsive {
 	visibility: hidden;
@@ -158,53 +160,55 @@
 	transform: translateY(-100%);
 	background: $main-color-light;
 	z-index: 999999999;
-	ul {
-		margin: 0;
-		padding: 0;
-		list-style: none;
-		li {
-			padding: 15px;
-			border-bottom: 1px solid $main-bg-color-light;
-			width: 100%;
-			cursor: pointer;
-			&:hover {
-				background: $main-bg-color-light;
-			}
-			a {
-				text-decoration: none;
-				font-family: $main-font-family;
-				color: $main-color-dark;
-				@include primary-font($font-size:14px,$font-weight:600,$l-spacing:2px);
-			}
-			i {
-				margin-left: 5px;
-				font-size: 8px;
-				color: $main-color-dark;
-				padding-right: 25px;
-			}
-		}
-		.sub-menu {
-			list-style: none;
+	.container{
+		ul {
 			margin: 0;
 			padding: 0;
-			display: none;
-			width: 100%;
-			overflow: hidden;
-			background: $main-color-light;
-			transition: 0.3s all;
+			list-style: none;
 			li {
-				margin: 0;
+				padding: 15px;
 				border-bottom: 1px solid $main-bg-color-light;
-				padding: 8px 20px;
-				transition: 0.3s;
+				width: 100%;
+				cursor: pointer;
 				&:hover {
 					background: $main-bg-color-light;
 				}
 				a {
 					text-decoration: none;
-					@include primary-font($font-size:13px,$font-weight:300);
-					color: $main-color-dark;
 					font-family: $main-font-family;
+					color: $main-color-dark;
+					@include primary-font($font-size:14px,$font-weight:600,$l-spacing:2px);
+				}
+				i {
+					margin-left: 5px;
+					font-size: 8px;
+					color: $main-color-dark;
+					padding-right: 25px;
+				}
+			}
+			.sub-menu {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				display: none;
+				width: 100%;
+				overflow: hidden;
+				background: $main-color-light;
+				transition: 0.3s all;
+				li {
+					margin: 0;
+					border-bottom: 1px solid $main-bg-color-light;
+					padding: 8px 20px;
+					transition: 0.3s;
+					&:hover {
+						background: $main-bg-color-light;
+					}
+					a {
+						text-decoration: none;
+						@include primary-font($font-size:13px,$font-weight:300);
+						color: $main-color-dark;
+						font-family: $main-font-family;
+					}
 				}
 			}
 		}

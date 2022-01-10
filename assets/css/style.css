@@ -1,4 +1,4 @@
-.navbar .login > ul li a, .bottom-header .container .row .left-side .context a, #pricing-plans .container .row .pricing-card .pricing-btn a, #parallax-text .row .parallax-context a, #blog-posts .container .row .blog-card .blog-btn a, #questions .container .row .left-side .context a, #message-us .container .row .right-side-inputs .send-btn a, #blog-cards .container .row .blog-card .blog-btn a, #blog-cards .container .row .blog-side-image .context .contact-us-btn a {
+.navbar .container .login > ul li a, .bottom-header .container .row .left-side .context a, #pricing-plans .container .row .pricing-card .pricing-btn a, #parallax-text .row .parallax-context a, #blog-posts .container .row .blog-card .blog-btn a, #questions .container .row .left-side .context a, #message-us .container .row .right-side-inputs .send-btn a, #blog-cards .container .row .blog-card .blog-btn a, #blog-cards .container .row .blog-side-image .context .contact-us-btn a {
   text-decoration: none;
   width: 110px;
   height: 32px;
@@ -14,7 +14,7 @@
   background-color: #585ce9;
 }
 
-.navbar .login > ul li a:hover, .bottom-header .container .row .left-side .context a:hover, #pricing-plans .container .row .pricing-card .pricing-btn a:hover, #parallax-text .row .parallax-context a:hover, #blog-posts .container .row .blog-card .blog-btn a:hover, #questions .container .row .left-side .context a:hover, #message-us .container .row .right-side-inputs .send-btn a:hover, #blog-cards .container .row .blog-card .blog-btn a:hover, #blog-cards .container .row .blog-side-image .context .contact-us-btn a:hover {
+.navbar .container .login > ul li a:hover, .bottom-header .container .row .left-side .context a:hover, #pricing-plans .container .row .pricing-card .pricing-btn a:hover, #parallax-text .row .parallax-context a:hover, #blog-posts .container .row .blog-card .blog-btn a:hover, #questions .container .row .left-side .context a:hover, #message-us .container .row .right-side-inputs .send-btn a:hover, #blog-cards .container .row .blog-card .blog-btn a:hover, #blog-cards .container .row .blog-side-image .context .contact-us-btn a:hover {
   background-color: #3138ff;
 }
 
@@ -376,25 +376,28 @@
   background-color: transparent;
   -webkit-transition: .5s;
   transition: .5s;
+}
+
+.navbar .container {
   position: relative;
 }
 
-.navbar .menu-icon {
+.navbar .container .menu-icon {
   display: none;
 }
 
-.navbar .logo {
+.navbar .container .logo {
   padding: 0;
   margin: 0;
 }
 
-.navbar .menu > ul {
+.navbar .container .menu > ul {
   margin: 0;
   padding: 0 20px;
   list-style: none;
 }
 
-.navbar .menu > ul li {
+.navbar .container .menu > ul li {
   padding: 20px;
   cursor: pointer;
   position: relative;
@@ -402,14 +405,14 @@
   z-index: 1;
 }
 
-.navbar .menu > ul li:hover ul.sub-menu {
+.navbar .container .menu > ul li:hover ul.sub-menu {
   opacity: 1;
   visibility: visible;
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
 
-.navbar .menu > ul li ul {
+.navbar .container .menu > ul li ul {
   z-index: 0;
   top: 100%;
   left: 0;
@@ -432,7 +435,7 @@
           box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.089);
 }
 
-.navbar .menu > ul li ul li {
+.navbar .container .menu > ul li ul li {
   margin: 0;
   padding: 8px 20px;
   border-bottom: 1px solid #f5f5f5;
@@ -441,7 +444,7 @@
   transition: 0.3s;
 }
 
-.navbar .menu > ul li ul li::before {
+.navbar .container .menu > ul li ul li::before {
   content: '';
   position: absolute;
   left: 0;
@@ -453,16 +456,16 @@
   transition: 0.3s;
 }
 
-.navbar .menu > ul li ul li:hover {
+.navbar .container .menu > ul li ul li:hover {
   background: #f5f5f5;
   padding-left: 25px;
 }
 
-.navbar .menu > ul li ul li:hover::before {
+.navbar .container .menu > ul li ul li:hover::before {
   width: 3px;
 }
 
-.navbar .menu > ul li ul li a {
+.navbar .container .menu > ul li ul li a {
   font-size: 13px;
   font-weight: 300;
   color: #3b566e;
@@ -470,7 +473,7 @@
   font-family: "Nunito", sans-serif;
 }
 
-.navbar .menu > ul li i {
+.navbar .container .menu > ul li i {
   margin-left: 5px;
   font-size: 8px;
   color: #3b566e;
@@ -479,7 +482,7 @@
   width: 100%;
 }
 
-.navbar .menu > ul li a {
+.navbar .container .menu > ul li a {
   display: inline-block;
   height: 100%;
   width: 100%;
@@ -491,48 +494,48 @@
   letter-spacing: 1px;
 }
 
-.navbar .login {
+.navbar .container .login {
   padding: 0;
 }
 
-.navbar .login > ul {
+.navbar .container .login > ul {
   list-style: none;
   margin-bottom: 0;
   padding: 0;
   margin: 0;
 }
 
-.navbar .login > ul li {
+.navbar .container .login > ul li {
   cursor: pointer;
 }
 
-.navbar .login > ul li a.sign-up {
+.navbar .container .login > ul li a.sign-up {
   color: #fff;
   background-color: #585ce9;
 }
 
-.navbar .login > ul li a.sign-up:hover {
+.navbar .container .login > ul li a.sign-up:hover {
   color: #585ce9;
   background-color: #fff;
 }
 
-.navbar .login > ul li a.sign-in {
+.navbar .container .login > ul li a.sign-in {
   color: #585ce9;
   background-color: #fff;
 }
 
-.navbar .login > ul li a.sign-in:hover {
+.navbar .container .login > ul li a.sign-in:hover {
   color: #fff;
   background-color: #585ce9;
 }
 
-.navbar .menu-icon {
+.navbar .container .menu-icon {
   cursor: pointer;
   padding: 0;
   margin: 0;
 }
 
-.navbar .menu-icon span {
+.navbar .container .menu-icon span {
   display: block;
   line-height: 10px;
   font-weight: 900;
@@ -555,24 +558,24 @@
   z-index: 999999999;
 }
 
-.menu-responsive ul {
+.menu-responsive .container ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.menu-responsive ul li {
+.menu-responsive .container ul li {
   padding: 15px;
   border-bottom: 1px solid #f5f5f5;
   width: 100%;
   cursor: pointer;
 }
 
-.menu-responsive ul li:hover {
+.menu-responsive .container ul li:hover {
   background: #f5f5f5;
 }
 
-.menu-responsive ul li a {
+.menu-responsive .container ul li a {
   text-decoration: none;
   font-family: "Nunito", sans-serif;
   color: #3b566e;
@@ -581,14 +584,14 @@
   letter-spacing: 2px;
 }
 
-.menu-responsive ul li i {
+.menu-responsive .container ul li i {
   margin-left: 5px;
   font-size: 8px;
   color: #3b566e;
   padding-right: 25px;
 }
 
-.menu-responsive ul .sub-menu {
+.menu-responsive .container ul .sub-menu {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -600,7 +603,7 @@
   transition: 0.3s all;
 }
 
-.menu-responsive ul .sub-menu li {
+.menu-responsive .container ul .sub-menu li {
   margin: 0;
   border-bottom: 1px solid #f5f5f5;
   padding: 8px 20px;
@@ -608,11 +611,11 @@
   transition: 0.3s;
 }
 
-.menu-responsive ul .sub-menu li:hover {
+.menu-responsive .container ul .sub-menu li:hover {
   background: #f5f5f5;
 }
 
-.menu-responsive ul .sub-menu li a {
+.menu-responsive .container ul .sub-menu li a {
   text-decoration: none;
   font-size: 13px;
   font-weight: 300;
@@ -2828,5 +2831,29 @@ footer .container .row .footer-copyright {
 
 #blog-more-direction .container .row .blog-more-context span {
   color: #f5f5f5;
+}
+
+#blog-cards .container .row .left-side .blog-card .blog-images {
+  overflow: hidden;
+  margin: 20px;
+}
+
+#blog-cards .container .row .left-side .blog-card .blog-images .image {
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+#blog-cards .container .row .left-side .blog-card .blog-images .image img {
+  height: 200px;
+  width: 220px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#blog-cards .container .row .left-side .blog-card .blog-images .image img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 /*# sourceMappingURL=style.css.map */
