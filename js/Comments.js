@@ -21,19 +21,18 @@ $(".send-btn a").click(function (e) {
     }
     
     if(!$(".name-input").val()) obj.name ="Unknown";
-    
+
     if(localStorage.getItem("login") === "true")
     {
         obj.name = localStorage.getItem("active-user");
     }
-
 
     addCommentToLocal(obj);
 
     RefreshCommentList();
 
     resetInputValue();
-})
+    })
 //add comment to local storage
 function addCommentToLocal(obj) {
     arr = readLocalStorage();
@@ -48,6 +47,7 @@ function RefreshCommentList() {
     arr.forEach(element => {
         createNewComment(element);
     });
+    $(".comment-count").html("Comments ("+ $(".comments").children().length + ")")
 }
 //create new comment element
 function createNewComment(obj){

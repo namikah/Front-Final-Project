@@ -1,7 +1,9 @@
 if(localStorage.getItem("login") === "true"){
     $(".login-menu").empty();
     $(".login-menu").append(`<li>
-    <a class="sign-out" href="./login.html">SIGN OUT</a>
+    <a class="sign-out" href="./login.html">sign out</a>
+    <span class="user" href="./login.html">${localStorage.getItem("active-user")}</span>
+    <img src="./assets/images/anonymous.png" alt="" class="img-fluid profile-image-top-right">
   </li>`);
  }
  $(".sign-out").click(function(e){

@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.navbar .container .login > ul li a, .bottom-header .container .row .left-side .context a, #pricing-plans .container .row .pricing-card .pricing-btn a, #parallax-text .row .parallax-context a, #blog-posts .container .row .blog-card .blog-btn a, #questions .container .row .left-side .context a, #message-us .container .row .right-side-inputs .send-btn a, #blog-cards .container .row .blog-card .blog-btn a, #blog-cards .container .row .blog-side-image .context .contact-us-btn a, #blog-cards .container .row .submit-comment .send-btn a, #user-login .user-login-enter .login-button, #user-register .user-register-enter .register-button {
+.navbar .container .login > ul li a.sign-up, .navbar .container .login > ul li a.sign-in, .bottom-header .container .row .left-side .context a, #pricing-plans .container .row .pricing-card .pricing-btn a, #parallax-text .row .parallax-context a, #blog-posts .container .row .blog-card .blog-btn a, #questions .container .row .left-side .context a, #message-us .container .row .right-side-inputs .send-btn a, #blog-cards .container .row .blog-card .blog-btn a, #blog-cards .container .row .blog-side-image .context .contact-us-btn a, #blog-cards .container .row .submit-comment .send-btn a, #user-login .user-login-enter .login-button, #user-register .user-register-enter .register-button {
   text-decoration: none;
   border: 1px solid #585ce9;
   border-radius: 5px;
@@ -13,7 +13,7 @@
   background-color: #585ce9;
 }
 
-.navbar .container .login > ul li a:hover, .bottom-header .container .row .left-side .context a:hover, #pricing-plans .container .row .pricing-card .pricing-btn a:hover, #parallax-text .row .parallax-context a:hover, #blog-posts .container .row .blog-card .blog-btn a:hover, #questions .container .row .left-side .context a:hover, #message-us .container .row .right-side-inputs .send-btn a:hover, #blog-cards .container .row .blog-card .blog-btn a:hover, #blog-cards .container .row .blog-side-image .context .contact-us-btn a:hover, #blog-cards .container .row .submit-comment .send-btn a:hover, #user-login .user-login-enter .login-button:hover, #user-register .user-register-enter .register-button:hover {
+.navbar .container .login > ul li a.sign-up:hover, .navbar .container .login > ul li a.sign-in:hover, .bottom-header .container .row .left-side .context a:hover, #pricing-plans .container .row .pricing-card .pricing-btn a:hover, #parallax-text .row .parallax-context a:hover, #blog-posts .container .row .blog-card .blog-btn a:hover, #questions .container .row .left-side .context a:hover, #message-us .container .row .right-side-inputs .send-btn a:hover, #blog-cards .container .row .blog-card .blog-btn a:hover, #blog-cards .container .row .blog-side-image .context .contact-us-btn a:hover, #blog-cards .container .row .submit-comment .send-btn a:hover, #user-login .user-login-enter .login-button:hover, #user-register .user-register-enter .register-button:hover {
   background-color: #3138ff;
 }
 
@@ -394,8 +394,8 @@
   height: 100px;
   z-index: 9999999999;
   background-color: transparent;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .navbar .container {
@@ -465,7 +465,7 @@
 }
 
 .navbar .container .menu > ul li ul li::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   width: 0;
@@ -529,6 +529,15 @@
   cursor: pointer;
 }
 
+.navbar .container .login > ul li a.sign-out {
+  text-decoration: none;
+  font-family: "Nunito", sans-serif;
+  color: #3b566e;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
 .navbar .container .login > ul li a.sign-up {
   color: #fff;
   background-color: #585ce9;
@@ -547,6 +556,23 @@
 .navbar .container .login > ul li a.sign-in:hover {
   color: #fff;
   background-color: #585ce9;
+}
+
+.navbar .container .login > ul li span {
+  padding: 0 15px;
+  font-family: "Nunito", sans-serif;
+  color: #585ce9;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.navbar .container .login > ul li .profile-image-top-right {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  padding: 0;
+  margin: 0;
 }
 
 .navbar .container .menu-icon {

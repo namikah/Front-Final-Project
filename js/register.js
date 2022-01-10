@@ -27,6 +27,11 @@ $(".register-button").click(function (e) {
     window.location.href = "./index.html";
 })
 
+$(".user-register-enter .log-in").click(function (e) {
+    e.preventDefault();
+    window.location.href = "./login.html";
+})
+
 function readLocalStorage() {
     return JSON.parse(localStorage.getItem("Users"));
 }
