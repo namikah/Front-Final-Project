@@ -153,6 +153,7 @@
             }
             .context {
               padding-top: 10px;
+              overflow: auto;
               h4 {
                 @include primary-font($font-weight: 600);
                 color: $main-color-dark;

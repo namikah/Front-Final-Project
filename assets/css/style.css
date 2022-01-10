@@ -3069,6 +3069,7 @@ footer .container .row .footer-copyright {
 
 #blog-cards .container .row .blog-comments .comments li .context {
   padding-top: 10px;
+  overflow: auto;
 }
 
 #blog-cards .container .row .blog-comments .comments li .context h4 {
