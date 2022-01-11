@@ -142,18 +142,18 @@
         .comments {
           padding: 0;
           padding-top: 20px;
-          li {
-            max-height: 100px;
+          border-top: 1px solid rgba(0, 0, 0, 0.075);
+            li {
+            padding:20px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.075);
             .profile-image {
-              max-width: 70px;
-              max-height: 70px;
+              min-width: 100px;
               img {
                 border-radius: 5px;
               }
             }
             .context {
               padding-top: 10px;
-              overflow: auto;
               h4 {
                 @include primary-font($font-weight: 600);
                 color: $main-color-dark;

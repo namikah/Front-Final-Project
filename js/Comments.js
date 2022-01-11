@@ -54,11 +54,11 @@ function RefreshCommentList() {
 }
 //create new comment element
 function createNewComment(obj) {
-    $(".comments").append(`<li class="d-flex justify-content-md-start align-items-start gap-3">
-    <div class="profile-image">
+    $(".comments").append(`<li class="row">
+    <div class="profile-image col-2">
       <img src="${obj.image}" alt="profile image" class="img-fluid comment-profile-pic"/>
     </div>
-    <div class="context">
+    <div class="context col-10">
       <h4>${obj.name}</h4>
       <span>${new Date().toLocaleDateString("en-us", { year: 'numeric', month: 'short', day: 'numeric' })}</span>
       <p>${obj.comment}</p>
