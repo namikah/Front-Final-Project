@@ -31,7 +31,7 @@
 				display: block;
 				color: white;
 				z-index: 999;
-				@include primary-font($font-size:40px);
+				@include primary-font($font-size:46px);
 				position: relative;
 				padding-bottom: 15px;
 				&::after {
