@@ -6,10 +6,6 @@ $(".our-team").click(function(e){
     e.preventDefault();
     window.scrollTo($('#our-team'), 2366);
 })
-$(".our-team").click(function(e){
-    e.preventDefault();
-    window.scrollTo($('#our-team'), 2366);
-})
 $(".pricing-plans").click(function(e){
     e.preventDefault();
     window.scrollTo($('#pricing-plans'), 3010);

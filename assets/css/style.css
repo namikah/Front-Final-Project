@@ -1045,6 +1045,7 @@
 }
 
 #design-development {
+  scroll-behavior: smooth;
   padding: 80px 0;
 }
 
@@ -1240,6 +1241,7 @@
 }
 
 #our-team {
+  scroll-behavior: smooth;
   padding: 80px 0;
 }
 
@@ -1369,6 +1371,7 @@
 #pricing-plans {
   background: #f7fafd;
   padding: 80px 0;
+  scroll-behavior: smooth;
 }
 
 #pricing-plans .container .row .pricing-plan-title {
