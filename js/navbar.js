@@ -4,9 +4,20 @@ if(localStorage.getItem("login") === "true"){
     <a class="sign-out">sign out</a>
     <span class="user">${JSON.parse(localStorage.getItem("active-user")).username}</span>
     <img src="./assets/images/anonymous.png" alt="profile-image" class="img-fluid profile-image-top-right">
-  </li>`);
+  </li>
+  <li class="nav-item nav-item-last" data-id="0">
+  <a
+    class="nav-link active"
+    aria-current="page"
+    href="./basket.html"
+  >
+    <i class="fas fa-shopping-cart"></i>
+  </a>
+  <ul class="my-cart-list"></ul>
+</li>`);
   $(".profile-image-top-right").attr("src",JSON.parse(localStorage.getItem("active-user")).image)
  }
+
  $(".sign-out").click(function(e){
     localStorage.setItem("login","false");
     localStorage.removeItem("active-user");
@@ -55,3 +66,93 @@ function navbarScrollEffect() {
         }
     });
 }
+let baskets;
+let username;
+try{username = JSON.parse(localStorage.getItem("active-user")).username;}catch{}
+try{baskets = JSON.parse(localStorage.getItem(username));}catch{baskets = []}
+if (!baskets) baskets = [];
+
+RefreshList();
+
+$(".pricing-btn").click(function (e) {
+    e.preventDefault();
+
+    try{username = JSON.parse(localStorage.getItem("active-user")).username;}catch{}
+    try{baskets = JSON.parse(localStorage.getItem(username));}catch{baskets = []}
+    if (!baskets) baskets = [];
+
+    let obj = {
+        plan: $(this).prev().prev().prev().prev().text(),
+        info: $(this).prev().text(),
+        price: $(this).prev().prev().text()
+    }
+
+    baskets.push(obj);
+    localStorage.setItem(username, JSON.stringify(baskets));
+
+    RefreshList();
+    
+})
+
+//refresh all comments
+function RefreshList() {
+    $(".my-cart-list").empty();
+    baskets.forEach(element => {
+        createNewItem(element);
+    });
+    $(".nav-item-last::after").html($(".my-cart-list").children().length)
+}
+
+function createNewItem(obj) {
+    $(".my-cart-list").append(` <li>
+    <h4>${obj.plan}</h4>
+    <h6>${obj.info}</h6>
+    <h2>${obj.price}</h2>
+    <span class="close-x"></span>
+  </li>`)
+}
+
+// let buyItems = document.querySelector("#buy-items");
+// let navbar = document.querySelector("#navbar-header");
+// let myShoppingCartList = document.querySelector(".my-cart-list");
+// let addcartButton = document.querySelectorAll(".add-cart-button");
+
+// let cards = readLocalStorage();
+// if (!cards) cards = [];
+// readAllItemCount();
+// addNewElement();
+
+// $(".pricing-btn").click(function (e) {
+//     e.preventDefault();
+
+//     let newCard = {
+//         plan: "",
+//         info: "",
+//         price: ""
+//     }
+//     addNewElement();
+
+// })
+
+// function readLocalStorage() {
+//     if (localStorage.getItem("login") === "false")
+//         return JSON.parse(sessionStorage.getItem("Basket"));
+//     else
+//         return JSON.parse(localStorage.getItem(localStorage.getItem("login")));
+// }
+// function writeLocalStorage() {
+//     if (localStorage.getItem("login") === "false")
+//         sessionStorage.setItem("Basket", JSON.stringify(cards));
+//     else
+//         localStorage.setItem(localStorage.getItem("login"), JSON.stringify(cards));
+// }
+
+// function addNewElement() {
+   
+// }
+
+// function readAllItemCount() {
+//     cards = readLocalStorage();
+//     if (cards !== null) $(".nav-item-last").attr("data-id", cards.length);
+//     else { $(".nav-item-last").attr("data-id", "0") }
+// }
