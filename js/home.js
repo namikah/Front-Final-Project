@@ -1,24 +1,23 @@
 scrollToCountNumber();
 
-scrollToElement(".features-sub-menu", '#cloud-services', 950);
-scrollToElement(".our-team", '#our-team', 2366);
-scrollToElement(".pricing-plans", '#pricing-plans', 3010);
-scrollToElement(".latests-blog", '#latests-blog', 4163);
+scrollToElement(".features-sub-menu", '#cloud-services');
+scrollToElement(".our-team", '#our-team');
+scrollToElement(".pricing-plans", '#pricing-plans');
+scrollToElement(".latests-blog", '#blog-posts');
 
 //for coun number when element scroltop
 function scrollToCountNumber() {
-    let scroll = 0;
+    let scroll = 0; //for count one time
     $(window).scroll(function () {
         let height = $(window).scrollTop();
-        if (height > 1600) {
+        if (height > $(".parallax-context").offset().top -$(window).height() + $(".parallax-context").height()) {
             if (scroll === 0) {
-
                 CalculateNumber(".project-complate", 10);
                 CalculateNumber(".happy-customer", 5);
                 CalculateNumber(".experienced-context", 79);
                 CalculateNumber(".ongoing-project", 21);
+                scroll = 1;
             }
-            scroll = 1;
         }
     })
 }
@@ -39,9 +38,10 @@ function CalculateNumber(className, milliSeconds) {
 }
 
 //for scroll to element
-function scrollToElement(clickElement, scrolToElement, milliSeconds) {
+function scrollToElement(clickElement, scrolToElement) {
     $(clickElement).click(function (e) {
         e.preventDefault();
-        window.scrollTo($(scrolToElement), milliSeconds);
+
+        $(window).scrollTop($(scrolToElement).offset().top - 50);
     })
 }
