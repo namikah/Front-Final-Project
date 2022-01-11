@@ -2,9 +2,10 @@ if(localStorage.getItem("login") === "true"){
     $(".login-menu").empty();
     $(".login-menu").append(`<li>
     <a class="sign-out">sign out</a>
-    <span class="user">${localStorage.getItem("active-user")}</span>
+    <span class="user">${JSON.parse(localStorage.getItem("active-user")).username}</span>
     <img src="./assets/images/anonymous.png" alt="profile-image" class="img-fluid profile-image-top-right">
   </li>`);
+  $(".profile-image-top-right").attr("src",JSON.parse(localStorage.getItem("active-user")).image)
  }
  $(".sign-out").click(function(e){
     localStorage.setItem("login","false");

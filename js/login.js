@@ -1,6 +1,6 @@
-if(localStorage.getItem("login") === "true"){
-   $(".user-login-enter").empty();
-   $(".user-login-enter").append(`<p>You are already registered</p>`);
+if (localStorage.getItem("login") === "true") {
+    $(".user-login-enter").empty();
+    $(".user-login-enter").append(`<p>You are already registered</p>`);
 }
 
 $(".login-button").click(function (e) {
@@ -8,7 +8,8 @@ $(".login-button").click(function (e) {
 
     let obj = {
         username: $(".register-username").val(),
-        password: $(".register-password").val()
+        password: $(".register-password").val(),
+        image: ""
     }
 
     users = readLocalStorage();
@@ -22,8 +23,14 @@ $(".login-button").click(function (e) {
         return;
     }
 
-    writeLocalStorage("active-user", obj.username);
-    writeLocalStorage("login","true");
+    users.forEach(element => {
+        if (element.username === obj.username && element.password === obj.password) {
+            obj.image = element.image;
+        }
+    });
+
+    writeLocalStorage("active-user", JSON.stringify(obj));
+    writeLocalStorage("login", "true");
 
     window.location.href = "./index.html";
 })
@@ -43,7 +50,7 @@ function writeLocalStorage(key, value) {
 function isUserExist(users, obj) {
     let counter = 0;
     users.forEach(element => {
-        if (element.username === obj.username) {
+        if (element.username === obj.username && element.password === obj.password) {
             counter++;
         }
     });

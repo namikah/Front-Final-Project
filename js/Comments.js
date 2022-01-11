@@ -1,7 +1,7 @@
-if(localStorage.getItem("login") === "true"){
-    $(".name-email input").css("display","none");
-    $(".name-email").append(`<h2>by, <span>${localStorage.getItem("active-user")}</span></h2>`);
- }
+if (localStorage.getItem("login") === "true") {
+    $(".name-email input").css("display", "none");
+    $(".name-email").append(`<h2>by, <span>${JSON.parse(localStorage.getItem("active-user")).username}</span></h2>`);
+}
 
 let arr = readLocalStorage();
 if (!arr) arr = [];
@@ -11,20 +11,23 @@ if (arr.length > 0) {
 }
 
 $(".send-btn a").click(function (e) {
-    e.preventDefault(); 
+    e.preventDefault();
+
+    if (!checkInputIsTrue()) return;
 
     let obj = {
         name: $(".name-input").val(),
         email: $(".email-input").val(),
         comment: $("#your-comment").val(),
-        date: new Date().toLocaleDateString("en-us", { year: 'numeric', month: 'short', day: 'numeric', time:'short' })
+        date: new Date().toLocaleDateString("en-us", { year: 'numeric', month: 'short', day: 'numeric', time: 'short' }),
+        image: "./assets/images/anonymous.png"
     }
-    
-    if(!$(".name-input").val()) obj.name ="Unknown";
 
-    if(localStorage.getItem("login") === "true")
-    {
-        obj.name = localStorage.getItem("active-user");
+    if (!$(".name-input").val()) obj.name = "Unknown";
+
+    if (localStorage.getItem("login") === "true") {
+        obj.name = JSON.parse(localStorage.getItem("active-user")).username;
+        obj.image = JSON.parse(localStorage.getItem("active-user")).image;
     }
 
     addCommentToLocal(obj);
@@ -32,7 +35,7 @@ $(".send-btn a").click(function (e) {
     RefreshCommentList();
 
     resetInputValue();
-    })
+})
 //add comment to local storage
 function addCommentToLocal(obj) {
     arr = readLocalStorage();
@@ -47,13 +50,13 @@ function RefreshCommentList() {
     arr.forEach(element => {
         createNewComment(element);
     });
-    $(".comment-count").html("Comments ("+ $(".comments").children().length + ")")
+    $(".comment-count").html("Comments (" + $(".comments").children().length + ")")
 }
 //create new comment element
-function createNewComment(obj){
+function createNewComment(obj) {
     $(".comments").append(`<li class="d-flex justify-content-md-start align-items-start gap-3">
     <div class="profile-image">
-      <img src="./assets/images/anonymous.png" alt="profile image" class="img-fluid"/>
+      <img src="${obj.image}" alt="profile image" class="img-fluid comment-profile-pic"/>
     </div>
     <div class="context">
       <h4>${obj.name}</h4>
@@ -71,8 +74,19 @@ function writeLocalStorage(arr) {
     localStorage.setItem("comments", JSON.stringify(arr));
 }
 //reset input value
-function resetInputValue(){
+function resetInputValue() {
     $(".name-input").val("");
     $(".email-input").val("");
     $("#your-comment").val("");
+}
+function checkInputIsTrue() {
+    if ($("#your-comment").val() === "") {
+        $("#your-comment").css("border-color", "rgb(255, 0, 0)");
+        return false;
+    }
+    else 
+    {
+        $("#your-comment").css("border-color", "rgb(255, 255, 255)");
+        return true;
+    }
 }

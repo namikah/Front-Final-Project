@@ -8,5 +8,29 @@
         @include primary-font();
         @extend %primary-btn;
     }
+    .upload-image {
+      text-align: center;
+      align-items: center;
+
+      .upload-icon {
+        font-size: 24px;
+        color: rgb(7, 136, 7);
+        cursor: pointer;
+        transition: .5s;
+        span {
+          font-size: 16px;
+        }
+        &:hover {
+          color: rgb(17, 182, 17);
+          span {
+            color: rgb(17, 182, 17);
+          }
+        }
+      }
+
+      .upload-btn {
+        display: none;
+      }
+    }
  }
 }
