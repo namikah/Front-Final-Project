@@ -4,8 +4,8 @@
   width: 100%;
   padding: 10px;
   height: 100px;
-  z-index: 9999999999;
-  background-color: transparent;
+  z-index: 999999999999999;
+  background-color: $main-bg-color-light;
   transition: 0.5s;
   .container {
     .menu-icon {
@@ -169,15 +169,15 @@
   }
 }
 .menu-responsive {
-  visibility: hidden;
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   padding-top: 100px;
-  transition: 0.3s all;
-  opacity: 0;
-  transform: translateY(-100%);
+  // transition: 0.3s all;
+  // opacity: 0;
+  // transform: translateY(-100%);
   background: $main-color-light;
   z-index: 999999999;
   .container {

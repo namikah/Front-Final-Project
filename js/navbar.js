@@ -13,14 +13,18 @@ if(localStorage.getItem("login") === "true"){
     window.location.href = "";
  })
 
+//for responsive menu open
 $(".menu-icon").click(function (e) {
     e.preventDefault();
-    $(".menu-responsive").toggleClass("menu-active");
+    $(".menu-responsive").slideToggle(500);
+
 })
 
+//for sub menu open for responsive menu
 $(".drop-menu").click(function (e) {
     e.preventDefault();
-    $(this).next(".sub-menu").toggle();
+    $("ul .sub-menu").not($(this).next()).slideUp(500);
+    $(this).next(".sub-menu").slideToggle(500);
 })
 
 navbarScrollEffect();
