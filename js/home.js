@@ -1,87 +1,47 @@
-$(".features-sub-menu").click(function(e){
-    e.preventDefault();
-    window.scrollTo($('#cloud-services'), 950);
-})
-$(".our-team").click(function(e){
-    e.preventDefault();
-    window.scrollTo($('#our-team'), 2366);
-})
-$(".pricing-plans").click(function(e){
-    e.preventDefault();
-    window.scrollTo($('#pricing-plans'), 3010);
-})
-$(".latests-blog").click(function(e){
-    e.preventDefault();
-    window.scrollTo($('#latests-blog'), 4163);
-})
+scrollToCountNumber();
 
-// let number=0;
+scrollToElement(".features-sub-menu", '#cloud-services', 950);
+scrollToElement(".our-team", '#our-team', 2366);
+scrollToElement(".pricing-plans", '#pricing-plans', 3010);
+scrollToElement(".latests-blog", '#latests-blog', 4163);
 
-//  function asdasd(){
-//         $(".project-complate").text(number);
-//         parallaxCount();
-//  }
+//for coun number when element scroltop
+function scrollToCountNumber() {
+    let scroll = 0;
+    $(window).scroll(function () {
+        let height = $(window).scrollTop();
+        if (height > 1600) {
+            if (scroll === 0) {
 
-// function parallaxCount(){
-//     number++;
-//     asdasd();
-// }
+                CalculateNumber(".project-complate", 10);
+                CalculateNumber(".happy-customer", 5);
+                CalculateNumber(".experienced-context", 79);
+                CalculateNumber(".ongoing-project", 21);
+            }
+            scroll = 1;
+        }
+    })
+}
 
-// $(".project-complate").each(function(e) {
-//     console.log($(".project-complate").text());
-//     var tmp = $(".project-complate").text();
-//     var i = 0;
-//     while(i != tmp) {
-//         $(".project-complate").text(i++);
-//     }
-// });
+//for calculate number when page load
+function CalculateNumber(className, milliSeconds) {
+    $(className).each(function () {
+        let that = $(this);
+        let temp = $(this).text();
+        let i = 0;
 
-    
-    $(".project-complate").each(function() {
-        var that = $(this),
-            tmp = that.html(),
-            i = 0,
-            interval;
-
-        that.html(0);
-        interval = setInterval(function() {
-            that.html(++i);
-            if (i === +tmp) clearInterval(interval);
-        }, 10);
+        that.text(0);
+        let interval = setInterval(function () {
+            that.text(++i);
+            if (i === +temp) clearInterval(interval);
+        }, milliSeconds);
     });
-    $(".happy-customer").each(function() {
-        var that = $(this),
-            tmp = that.html(),
-            i = 0,
-            interval;
+}
 
-        that.html(0);
-        interval = setInterval(function() {
-            that.html(++i);
-            if (i === +tmp) clearInterval(interval);
-        }, 5);
-    });
-    $(".experienced-context").each(function() {
-        var that = $(this),
-            tmp = that.html(),
-            i = 0,
-            interval;
-
-        that.html(0);
-        interval = setInterval(function() {
-            that.html(++i);
-            if (i === +tmp) clearInterval(interval);
-        }, 79);
-    });
-    $(".ongoing-project").each(function() {
-        var that = $(this),
-            tmp = that.html(),
-            i = 0,
-            interval;
-
-        that.html(0);
-        interval = setInterval(function() {
-            that.html(++i);
-            if (i === +tmp) clearInterval(interval);
-        }, 21);
-    });
+//for scroll to element
+function scrollToElement(clickElement, scrolToElement, milliSeconds) {
+    $(clickElement).click(function (e) {
+        e.preventDefault();
+        window.scrollTo($(scrolToElement), milliSeconds);
+    })
+}
