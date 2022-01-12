@@ -6,8 +6,8 @@ try { userPics = JSON.parse(localStorage.getItem("active-user")).image; } catch 
 if (localStorage.getItem("login") === "true") {
     $(".login-menu").empty();
     $(".login-menu").append(`
-    <li class="d-flex justify-content-end align-items-end">
-        <div class="d-flex flex-column justify-content-between align-items-end">
+    <li class="d-flex justify-content-end align-items-center">
+        <div class="d-flex flex-column justify-content-end align-items-end">
             <span style="display: block;" class="user">${JSON.parse(localStorage.getItem("active-user")).username}</span>
             <a style="padding: 0 15px;" class="sign-out">sign out</a>
         </div>
@@ -16,7 +16,7 @@ if (localStorage.getItem("login") === "true") {
             <input class="upload-btn" type="file" style="display: none;"/>
         </div>
     </li>
-    <li class="nav-item nav-item-last d-flex flex-column justify-content-between align-items-end" data-id="0">
+    <li class="nav-item nav-item-last d-flex justify-content-end align-items-center" data-id="0">
         <a class="nav-link active" aria-current="page" href="./basket.html">
             <i class="fas fa-shopping-cart basket-icon"></i>
         </a>
