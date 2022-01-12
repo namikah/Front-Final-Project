@@ -1,3 +1,5 @@
+navbarScrollEffect();
+
 let userPics = "./assets/images/anonymous.png";
 try { userPics = JSON.parse(localStorage.getItem("active-user")).image; } catch { };
 
@@ -42,34 +44,7 @@ $(".drop-menu").click(function (e) {
     $(this).next(".sub-menu").slideToggle(500);
 })
 
-navbarScrollEffect();
 
-function navbarScrollEffect() {
-    $(window).scroll(function (e) {
-        e.preventDefault();
-        if ($(this).scrollTop() < 80) {
-            $(".navbar").css("transition", "0.3s all");
-            $(".navbar").removeClass("active-scroll");
-            $(".navbar").css("transform", "translateY(0)");
-            $(".navbar").css("opacity", "1");
-            $(".navbar").css("box-shadow", "0 0px 0px 0 rgba(0, 0, 0, 0.00)");
-            $(".navbar").css("background-color", "transparent");
-        }
-        else if ($(this).scrollTop() > 80 && $(this).scrollTop() < 100) {
-            $(".navbar").css("transition", "0s");
-            $(".navbar").css("transform", "translateY(-100%)");
-            $(".navbar").css("opacity", "0");
-        }
-        else if ($(this).scrollTop() > 100) {
-            $(".navbar").css("transition", "1s all");
-            $(".navbar").addClass("active-scroll");
-            $(".navbar").css("transform", "translateY(0)");
-            $(".navbar").css("opacity", "1");
-            $(".navbar").css("box-shadow", "0 2px 28px 0 rgba(0, 0, 0, 0.2)");
-            $(".navbar").css("background-color", "#fff");
-        }
-    });
-}
 let baskets;
 let username;
 try { username = JSON.parse(localStorage.getItem("active-user")).username; } catch { }
@@ -106,7 +81,7 @@ function RefreshList() {
     });
     $(".nav-item-last::after").html($(".my-cart-list").children().length)
 }
-
+//create new item to basket
 function createNewItem(obj) {
     $(".my-cart-list").append(` <li>
     <h4>${obj.plan}</h4>
@@ -116,7 +91,7 @@ function createNewItem(obj) {
   </li>`)
 }
 
-
+//change profile pisctures with local storage
 $(".profile-image-top-right").click(function (e) {
     e.preventDefault();
     $(".upload-btn").click();
@@ -141,12 +116,8 @@ $(".profile-image-top-right").click(function (e) {
                         users[i] = newObj;
 
                         localStorage.setItem("Users", JSON.stringify(users));
-
-
                     }
-
                 }
-
                 let user = JSON.parse(localStorage.getItem("active-user"));
                 user.image = e.target.result;
                 localStorage.setItem("active-user", JSON.stringify(user));
@@ -157,3 +128,30 @@ $(".profile-image-top-right").click(function (e) {
         }
     })
 })
+
+function navbarScrollEffect() {
+    $(window).scroll(function (e) {
+        e.preventDefault();
+        if ($(this).scrollTop() < 80) {
+            $(".navbar").css("transition", "0.3s all");
+            $(".navbar").removeClass("active-scroll");
+            $(".navbar").css("transform", "translateY(0)");
+            $(".navbar").css("opacity", "1");
+            $(".navbar").css("box-shadow", "0 0px 0px 0 rgba(0, 0, 0, 0.00)");
+            $(".navbar").css("background-color", "transparent");
+        }
+        else if ($(this).scrollTop() > 80 && $(this).scrollTop() < 100) {
+            $(".navbar").css("transition", "0s");
+            $(".navbar").css("transform", "translateY(-100%)");
+            $(".navbar").css("opacity", "0");
+        }
+        else if ($(this).scrollTop() > 100) {
+            $(".navbar").css("transition", "1s all");
+            $(".navbar").addClass("active-scroll");
+            $(".navbar").css("transform", "translateY(0)");
+            $(".navbar").css("opacity", "1");
+            $(".navbar").css("box-shadow", "0 2px 28px 0 rgba(0, 0, 0, 0.2)");
+            $(".navbar").css("background-color", "#fff");
+        }
+    });
+}
