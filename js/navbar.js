@@ -17,7 +17,7 @@ if (localStorage.getItem("login") === "true") {
     aria-current="page"
     href="./basket.html"
   >
-    <i class="fas fa-shopping-cart"></i>
+    <i class="fas fa-shopping-cart basket-icon"></i>
   </a>
   <ul class="my-cart-list"></ul>
 </li>`);
@@ -66,6 +66,13 @@ $(".pricing-btn").click(function (e) {
         price: $(this).prev().prev().text()
     }
 
+    let counter = 0;
+    baskets.forEach(element => {
+        if (element.plan === obj.plan)
+            counter++;
+    });
+    if (counter > 0) return;
+
     baskets.push(obj);
     localStorage.setItem(username, JSON.stringify(baskets));
 
@@ -80,6 +87,7 @@ function RefreshList() {
         createNewItem(element);
     });
     $(".nav-item-last::after").html($(".my-cart-list").children().length)
+    $(".nav-item-last").attr("data-id", baskets.length)
 }
 //create new item to basket
 function createNewItem(obj) {

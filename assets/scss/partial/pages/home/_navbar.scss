@@ -188,6 +188,7 @@
                 width: 100%;
                 list-style: none;
                 position: relative;
+                transition:.5s;
                 .close-x {
                   font-size: 20px;
                   position: absolute;
@@ -225,7 +226,7 @@
                   color: rgb(255, 152, 152);
                   }
                   h6{
-                    color: rgba(255, 255, 255, 0.527);
+                    color: rgba(252, 252, 252, 0.849);
                  }
                 }
               }
@@ -234,6 +235,9 @@
               .my-cart-list {
                 display: block;
               }
+            }
+            .basket-icon{
+              font-size: 20px;
             }
           }
         }

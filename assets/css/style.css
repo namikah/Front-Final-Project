@@ -261,6 +261,8 @@
   width: 100%;
   list-style: none;
   position: relative;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .navbar .container .login > ul li.nav-item-last .my-cart-list li .close-x {
@@ -308,11 +310,15 @@
 }
 
 .navbar .container .login > ul li.nav-item-last .my-cart-list li:hover h6 {
-  color: rgba(255, 255, 255, 0.527);
+  color: rgba(252, 252, 252, 0.849);
 }
 
 .navbar .container .login > ul li.nav-item-last:hover .my-cart-list {
   display: block;
+}
+
+.navbar .container .login > ul li.nav-item-last .basket-icon {
+  font-size: 20px;
 }
 
 .navbar .container .menu-icon {
