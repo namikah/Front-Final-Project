@@ -4,3 +4,7 @@ $(".search-btn-active").click(function (e) {
    $(".blog-card h4").parent().parent().parent().css("display","flex");
    $(".blog-card h4:not(:contains("+ searchText +"))").parent().parent().parent().css("display","none");
 });
+
+$(".input-search").keypress(function (e) { 
+    if(e.key === "Enter") $(".search-btn-active").click();
+});
