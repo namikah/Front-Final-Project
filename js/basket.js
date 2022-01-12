@@ -4,7 +4,7 @@ let userOfName;
 try { userOfName = JSON.parse(localStorage.getItem("active-user")).username; } catch { }
 try { basketsList = JSON.parse(localStorage.getItem(userOfName)); } catch { baskets = [] }
 if (!basketsList) basketsList = [];
-$(".nav-item-last").remove();
+$(".navbar .nav-item-last").remove();
 RefreshBasketList(basketsList);
 
 //add new item to basket page
