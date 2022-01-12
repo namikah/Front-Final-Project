@@ -173,8 +173,8 @@
 .navbar .container .login > ul li a.sign-out {
   text-decoration: none;
   font-family: "Nunito", sans-serif;
-  color: #3b566e;
-  font-size: 14px;
+  color: #585ce9;
+  font-size: 12px;
   font-weight: 400;
   letter-spacing: 1px;
 }
@@ -254,6 +254,7 @@
 }
 
 .navbar .container .login > ul li.nav-item-last .my-cart-list li {
+  border-radius: 5px;
   background-color: #fffefe;
   border: 1px solid rgba(0, 0, 0, 0.096);
   padding: 10px;
@@ -2966,7 +2967,12 @@ footer .container .row .footer-copyright {
   margin: 80px auto;
 }
 
+#basket .basket-list {
+  padding: 0 10px;
+}
+
 #basket .basket-list .basket-item {
+  border-radius: 5px;
   border: 1px solid rgba(107, 104, 104, 0.205);
   cursor: auto;
 }
@@ -2976,29 +2982,16 @@ footer .container .row .footer-copyright {
           box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.459);
 }
 
-#basket .basket-list .basket-item .left-side .item-image {
-  cursor: pointer;
-  width: 70px;
-  height: auto;
-}
-
-#basket .basket-list .basket-item .left-side .item-image .img-fluid {
-  max-width: 100%;
-  padding: 5px;
-}
-
-#basket .basket-list .basket-item .left-side .item-content p {
+#basket .basket-list .basket-item .item-name p {
   cursor: text;
-  margin: 0;
-  padding: 2px;
+  color: #ff9898;
 }
 
-#basket .basket-list .basket-item .item-count button {
-  border: 1px solid #6b6868;
-  width: 25px;
+#basket .basket-list .basket-item .item-info p {
+  color: #3b566ea9;
 }
 
-#basket .basket-list .basket-item .item-count .counter {
+#basket .basket-list .basket-item .item-info .counter {
   width: 50px;
   border: 1px solid #6b6868;
   margin-left: -5px;
@@ -3006,23 +2999,14 @@ footer .container .row .footer-copyright {
   text-align: center;
 }
 
-#basket .basket-list .basket-item .item-price {
-  font-size: large;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 #basket .basket-list .basket-item .item-price p {
   cursor: text;
-  margin: 0;
-  padding: 0;
+  color: #ff9898;
+  font-weight: 600;
 }
 
 #basket .basket-list .basket-item .item-close .x-close {
-  font-size: 16px;
   cursor: pointer;
-  padding: 10px;
   color: red;
 }
 
