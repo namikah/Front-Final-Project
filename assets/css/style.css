@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.navbar .container .login > ul li a.sign-up, .navbar .container .login > ul li a.sign-in, .bottom-header .container .row .left-side .context a, #pricing-plans .container .row .pricing-card .pricing-btn a, #parallax-text .row .parallax-context a, #blog-posts .container .row .blog-card .blog-btn a, #questions .container .row .left-side .context a, #message-us .container .row .right-side-inputs .send-btn a, #blog-cards .container .row .blog-card .blog-btn a, #blog-cards .container .row .blog-side-image .context .contact-us-btn a, #blog-cards .container .row .submit-comment .send-btn a, #user-login .user-login-enter .login-button, #user-register .user-register-enter .register-button {
+.navbar .container .login > ul li a.sign-up, .navbar .container .login > ul li a.sign-in, .menu-responsive .container .login > ul li a.sign-up, .menu-responsive .container .login > ul li a.sign-in, .bottom-header .container .row .left-side .context a, #pricing-plans .container .row .pricing-card .pricing-btn a, #parallax-text .row .parallax-context a, #blog-posts .container .row .blog-card .blog-btn a, #questions .container .row .left-side .context a, #message-us .container .row .right-side-inputs .send-btn a, #blog-cards .container .row .blog-card .blog-btn a, #blog-cards .container .row .blog-side-image .context .contact-us-btn a, #blog-cards .container .row .submit-comment .send-btn a, #user-login .user-login-enter .login-button, #user-register .user-register-enter .register-button {
   text-decoration: none;
   border: 1px solid #585ce9;
   border-radius: 5px;
@@ -13,7 +13,7 @@
   background-color: #585ce9;
 }
 
-.navbar .container .login > ul li a.sign-up:hover, .navbar .container .login > ul li a.sign-in:hover, .bottom-header .container .row .left-side .context a:hover, #pricing-plans .container .row .pricing-card .pricing-btn a:hover, #parallax-text .row .parallax-context a:hover, #blog-posts .container .row .blog-card .blog-btn a:hover, #questions .container .row .left-side .context a:hover, #message-us .container .row .right-side-inputs .send-btn a:hover, #blog-cards .container .row .blog-card .blog-btn a:hover, #blog-cards .container .row .blog-side-image .context .contact-us-btn a:hover, #blog-cards .container .row .submit-comment .send-btn a:hover, #user-login .user-login-enter .login-button:hover, #user-register .user-register-enter .register-button:hover {
+.navbar .container .login > ul li a.sign-up:hover, .navbar .container .login > ul li a.sign-in:hover, .menu-responsive .container .login > ul li a.sign-up:hover, .menu-responsive .container .login > ul li a.sign-in:hover, .bottom-header .container .row .left-side .context a:hover, #pricing-plans .container .row .pricing-card .pricing-btn a:hover, #parallax-text .row .parallax-context a:hover, #blog-posts .container .row .blog-card .blog-btn a:hover, #questions .container .row .left-side .context a:hover, #message-us .container .row .right-side-inputs .send-btn a:hover, #blog-cards .container .row .blog-card .blog-btn a:hover, #blog-cards .container .row .blog-side-image .context .contact-us-btn a:hover, #blog-cards .container .row .submit-comment .send-btn a:hover, #user-login .user-login-enter .login-button:hover, #user-register .user-register-enter .register-button:hover {
   background-color: #3138ff;
 }
 
@@ -178,10 +178,11 @@
 
 .navbar .container .login > ul li a.sign-out {
   text-decoration: none;
+  padding: 0 15px;
   font-family: "Nunito", sans-serif;
   color: #585ce9;
-  font-size: 12px;
-  font-weight: 400;
+  font-size: 16px;
+  font-weight: 600;
   letter-spacing: 1px;
 }
 
@@ -235,8 +236,8 @@
           align-items: center;
   width: 20px;
   height: 20px;
-  right: -5px;
-  top: -5px;
+  right: 0px;
+  top: -8px;
   border-radius: 100%;
   background-color: red;
   color: white;
@@ -424,6 +425,124 @@
   letter-spacing: 1px;
   color: #3b566e;
   font-family: "Nunito", sans-serif;
+}
+
+.menu-responsive .container .login {
+  padding: 0;
+}
+
+.menu-responsive .container .login > ul {
+  background-color: #f5f5f5;
+  list-style: none;
+  margin-bottom: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-responsive .container .login > ul li {
+  width: calc(100% / 12 * 7);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.menu-responsive .container .login > ul li a {
+  text-transform: capitalize;
+}
+
+.menu-responsive .container .login > ul li a.sign-out {
+  text-decoration: none;
+  padding: 0 15px;
+  font-family: "Nunito", sans-serif;
+  color: #585ce9;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.menu-responsive .container .login > ul li a.sign-up {
+  color: #fff;
+  background-color: #585ce9;
+}
+
+.menu-responsive .container .login > ul li a.sign-up:hover {
+  color: #585ce9;
+  background-color: #fff;
+}
+
+.menu-responsive .container .login > ul li a.sign-in {
+  color: #585ce9;
+  background-color: #fff;
+}
+
+.menu-responsive .container .login > ul li a.sign-in:hover {
+  color: #fff;
+  background-color: #585ce9;
+}
+
+.menu-responsive .container .login > ul li span {
+  padding: 0 15px;
+  font-family: "Nunito", sans-serif;
+  color: #585ce9;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.menu-responsive .container .login > ul li .profile-image-top-right {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-responsive .container .login > ul li.nav-item-last {
+  width: calc(100% / 12 * 5);
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: left;
+}
+
+.menu-responsive .container .login > ul li.nav-item-last::after {
+  content: attr(data-id);
+  position: absolute;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: 20px;
+  height: 20px;
+  left: 58px;
+  top: 10px;
+  border-radius: 100%;
+  background-color: red;
+  color: white;
+  font-size: 14px;
+}
+
+.menu-responsive .container .login > ul li.nav-item-last .my-cart-list {
+  display: none;
+}
+
+.menu-responsive .container .login > ul li.nav-item-last .basket-icon {
+  font-size: 20px;
+  padding: 0;
 }
 
 .active-scroll {
@@ -2989,11 +3108,8 @@ footer .container .row .footer-copyright {
   border-radius: 5px;
   border: 1px solid rgba(107, 104, 104, 0.205);
   cursor: auto;
-}
-
-#basket .basket-list .basket-item:hover {
-  -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.089);
-          box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.089);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 #basket .basket-list .basket-item .item-name p {
@@ -3026,6 +3142,17 @@ footer .container .row .footer-copyright {
 #basket .basket-list .basket-item .item-close .x-close {
   cursor: pointer;
   color: red;
+}
+
+#basket .basket-list .basket-item:hover {
+  -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.089);
+          box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.089);
+  background-color: #585ce9;
+}
+
+#basket .basket-list .basket-item:hover p {
+  cursor: text;
+  color: #fff;
 }
 
 .scroll-up {
@@ -3089,6 +3216,7 @@ input::-webkit-inner-spin-button {
     display: inline !important;
   }
   .bottom-header .left-side {
+    width: calc(100%/12*12);
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -3097,10 +3225,8 @@ input::-webkit-inner-spin-button {
     text-align: center;
   }
   .bottom-header .right-side {
+    width: calc(100%/12*12);
     margin-top: 50px;
-  }
-  .bottom-header .right-side img {
-    width: 350px !important;
   }
   .bottom-header::after {
     display: none !important;

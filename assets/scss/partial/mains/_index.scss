@@ -38,15 +38,17 @@
 
   .bottom-header {
     .left-side {
+      width: calc(100%/12*12);
       align-items: center;
       .context {
         text-align: center;
       }
     }
     .right-side {
+      width: calc(100%/12*12);
       margin-top: 50px;
       img {
-        width: 350px !important;
+        // width: 350px !important;
       }
     }
     &::after {

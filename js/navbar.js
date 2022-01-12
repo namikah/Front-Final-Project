@@ -6,9 +6,9 @@ try { userPics = JSON.parse(localStorage.getItem("active-user")).image; } catch 
 if (localStorage.getItem("login") === "true") {
     $(".login-menu").empty();
     $(".login-menu").append(`<li>
-    <a class="sign-out">sign out</a>
     <span class="user">${JSON.parse(localStorage.getItem("active-user")).username}</span>
     <img src="${userPics}" alt="profile-image" class="img-fluid profile-image-top-right">
+    <a style="padding: 0 15px;" class="sign-out">sign out</a>
     <input class="upload-btn" type="file" style="display: none;"/>
     </li>
   <li class="nav-item nav-item-last" data-id="0">

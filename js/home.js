@@ -49,3 +49,20 @@ function scrollToElement(clickElement, scrolToElement) {
 $(".my-cart-list").click(function(e){
     window.location.href = "./basket.html";
 })
+
+//for redirect social pages
+$("[class*='fa-facebook']").click(function(e){
+    window.location.href = "https://www.facebook.com/heydarovnamiq/";
+})
+$("[class*='fa-twitter']").click(function(e){
+    window.location.href = "https://twitter.com/heydarov_namik";
+})
+$("[class*='fa-linkedin']").click(function(e){
+    window.location.href = "https://www.linkedin.com/in/namik-heydarov-887157221/";
+})
+$("[class*='fa-google']").click(function(e){
+    window.location.href = "https://myaccount.google.com/";
+})
+$("[class*='fa-github']").click(function(e){
+    window.location.href = "https://github.com/namikah";
+})
