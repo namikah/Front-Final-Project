@@ -2347,17 +2347,17 @@ footer .container .row .footer-copyright {
   content: "APR 09";
   position: absolute;
   color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
   background-color: #3b566ea9;
   opacity: .8;
-  font-size: 16px;
   padding: 5px 25px;
   border-radius: 5px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   bottom: 0;
-  text-align: center;
-  z-index: 999;
 }
 
 #blog-cards .container .row .blog-card .post-comments a {

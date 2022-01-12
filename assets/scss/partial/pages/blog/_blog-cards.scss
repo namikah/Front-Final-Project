@@ -23,16 +23,14 @@
 						content: "APR 09";
 						position: absolute;
 						color: $main-color-light;
+            @include primary-font($font-weight:600);
 						background-color: $secondary-color-dark;
             opacity: .8;
-						font-size: 16px;
             padding: 5px 25px;
             border-radius: 5px;
             left: 50%;
             transform: translateX(-50%);
             bottom: 0;
-            text-align: center;
-            z-index: 999;
 					}
 				}
 				.post-comments {
