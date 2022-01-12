@@ -45,3 +45,7 @@ function scrollToElement(clickElement, scrolToElement) {
         $(window).scrollTop($(scrolToElement).offset().top - 50);
     })
 }
+
+$(".my-cart-list").click(function(e){
+    window.location.href = "./basket.html";
+})

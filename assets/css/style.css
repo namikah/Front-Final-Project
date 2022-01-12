@@ -295,6 +295,22 @@
   color: #0d2274;
 }
 
+.navbar .container .login > ul li.nav-item-last .my-cart-list li:hover {
+  background-color: #585ce9;
+}
+
+.navbar .container .login > ul li.nav-item-last .my-cart-list li:hover h2 {
+  color: #ff9898;
+}
+
+.navbar .container .login > ul li.nav-item-last .my-cart-list li:hover h4 {
+  color: #ff9898;
+}
+
+.navbar .container .login > ul li.nav-item-last .my-cart-list li:hover h6 {
+  color: rgba(255, 255, 255, 0.527);
+}
+
 .navbar .container .login > ul li.nav-item-last:hover .my-cart-list {
   display: block;
 }

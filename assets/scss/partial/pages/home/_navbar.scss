@@ -216,6 +216,18 @@
                   font-size: 14px;
                   color: rgb(13, 34, 116);
                 }
+                &:hover{
+                 background-color: $main-bg-color-dark;
+                 h2{
+                  color: rgb(255, 152, 152);
+                 }
+                 h4{
+                  color: rgb(255, 152, 152);
+                  }
+                  h6{
+                    color: rgba(255, 255, 255, 0.527);
+                 }
+                }
               }
             }
             &:hover {
