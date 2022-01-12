@@ -1,10 +1,14 @@
-if(localStorage.getItem("login") === "true"){
+let userPics = "./assets/images/anonymous.png";
+try { userPics = JSON.parse(localStorage.getItem("active-user")).image; } catch { };
+
+if (localStorage.getItem("login") === "true") {
     $(".login-menu").empty();
     $(".login-menu").append(`<li>
     <a class="sign-out">sign out</a>
     <span class="user">${JSON.parse(localStorage.getItem("active-user")).username}</span>
-    <img src="./assets/images/anonymous.png" alt="profile-image" class="img-fluid profile-image-top-right">
-  </li>
+    <img src="${userPics}" alt="profile-image" class="img-fluid profile-image-top-right">
+    <input class="upload-btn" type="file" style="display: none;"/>
+    </li>
   <li class="nav-item nav-item-last" data-id="0">
   <a
     class="nav-link active"
@@ -15,14 +19,14 @@ if(localStorage.getItem("login") === "true"){
   </a>
   <ul class="my-cart-list"></ul>
 </li>`);
-  $(".profile-image-top-right").attr("src",JSON.parse(localStorage.getItem("active-user")).image)
- }
+    $(".profile-image-top-right").attr("src", JSON.parse(localStorage.getItem("active-user")).image)
+}
 
- $(".sign-out").click(function(e){
-    localStorage.setItem("login","false");
+$(".sign-out").click(function (e) {
+    localStorage.setItem("login", "false");
     localStorage.removeItem("active-user");
     window.location.href = "";
- })
+})
 
 //for responsive menu open
 $(".menu-icon").click(function (e) {
@@ -68,8 +72,8 @@ function navbarScrollEffect() {
 }
 let baskets;
 let username;
-try{username = JSON.parse(localStorage.getItem("active-user")).username;}catch{}
-try{baskets = JSON.parse(localStorage.getItem(username));}catch{baskets = []}
+try { username = JSON.parse(localStorage.getItem("active-user")).username; } catch { }
+try { baskets = JSON.parse(localStorage.getItem(username)); } catch { baskets = [] }
 if (!baskets) baskets = [];
 
 RefreshList();
@@ -77,8 +81,8 @@ RefreshList();
 $(".pricing-btn").click(function (e) {
     e.preventDefault();
 
-    try{username = JSON.parse(localStorage.getItem("active-user")).username;}catch{}
-    try{baskets = JSON.parse(localStorage.getItem(username));}catch{baskets = []}
+    try { username = JSON.parse(localStorage.getItem("active-user")).username; } catch { }
+    try { baskets = JSON.parse(localStorage.getItem(username)); } catch { baskets = [] }
     if (!baskets) baskets = [];
 
     let obj = {
@@ -91,7 +95,7 @@ $(".pricing-btn").click(function (e) {
     localStorage.setItem(username, JSON.stringify(baskets));
 
     RefreshList();
-    
+
 })
 
 //refresh all comments
@@ -112,47 +116,44 @@ function createNewItem(obj) {
   </li>`)
 }
 
-// let buyItems = document.querySelector("#buy-items");
-// let navbar = document.querySelector("#navbar-header");
-// let myShoppingCartList = document.querySelector(".my-cart-list");
-// let addcartButton = document.querySelectorAll(".add-cart-button");
 
-// let cards = readLocalStorage();
-// if (!cards) cards = [];
-// readAllItemCount();
-// addNewElement();
+$(".profile-image-top-right").click(function (e) {
+    e.preventDefault();
+    $(".upload-btn").click();
+    $(".upload-btn").change(function (e) {
+        const { files } = e.target;
 
-// $(".pricing-btn").click(function (e) {
-//     e.preventDefault();
+        for (const file of files) {
+            let fileReader = new FileReader();
+            fileReader.onloadend = function (e) {
 
-//     let newCard = {
-//         plan: "",
-//         info: "",
-//         price: ""
-//     }
-//     addNewElement();
+                let users;
+                let username;
+                try { username = JSON.parse(localStorage.getItem("active-user")).username; } catch { }
+                try { users = JSON.parse(localStorage.getItem("Users")); } catch { users = [] }
+                if (!users) users = [];
 
-// })
+                let temp = users;
+                for (let i = 0; i < users.length; i++) {
+                    if (users[i].username === username) {
+                        let newObj = users[i];
+                        newObj.image = e.target.result;
+                        users[i] = newObj;
 
-// function readLocalStorage() {
-//     if (localStorage.getItem("login") === "false")
-//         return JSON.parse(sessionStorage.getItem("Basket"));
-//     else
-//         return JSON.parse(localStorage.getItem(localStorage.getItem("login")));
-// }
-// function writeLocalStorage() {
-//     if (localStorage.getItem("login") === "false")
-//         sessionStorage.setItem("Basket", JSON.stringify(cards));
-//     else
-//         localStorage.setItem(localStorage.getItem("login"), JSON.stringify(cards));
-// }
+                        localStorage.setItem("Users", JSON.stringify(users));
 
-// function addNewElement() {
-   
-// }
 
-// function readAllItemCount() {
-//     cards = readLocalStorage();
-//     if (cards !== null) $(".nav-item-last").attr("data-id", cards.length);
-//     else { $(".nav-item-last").attr("data-id", "0") }
-// }
+                    }
+
+                }
+
+                let user = JSON.parse(localStorage.getItem("active-user"));
+                user.image = e.target.result;
+                localStorage.setItem("active-user", JSON.stringify(user));
+
+                $(".profile-image-top-right").attr("src", e.target.result);
+            };
+            fileReader.readAsDataURL(file);
+        }
+    })
+})
