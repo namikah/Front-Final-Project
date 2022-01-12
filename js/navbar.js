@@ -51,7 +51,7 @@ try { username = JSON.parse(localStorage.getItem("active-user")).username; } cat
 try { baskets = JSON.parse(localStorage.getItem(username)); } catch { baskets = [] }
 if (!baskets) baskets = [];
 
-RefreshList();
+RefreshList(baskets);
 
 $(".pricing-btn").click(function (e) {
     e.preventDefault();
@@ -76,66 +76,86 @@ $(".pricing-btn").click(function (e) {
     baskets.push(obj);
     localStorage.setItem(username, JSON.stringify(baskets));
 
-    RefreshList();
-
+    RefreshList(baskets);
 })
 
-//refresh all comments
-function RefreshList() {
-    $(".my-cart-list").empty();
-    baskets.forEach(element => {
-        createNewItem(element);
-    });
-    $(".nav-item-last::after").html($(".my-cart-list").children().length)
-    $(".nav-item-last").attr("data-id", baskets.length)
-}
 //create new item to basket
 function createNewItem(obj) {
     $(".my-cart-list").append(` <li>
     <h4>${obj.plan}</h4>
     <h6>${obj.info}</h6>
     <h2>${obj.price}</h2>
-    <span class="close-x"></span>
+    <i class="far fa-trash-alt x-close" data-id="${obj.plan}"></i>
   </li>`)
 }
+
+//refresh all comments
+function RefreshList(baskets) {
+    $(".my-cart-list").empty();
+    baskets.forEach(element => {
+        createNewItem(element);
+    });
+    $(".nav-item-last").attr("data-id", baskets.length)
+
+    //remove element from basket list top
+    $(".x-close").click(function (e) {
+        e.preventDefault();
+        try { userOfName = JSON.parse(localStorage.getItem("active-user")).username; } catch { }
+        try { basketsList = JSON.parse(localStorage.getItem(userOfName)); } catch { baskets = [] }
+        if (!basketsList) basketsList = [];
+
+        for (let i = 0; i < basketsList.length; i++) {
+            if (basketsList[i].plan === this.getAttribute("data-id")) {
+                basketsList.splice(i, 1);
+                localStorage.setItem(username, JSON.stringify(basketsList));
+            }
+        }
+        RefreshList(basketsList);
+    })
+}
+
+$(".my-cart-list >li").click(function (e) {
+    window.location.href = "./basket.html";
+})
 
 //change profile pisctures with local storage
 $(".profile-image-top-right").click(function (e) {
     $(".upload-btn").click();
-   
+
 })
- $(".upload-btn").change(function (e) {
-        const { files } = e.target;
 
-        for (const file of files) {
-            let fileReader = new FileReader();
-            fileReader.onloadend = function (e) {
+$(".upload-btn").change(function (e) {
+    const { files } = e.target;
 
-                let users;
-                let username;
-                try { username = JSON.parse(localStorage.getItem("active-user")).username; } catch { }
-                try { users = JSON.parse(localStorage.getItem("Users")); } catch { users = [] }
-                if (!users) users = [];
+    for (const file of files) {
+        let fileReader = new FileReader();
+        fileReader.onloadend = function (e) {
 
-                let temp = users;
-                for (let i = 0; i < users.length; i++) {
-                    if (users[i].username === username) {
-                        let newObj = users[i];
-                        newObj.image = e.target.result;
-                        users[i] = newObj;
+            let users;
+            let username;
+            try { username = JSON.parse(localStorage.getItem("active-user")).username; } catch { }
+            try { users = JSON.parse(localStorage.getItem("Users")); } catch { users = [] }
+            if (!users) users = [];
 
-                        localStorage.setItem("Users", JSON.stringify(users));
-                    }
+            let temp = users;
+            for (let i = 0; i < users.length; i++) {
+                if (users[i].username === username) {
+                    let newObj = users[i];
+                    newObj.image = e.target.result;
+                    users[i] = newObj;
+
+                    localStorage.setItem("Users", JSON.stringify(users));
                 }
-                let user = JSON.parse(localStorage.getItem("active-user"));
-                user.image = e.target.result;
-                localStorage.setItem("active-user", JSON.stringify(user));
+            }
+            let user = JSON.parse(localStorage.getItem("active-user"));
+            user.image = e.target.result;
+            localStorage.setItem("active-user", JSON.stringify(user));
 
-                $(".profile-image-top-right").attr("src", e.target.result);
-            };
-            fileReader.readAsDataURL(file);
-        }
-    })
+            $(".profile-image-top-right").attr("src", e.target.result);
+        };
+        fileReader.readAsDataURL(file);
+    }
+})
 
 function navbarScrollEffect() {
     $(window).scroll(function (e) {

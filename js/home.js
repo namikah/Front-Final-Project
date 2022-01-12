@@ -46,10 +46,6 @@ function scrollToElement(clickElement, scrolToElement) {
     })
 }
 
-$(".my-cart-list").click(function (e) {
-    window.location.href = "./basket.html";
-})
-
 //for redirect social pages
 $("[class*='fa-facebook']").click(function (e) {
     e.preventDefault();

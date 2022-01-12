@@ -179,30 +179,27 @@
               right: 0;
               top: 100%;
               display: none;
-              min-width: 300px;
+              width: 300px;
               height: auto;
-              max-height: 550px;
+              max-height: 100vh;
               overflow-y: auto;
               position: absolute;
               li {
                 border-radius: 5px;
-
-                background-color: rgb(255, 254, 254);
-                border: 1px solid rgba(0, 0, 0, 0.096);
+                background-color: $main-color-light;
+                border: 1px solid $main-bg-color-light;
                 padding: 10px;
-                padding-right: 20px;
                 width: 100%;
                 list-style: none;
                 position: relative;
                 transition: 0.5s;
-                .close-x {
-                  font-size: 20px;
+                .x-close {
+                  font-size: 16px;
                   position: absolute;
+				  padding:10px;
                   right: 0;
                   top: 0;
                   color: red;
-                  font-weight: 900;
-                  padding-right: 10px;
                   cursor: pointer;
                 }
                 h2 {
@@ -219,7 +216,7 @@
                 }
                 h6 {
                   @include primary-font($font-size: 14px);
-                  padding-left: 20px;
+                  padding: 5px 20px;
                   cursor: pointer;
                   color: $main-color-dark;
                 }
@@ -234,6 +231,9 @@
                   h6 {
                     color: $main-bg-color-light;
                   }
+				  .x-close{
+                    color: $main-bg-color-light;
+				  }
                 }
               }
             }

@@ -5,15 +5,15 @@ try { userOfName = JSON.parse(localStorage.getItem("active-user")).username; } c
 try { basketsList = JSON.parse(localStorage.getItem(userOfName)); } catch { baskets = [] }
 if (!basketsList) basketsList = [];
 $(".navbar .nav-item-last").remove();
-RefreshBasketList(basketsList);
+refreshBasketList(basketsList);
 
 //add new item to basket page
-function RefreshBasketList(basketsList) {
-    $(".basket-list").empty();
-    let total = 0;
-    for (const item of basketsList) {
-        total += Number(item.price.substring(20, 26));
-        $(".basket-list").append(`
+function refreshBasketList(basketsList) {
+  $(".basket-list").empty();
+  let total = 0;
+  for (const item of basketsList) {
+    total += Number(item.price.substring(20, 26));
+    $(".basket-list").append(`
     <li class="basket-item row align-items-center p-3">
     <div class="item-name col-md-2 text-center">
         <p>${item.plan}</p>
@@ -29,17 +29,17 @@ function RefreshBasketList(basketsList) {
     </div>
   </li>
       `)
-    }
-    //no selected item in basket page
-    if (total === 0) {
-        $(".basket-list").append(` <li class="basket-item row align-items-center p-3">
+  }
+  //no selected item in basket page
+  if (total === 0) {
+    $(".basket-list").append(` <li class="basket-item row align-items-center p-3">
         <div class="item-name col-12 text-center">
             <p>no selected item yet</p>
         </div>
       </li>`);
-    }
-    //add total basket page list
-    $(".basket-list").append(`
+  }
+  //add total basket page list
+  $(".basket-list").append(`
     <li class="basket-item row align-items-center p-3">
     <div class="item-name col-md-6 text-center">
     <p>TOTAL:</p>
@@ -49,18 +49,18 @@ function RefreshBasketList(basketsList) {
     </div>
     </li>
     `)
-    //remove item from basket list
-    $(".x-close").click(function (e) {
-        try { userOfName = JSON.parse(localStorage.getItem("active-user")).username; } catch { }
-        try { basketsList = JSON.parse(localStorage.getItem(userOfName)); } catch { baskets = [] }
-        if (!basketsList) basketsList = [];
+  //remove item from basket list
+  $(".x-close").click(function (e) {
+    try { userOfName = JSON.parse(localStorage.getItem("active-user")).username; } catch { }
+    try { basketsList = JSON.parse(localStorage.getItem(userOfName)); } catch { baskets = [] }
+    if (!basketsList) basketsList = [];
 
-        for (let i = 0; i < basketsList.length; i++) {
-            if (basketsList[i].plan === this.getAttribute("data-id")) {
-                basketsList.splice(i, 1);
-                localStorage.setItem(username, JSON.stringify(basketsList));
-                RefreshBasketList(basketsList);
-            }
-        }
-    })
+    for (let i = 0; i < basketsList.length; i++) {
+      if (basketsList[i].plan === this.getAttribute("data-id")) {
+        basketsList.splice(i, 1);
+        localStorage.setItem(username, JSON.stringify(basketsList));
+      }
+    }
+    refreshBasketList(basketsList);
+  })
 }
