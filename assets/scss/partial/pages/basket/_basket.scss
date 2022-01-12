@@ -1,60 +1,63 @@
 #basket {
-	margin: 80px auto;
-	.basket-list {
-		padding: 0 10px;
-		.basket-item {
-			border-radius: 5px;
-			border: 1px solid rgba(107, 104, 104, 0.205);
-			cursor: auto;
-			&:hover {
-				box-shadow: $main-box-shadow;
-			}
-			.item-name {
-				p {
-					@include primary-font($font-weight:600);
-					cursor: text;
-					color: $main-bg-color-dark;
-				}
-			}
-			.item-info {
-				p {
-					@include primary-font($font-size:14px, $font-weight:400);
-					cursor: text;
-					color: $main-bg-color-dark;
-				}
-			}
-			.item-price {
-				p {
-					@include primary-font($font-weight:600);
-					cursor: text;
-					color: $main-bg-color-dark;
-				}
-			}
-			.item-close {
-				.x-close {
-					cursor: pointer;
-					color: red;
-				}
-			}
-		}
-	}
+  margin: 80px auto;
+  .basket-list {
+    padding: 0 10px;
+    .basket-item {
+      border-radius: 5px;
+      border: 1px solid rgba(107, 104, 104, 0.205);
+      cursor: auto;
+      &:hover {
+        box-shadow: $main-box-shadow;
+      }
+      .item-name {
+        p {
+          @include primary-font($font-weight: 600);
+          padding-left: 20px;
+          cursor: pointer;
+          color: $main-bg-color-dark;
+        }
+      }
+      .item-info {
+        p {
+          @include primary-font($font-size: 14px);
+          padding-left: 20px;
+          cursor: pointer;
+          color: $main-bg-color-dark;
+        }
+      }
+      .item-price {
+        p {
+          @include primary-font($font-weight: 600);
+          padding-left: 20px;
+          cursor: pointer;
+          color: $main-bg-color-dark;
+        }
+      }
+      .item-close {
+        .x-close {
+          cursor: pointer;
+          color: red;
+        }
+      }
+    }
+  }
 }
 .scroll-up {
-	scroll-behavior: smooth;
-	display: none;
-	position: fixed;
-	bottom: 10px;
-	right: 10px;
-	font-size: 50px;
-	cursor: pointer;
-	transition: 0.5s;
-	&:hover {
-		color: rgba(0, 0, 255, 0.541);
-	}
+  scroll-behavior: smooth;
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  font-size: 50px;
+  cursor: pointer;
+  transition: 0.5s;
+  &:hover {
+    color: rgba(0, 0, 255, 0.541);
+  }
 }
 //number type input remove arrows inrease-decrease
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-	-webkit-appearance: none;
-	margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
 }
