@@ -45,7 +45,7 @@ function RefreshBasketList(basketsList) {
     <p>TOTAL:</p>
     </div>
     <div class="item-name col-md-6 text-center">
-    <p>${total.toFixed(2) + " USD"}</p>
+    <p>${total.toFixed(2) + " USD / Month"}</p>
     </div>
     </li>
     `)

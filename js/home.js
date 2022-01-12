@@ -10,7 +10,7 @@ function scrollToCountNumber() {
     let scroll = 0; //for count one time
     $(window).scroll(function () {
         let height = $(window).scrollTop();
-        if (height > $(".parallax-context").offset().top -$(window).height() + $(".parallax-context").height()) {
+        if (height > $(".parallax-context").offset().top - $(window).height() + $(".parallax-context").height()) {
             if (scroll === 0) {
                 CalculateNumber(".project-complate", 10);
                 CalculateNumber(".happy-customer", 5);
@@ -46,23 +46,28 @@ function scrollToElement(clickElement, scrolToElement) {
     })
 }
 
-$(".my-cart-list").click(function(e){
+$(".my-cart-list").click(function (e) {
     window.location.href = "./basket.html";
 })
 
 //for redirect social pages
-$("[class*='fa-facebook']").click(function(e){
-    window.location.href = "https://www.facebook.com/heydarovnamiq/";
+$("[class*='fa-facebook']").click(function (e) {
+    e.preventDefault();
+    window.open('https://www.facebook.com/heydarovnamiq/', '_blank');
 })
-$("[class*='fa-twitter']").click(function(e){
-    window.location.href = "https://twitter.com/heydarov_namik";
+$("[class*='fa-twitter']").click(function (e) {
+    e.preventDefault();
+    window.open("https://twitter.com/heydarov_namik", '_blank');
 })
-$("[class*='fa-linkedin']").click(function(e){
-    window.location.href = "https://www.linkedin.com/in/namik-heydarov-887157221/";
+$("[class*='fa-linkedin']").click(function (e) {
+    e.preventDefault();
+    window.open("https://www.linkedin.com/in/namik-heydarov-887157221/", '_blank');
 })
-$("[class*='fa-google']").click(function(e){
-    window.location.href = "https://myaccount.google.com/";
+$("[class*='fa-google']").click(function (e) {
+    e.preventDefault();
+    window.open("https://myaccount.google.com/", '_blank');
 })
-$("[class*='fa-github']").click(function(e){
-    window.location.href = "https://github.com/namikah";
+$("[class*='fa-github']").click(function (e) {
+    e.preventDefault();
+    window.open("https://github.com/namikah", '_blank');
 })

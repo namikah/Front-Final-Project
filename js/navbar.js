@@ -101,9 +101,10 @@ function createNewItem(obj) {
 
 //change profile pisctures with local storage
 $(".profile-image-top-right").click(function (e) {
-    e.preventDefault();
     $(".upload-btn").click();
-    $(".upload-btn").change(function (e) {
+   
+})
+ $(".upload-btn").change(function (e) {
         const { files } = e.target;
 
         for (const file of files) {
@@ -135,7 +136,6 @@ $(".profile-image-top-right").click(function (e) {
             fileReader.readAsDataURL(file);
         }
     })
-})
 
 function navbarScrollEffect() {
     $(window).scroll(function (e) {
