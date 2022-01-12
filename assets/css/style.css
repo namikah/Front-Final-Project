@@ -2325,6 +2325,7 @@ footer .container .row .footer-copyright {
 
 #blog-cards .container .row .blog-card .blog-image {
   overflow: hidden;
+  position: relative;
 }
 
 #blog-cards .container .row .blog-card .blog-image img {
@@ -2340,6 +2341,23 @@ footer .container .row .footer-copyright {
 #blog-cards .container .row .blog-card .blog-image img:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+#blog-cards .container .row .blog-card .blog-image::after {
+  content: "APR 09";
+  position: absolute;
+  color: #fff;
+  background-color: #3b566ea9;
+  opacity: .8;
+  font-size: 16px;
+  padding: 5px 25px;
+  border-radius: 5px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 0;
+  text-align: center;
+  z-index: 999;
 }
 
 #blog-cards .container .row .blog-card .post-comments a {
