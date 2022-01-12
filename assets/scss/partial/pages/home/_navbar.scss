@@ -378,7 +378,8 @@
             @include primary-font($font-weight: 600);
           }
           .profile-image-top-right {
-            min-width: 40px;
+            width: 50px;
+			height: 50px;
             border-radius: 50%;
             padding: 0;
             margin: 0;
