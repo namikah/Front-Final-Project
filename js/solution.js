@@ -93,7 +93,7 @@ $(".arrows .right-arrow i").click(function (e) {
 })
 //change images next
 function changeNext(curElement) {
-    if ($(curElement).parent().next !== null) {
+    if ($(curElement).parent().next() !== null) {
         nextImageSrc = $(curElement).parent().next().children();
     }
     else {
@@ -104,13 +104,13 @@ function changeNext(curElement) {
 }
 //change prev
 function changePrev(curElement) {
-    if ($(".blog-images div").first() !== $(curElement)) {
-        prevImageSrc = $(curElement).prev();
+    if ($(curElement).parent().prev() !== null) {
+        nextImageSrc = $(curElement).parent().prev().children();
     }
     else {
-        nextImageSrc = $(".blog-images div").last()
+        nextImageSrc =$(curElement).parent().parent().last().children();
     }
-    openPopup(prevImageSrc);
+    openPopup(nextImageSrc);
 }
 function startAutoSlide() {
     autoSlideInterval = setInterval(function () {
