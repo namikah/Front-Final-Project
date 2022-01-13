@@ -5,9 +5,9 @@ let prevImageSrc = ""
 let curElement;
 
 //add click event for all images
-$(".blog-images .image").click(function (e) {
+$(".blog-images .image img").click(function (e) {
     e.preventDefault();
-    imgSrc = $(this).attr("data-id");
+    imgSrc = $(this).attr("src");
         openPopup(this);
         // startAutoSlide();
     });
@@ -16,7 +16,7 @@ $(".blog-images .image").click(function (e) {
 function openPopup(item) {
     resetClassList();
     $(item).addClass("show-image");
-    imgSrc = $(item).attr("data-id");
+    imgSrc = $(item).attr("src");
     $(".big-image-slide").attr("src", imgSrc);
     $(".popup").css("display","flex");
 }
@@ -61,7 +61,7 @@ $(".popup").click(function(e) {
 $(document).keydown(function (e) { 
     
     if ( $(".popup").css("display") !== "flex") return
-    curElement = document.querySelector(".show-image");
+    curElement = $(".show-image");
     switch (e.code) {
         case "ArrowRight":
             stopAutoSlide();
@@ -91,23 +91,23 @@ $(".arrows .right-arrow i").click(function (e) {
     // stopAutoSlide();
 })
 //change images next
-function changeNext(currentElement) {
-    if ($(".blog-images div").last() !== $(currentElement)) {
-        nextImageSrc = $(currentElement).next();
+function changeNext(curElement) {
+    if ($(curElement).parent().next !== null) {
+        nextImageSrc = $(curElement).parent().next().children();
     }
     else {
-        nextImageSrc = $(".first-image");
-        $(".first-image").addClass("show-image")
+        nextImageSrc =$(curElement).parent().parent().first().children()
+        console.log($(curElement).parent().parent().first().children());
     }
     openPopup(nextImageSrc);
 }
 //change prev
-function changePrev(currentElement) {
-    if ($(".blog-images div").first() !== $(currentElement)) {
-        nextImageSrc = $(currentElement).prev();
+function changePrev(curElement) {
+    if ($(".blog-images div").first() !== $(curElement)) {
+        prevImageSrc = $(curElement).prev();
     }
     else {
         nextImageSrc = $(".blog-images div").last()
     }
-    openPopup(nextImageSrc);
+    openPopup(prevImageSrc);
 }
