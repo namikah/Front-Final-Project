@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.navbar .container .login > ul li a.sign-up, .navbar .container .login > ul li a.sign-in, .menu-responsive .container .login > ul li a.sign-up, .menu-responsive .container .login > ul li a.sign-in, .bottom-header .container .row .left-side .context a, #pricing-plans .container .row .pricing-card .pricing-btn a, #parallax-text .row .parallax-context a, #blog-posts .container .row .blog-card .blog-btn a, #questions .container .row .left-side .context a, #message-us .container .row .right-side-inputs .send-btn a, #blog-cards .container .row .blog-card .blog-btn a, #blog-cards .container .row .blog-side-image .context .contact-us-btn a, #blog-cards .container .row .submit-comment .send-btn a, #user-login .user-login-enter .login-button, #user-register .user-register-enter .register-button {
+.navbar .container .login > ul li a.sign-up, .navbar .container .login > ul li a.sign-in, .menu-responsive .container .login > ul li a.sign-up, .menu-responsive .container .login > ul li a.sign-in, .bottom-header .container .row .left-side .context a, #pricing-plans .container .row .pricing-card .pricing-btn a, #parallax-text .row .parallax-context a, #blog-posts .container .row .blog-card .blog-btn a, #questions .container .row .left-side .context a, #message-us .container .row .right-side-inputs .send-btn a, #blog-cards .container .row .blog-card .blog-btn a, #blog-cards .container .row .blog-side-image .context .contact-us-btn a, #blog-cards .container .row .submit-comment .send-btn a, #user-login .user-login-enter .login-button, #user-register .user-register-enter .register-button, #solution .container .row .blog-side-image .context .contact-us-btn a {
   text-decoration: none;
   border: 1px solid #585ce9;
   border-radius: 5px;
@@ -13,7 +13,7 @@
   background-color: #585ce9;
 }
 
-.navbar .container .login > ul li a.sign-up:hover, .navbar .container .login > ul li a.sign-in:hover, .menu-responsive .container .login > ul li a.sign-up:hover, .menu-responsive .container .login > ul li a.sign-in:hover, .bottom-header .container .row .left-side .context a:hover, #pricing-plans .container .row .pricing-card .pricing-btn a:hover, #parallax-text .row .parallax-context a:hover, #blog-posts .container .row .blog-card .blog-btn a:hover, #questions .container .row .left-side .context a:hover, #message-us .container .row .right-side-inputs .send-btn a:hover, #blog-cards .container .row .blog-card .blog-btn a:hover, #blog-cards .container .row .blog-side-image .context .contact-us-btn a:hover, #blog-cards .container .row .submit-comment .send-btn a:hover, #user-login .user-login-enter .login-button:hover, #user-register .user-register-enter .register-button:hover {
+.navbar .container .login > ul li a.sign-up:hover, .navbar .container .login > ul li a.sign-in:hover, .menu-responsive .container .login > ul li a.sign-up:hover, .menu-responsive .container .login > ul li a.sign-in:hover, .bottom-header .container .row .left-side .context a:hover, #pricing-plans .container .row .pricing-card .pricing-btn a:hover, #parallax-text .row .parallax-context a:hover, #blog-posts .container .row .blog-card .blog-btn a:hover, #questions .container .row .left-side .context a:hover, #message-us .container .row .right-side-inputs .send-btn a:hover, #blog-cards .container .row .blog-card .blog-btn a:hover, #blog-cards .container .row .blog-side-image .context .contact-us-btn a:hover, #blog-cards .container .row .submit-comment .send-btn a:hover, #user-login .user-login-enter .login-button:hover, #user-register .user-register-enter .register-button:hover, #solution .container .row .blog-side-image .context .contact-us-btn a:hover {
   background-color: #3138ff;
 }
 
@@ -3188,6 +3188,232 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
+#solution-direction {
+  background-color: #f5f5f5;
+  padding: 80px 0;
+  background-image: url("../images/2.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-attachment: fixed;
+  min-height: 300px;
+  position: relative;
+}
+
+#solution-direction:after {
+  content: "";
+  background-color: #585de9a9;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+#solution-direction .container .row .solution-context {
+  z-index: 1;
+}
+
+#solution-direction .container .row .solution-context h1 {
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #f5f5f5;
+  position: relative;
+}
+
+#solution-direction .container .row .solution-context h1::after {
+  content: "";
+  width: 20px;
+  position: absolute;
+  border: 1px solid #fff;
+  left: 50%;
+  top: 120%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#solution-direction .container .row .solution-context a {
+  padding-top: 20px;
+  color: #f5f5f5;
+  text-decoration: none;
+  display: inline-block;
+}
+
+#solution-direction .container .row .solution-context span {
+  color: #f5f5f5;
+}
+
+#solution {
+  padding: 80px 0;
+  background-color: #f5f5f5;
+}
+
+#solution .container .row .blog-card .blog-image img {
+  border-radius: 5px;
+}
+
+#solution .container .row .blog-card .blog-images {
+  overflow: hidden;
+}
+
+#solution .container .row .blog-card .blog-images .image {
+  overflow: hidden;
+  border-radius: 5px;
+  border-radius: 5px;
+}
+
+#solution .container .row .blog-card .blog-images .image img {
+  border-radius: 5px;
+  height: 220px;
+  width: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#solution .container .row .blog-card .blog-images .image img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+#solution .container .row .blog-card .context p {
+  text-align: left;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 30px;
+  color: #3b566ea9;
+  padding: 20px 0;
+}
+
+#solution .container .row .blog-category {
+  margin: 25px 0;
+  padding: 0;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+#solution .container .row .blog-category li {
+  border-radius: 5px;
+  overflow: hidden;
+  height: 50px;
+  margin: 8px;
+  position: relative;
+}
+
+#solution .container .row .blog-category li.first-category a {
+  background-color: #585ce9;
+  color: #fff;
+}
+
+#solution .container .row .blog-category li.first-category i {
+  color: #fff;
+}
+
+#solution .container .row .blog-category li.first-category:hover a {
+  padding-left: 60px;
+}
+
+#solution .container .row .blog-category li:hover a {
+  padding-left: 70px;
+}
+
+#solution .container .row .blog-category li a {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding-top: 13px;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  background-color: #fff;
+  text-decoration: none;
+  color: #3b566e;
+  border-radius: 5px;
+  padding-left: 60px;
+}
+
+#solution .container .row .blog-category li i {
+  color: #3b566e;
+  position: absolute;
+  font-size: 10px;
+  z-index: 9999;
+  left: 30px;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+#solution .container .row .blog-side-image {
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 5px;
+}
+
+#solution .container .row .blog-side-image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-position: center;
+  width: 221px;
+  height: 100%;
+  border-radius: 5px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#solution .container .row .blog-side-image img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+#solution .container .row .blog-side-image .context {
+  padding: 0 10px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #585de9d2;
+  z-index: 0;
+}
+
+#solution .container .row .blog-side-image .context p {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  z-index: 1;
+}
+
+#solution .container .row .blog-side-image .context .contact-us-btn {
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#solution .container .row .blog-side-image .context .contact-us-btn:hover a {
+  color: #fff;
+}
+
+#solution .container .row .blog-side-image .context .contact-us-btn a {
+  background-color: #fff;
+  color: #585ce9;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -3534,6 +3760,25 @@ input::-webkit-inner-spin-button {
   }
   #blog-cards .blog-search {
     margin-top: 30px;
+  }
+  #blog-cards .blog-card .blog-images {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+  #solution .blog-card .blog-images {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+  }
+  #solution .blog-card .blog-images .image img {
+    width: 100% !important;
+    height: 100% !important;
   }
   #our-services .services-card {
     -webkit-box-orient: vertical;

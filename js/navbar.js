@@ -204,6 +204,7 @@ loadingEffect(".home-button", "./index.html")
 loadingEffect(".sign-in-button-effect", "./login.html")
 loadingEffect(".sign-up-button-effect", "./register.html")
 loadingEffect(".basket-button-effect", "./basket.html")
+loadingEffect(".services-card-button-effect", "./solution.html")
 
 //loading effect
 function loadingEffect(element, location) {

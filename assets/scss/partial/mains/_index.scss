@@ -35,7 +35,6 @@
       display: inline !important;
     }
   }
-
   .bottom-header {
     .left-side {
       width: calc(100%/12*12);
@@ -258,6 +257,25 @@
         li {
           // flex-direction: column !important;
         }
+      }
+    }
+    .blog-card{
+      .blog-images{
+        flex-direction: column !important;
+      }
+    }
+  }
+  #solution {
+    .blog-card{
+      .blog-images{
+        flex-direction: column !important;
+      align-items: center !important;
+        .image{
+          img{
+            width: 100% !important;
+            height: 100% !important
+          }
+        };
       }
     }
   }
