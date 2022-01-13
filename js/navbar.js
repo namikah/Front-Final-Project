@@ -25,6 +25,43 @@ if (localStorage.getItem("login") === "true") {
     $(".profile-image-top-right").attr("src", JSON.parse(localStorage.getItem("active-user")).image)
 }
 
+//change profile pisctures with local storage
+$(".profile-image-top-right").click(function (e) {
+    $(".upload-btn").click();
+})
+
+$(".upload-btn").change(function (e) {
+    const { files } = e.target;
+
+    for (const file of files) {
+        let fileReader = new FileReader();
+        fileReader.onloadend = function (e) {
+
+            let users;
+            let username;
+            try { username = JSON.parse(localStorage.getItem("active-user")).username; } catch { }
+            try { users = JSON.parse(localStorage.getItem("Users")); } catch { users = [] }
+            if (!users) users = [];
+
+            for (let i = 0; i < users.length; i++) {
+                if (users[i].username === username) {
+                    let newObj = users[i];
+                    newObj.image = e.target.result;
+                    users[i] = newObj;
+
+                    localStorage.setItem("Users", JSON.stringify(users));
+                }
+            }
+            let user = JSON.parse(localStorage.getItem("active-user"));
+            user.image = e.target.result;
+            localStorage.setItem("active-user", JSON.stringify(user));
+
+            $(".profile-image-top-right").attr("src", e.target.result);
+        };
+        fileReader.readAsDataURL(file);
+    }
+})
+
 $(".sign-out").click(function (e) {
     localStorage.setItem("login", "false");
     localStorage.removeItem("active-user");
@@ -128,45 +165,6 @@ function RefreshList(baskets) {
 
 $(".my-cart-list >li").click(function (e) {
     loadingEffect(".basket-button-effect","./basket.html");
-})
-
-//change profile pisctures with local storage
-$(".profile-image-top-right").click(function (e) {
-    $(".upload-btn").click();
-
-})
-
-$(".upload-btn").change(function (e) {
-    const { files } = e.target;
-
-    for (const file of files) {
-        let fileReader = new FileReader();
-        fileReader.onloadend = function (e) {
-
-            let users;
-            let username;
-            try { username = JSON.parse(localStorage.getItem("active-user")).username; } catch { }
-            try { users = JSON.parse(localStorage.getItem("Users")); } catch { users = [] }
-            if (!users) users = [];
-
-            let temp = users;
-            for (let i = 0; i < users.length; i++) {
-                if (users[i].username === username) {
-                    let newObj = users[i];
-                    newObj.image = e.target.result;
-                    users[i] = newObj;
-
-                    localStorage.setItem("Users", JSON.stringify(users));
-                }
-            }
-            let user = JSON.parse(localStorage.getItem("active-user"));
-            user.image = e.target.result;
-            localStorage.setItem("active-user", JSON.stringify(user));
-
-            $(".profile-image-top-right").attr("src", e.target.result);
-        };
-        fileReader.readAsDataURL(file);
-    }
 })
 
 function navbarScrollEffect() {
