@@ -3535,6 +3535,25 @@ input::-webkit-inner-spin-button {
   #blog-cards .blog-search {
     margin-top: 30px;
   }
+  #our-services .services-card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  #our-services .services-card .image-box {
+    margin-left: 0 !important;
+  }
+  #our-services .services-card img {
+    left: 30% !important;
+  }
 }
 
 @media screen and (min-width: 992px) {

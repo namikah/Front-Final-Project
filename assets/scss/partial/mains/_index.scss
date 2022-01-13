@@ -261,6 +261,20 @@
       }
     }
   }
+  #our-services{
+    .services-card{
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+.image-box {
+  margin-left: 0 !important;
+}
+img{
+  left: 30% !important;
+}
+    }
+  }
   .menu-responsive{
     .login-menu{
     }
