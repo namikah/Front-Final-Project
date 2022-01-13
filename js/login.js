@@ -7,7 +7,7 @@ $(".login-button").click(function (e) {
     e.preventDefault();
 
     let obj = {
-        username: $(".register-username").val(),
+        username: $(".register-username").val().toLowerCase(),
         password: $(".register-password").val(),
         image: ""
     }
@@ -24,7 +24,7 @@ $(".login-button").click(function (e) {
     }
 
     users.forEach(element => {
-        if (element.username === obj.username && element.password === obj.password) {
+        if (element.username.toLowerCase() === obj.username.toLowerCase() && element.password === obj.password) {
             obj.image = element.image;
         }
     });

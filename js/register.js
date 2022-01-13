@@ -16,7 +16,7 @@ $(".register-button").click(function (e) {
     let obj = {
         name: $(".register-name").val(),
         surname: $(".register-surname").val(),
-        username: $(".register-username").val(),
+        username: $(".register-username").val().toLowerCase(),
         password: $(".register-password").val(),
         image: profilePics
     }
@@ -67,7 +67,7 @@ $(".upload-btn").change(function (e) {
 function isUserExist(users, obj) {
     let counter = 0;
     users.forEach(element => {
-        if (element.username === obj.username) {
+        if (element.username.toLowerCase() === obj.username.toLowerCase()) {
             counter++;
         }
     });
