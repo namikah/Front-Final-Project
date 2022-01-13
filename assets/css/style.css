@@ -3532,6 +3532,15 @@ input::-webkit-inner-spin-button {
 }
 
 @media only screen and (max-width: 992px) {
+  .popup .inner .slider-image {
+    width: 350px;
+    max-height: 250px;
+    background-color: white;
+  }
+  .popup .inner .slider-image img {
+    width: 100%;
+    height: 100%;
+  }
   .navbar {
     max-height: 80px;
     background-color: #fff !important;
