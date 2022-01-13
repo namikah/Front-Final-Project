@@ -13,7 +13,7 @@ if (localStorage.getItem("login") === "true") {
         </div>
         <div class="d-flex flex-column justify-content-between align-items-start">
             <img src="${userPics}" alt="profile-image" class="img-fluid profile-image-top-right">
-            <input class="upload-btn" type="file" style="display: none;"/>
+            <input id="upload-btn-navbar" type="file" style="display: none;"/>
         </div>
     </li>
     <li class="nav-item nav-item-last d-flex justify-content-end align-items-center" data-id="0">
@@ -27,10 +27,9 @@ if (localStorage.getItem("login") === "true") {
 
 //change profile pisctures with local storage
 $(".profile-image-top-right").click(function (e) {
-    $(".upload-btn").click();
+    $("#upload-btn-navbar").click();
 })
-
-$(".upload-btn").change(function (e) {
+$("#upload-btn-navbar").change(function (e) {
     const { files } = e.target;
 
     for (const file of files) {
@@ -62,6 +61,7 @@ $(".upload-btn").change(function (e) {
     }
 })
 
+
 $(".sign-out").click(function (e) {
     localStorage.setItem("login", "false");
     localStorage.removeItem("active-user");
@@ -72,7 +72,7 @@ $(".sign-out").click(function (e) {
     }, 500, "linear", function () {
         $('#loading-effect span').css("transform", "rotate(360deg)");
     });
-    
+
     setTimeout(() => {
         $('#loading-effect').remove();
         window.location.href = "";
@@ -161,10 +161,10 @@ function RefreshList(baskets) {
         }
         RefreshList(basketsList);
     })
-    
-$(".my-cart-list li").click(function (e) {
-    loadingEffect(".basket-button-effect","./basket.html");
-})
+
+    $(".my-cart-list li").click(function (e) {
+        loadingEffect(".basket-button-effect", "./basket.html");
+    })
 }
 
 function navbarScrollEffect() {
@@ -194,36 +194,36 @@ function navbarScrollEffect() {
     });
 }
 
-loadingEffect(".about-us-button","./about.html");
-loadingEffect(".features-button","./features.html")
-loadingEffect(".faqs-button","./faqs.html")
-loadingEffect(".blog-button","./blog.html")
-loadingEffect(".blog-more-button","./blogMore.html")
-loadingEffect(".contact-button","./contact.html")
-loadingEffect(".home-button","./index.html")
-loadingEffect(".sign-in-button-effect","./login.html")
-loadingEffect(".sign-up-button-effect","./register.html")
-loadingEffect(".basket-button-effect","./basket.html")
+loadingEffect(".about-us-button", "./about.html");
+loadingEffect(".features-button", "./features.html")
+loadingEffect(".faqs-button", "./faqs.html")
+loadingEffect(".blog-button", "./blog.html")
+loadingEffect(".blog-more-button", "./blogMore.html")
+loadingEffect(".contact-button", "./contact.html")
+loadingEffect(".home-button", "./index.html")
+loadingEffect(".sign-in-button-effect", "./login.html")
+loadingEffect(".sign-up-button-effect", "./register.html")
+loadingEffect(".basket-button-effect", "./basket.html")
 
 //loading effect
-function loadingEffect(element, location){
+function loadingEffect(element, location) {
     $("body").append(`<div id="loading-effect"><span></span></div>`);
-$(element).click(function (e) {
-    e.preventDefault();
-    $("body").append(`<div id="enlarge"><span></span></div>`);
+    $(element).click(function (e) {
+        e.preventDefault();
+        $("body").append(`<div id="enlarge"><span></span></div>`);
 
-    $('#loading-effect').css("display", "block").animate({
-        opacity: 1
-    }, 500, "linear", function () {
-        $('#loading-effect span').css("transform", "rotate(360deg)");
-    });
-    
-    setTimeout(() => {
-        window.location.href = location;
-    }, 1000);
-    setTimeout(() => {
-        $('#loading-effect').remove();
-    }, 2000);
+        $('#loading-effect').css("display", "block").animate({
+            opacity: 1
+        }, 500, "linear", function () {
+            $('#loading-effect span').css("transform", "rotate(360deg)");
+        });
 
-})
+        setTimeout(() => {
+            window.location.href = location;
+        }, 1000);
+        setTimeout(() => {
+            $('#loading-effect').remove();
+        }, 2000);
+
+    })
 }
