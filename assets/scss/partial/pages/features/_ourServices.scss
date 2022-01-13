@@ -14,22 +14,24 @@
                 transform: rotate(45deg);
             }
         }
+       div{
+         position: relative;
         .image-box {
-            position: relative;
-          margin-left: 50px;
-          background-color: $main-bg-color-light;
-          width: 120px;
-          height: 120px;
-          transition: .5s all;
-          z-index: 0;
-        }
-        img {
-          position: absolute;
-          left: 50%;
-          top: 50%;
-          transform: translate(-50%, -50%);
-          z-index: 1;
-        }
+        margin-left: 50px;
+        background-color: $main-bg-color-light;
+        width: 120px;
+        height: 120px;
+        transition: .5s all;
+        z-index: 0;
+      }
+      img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+      }
+       }
         .our-services-context {
           h5 {
             @include primary-font($font-size: 18px);
