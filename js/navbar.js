@@ -17,7 +17,7 @@ if (localStorage.getItem("login") === "true") {
         </div>
     </li>
     <li class="nav-item nav-item-last d-flex justify-content-end align-items-center" data-id="0">
-        <a class="nav-link active" aria-current="page" href="./basket.html">
+        <a class="nav-link active basket-button-effect" aria-current="page" href="#">
             <i class="fas fa-shopping-cart basket-icon"></i>
         </a>
         <ul class="my-cart-list"></ul>
@@ -28,7 +28,18 @@ if (localStorage.getItem("login") === "true") {
 $(".sign-out").click(function (e) {
     localStorage.setItem("login", "false");
     localStorage.removeItem("active-user");
-    window.location.href = "";
+    $("body").append(`<div id="enlarge"><span></span></div>`);
+
+    $('#loading-effect').css("display", "block").animate({
+        opacity: 1
+    }, 500, "linear", function () {
+        $('#loading-effect span').css("transform", "rotate(360deg)");
+    });
+    
+    setTimeout(() => {
+        $('#loading-effect').remove();
+        window.location.href = "";
+    }, 1000);
 })
 
 //for responsive menu open
@@ -82,7 +93,7 @@ $(".pricing-btn").click(function (e) {
 
 //create new item to basket
 function createNewItem(obj) {
-    $(".my-cart-list").append(` <li>
+    $(".my-cart-list").append(` <li class="basket-button-effect">
     <h4>${obj.plan}</h4>
     <h6>${obj.info}</h6>
     <h2>${obj.price}</h2>
@@ -116,7 +127,7 @@ function RefreshList(baskets) {
 }
 
 $(".my-cart-list >li").click(function (e) {
-    window.location.href = "./basket.html";
+    loadingEffect(".basket-button-effect","./basket.html");
 })
 
 //change profile pisctures with local storage
@@ -183,4 +194,38 @@ function navbarScrollEffect() {
             $(".navbar").css("background-color", "#fff");
         }
     });
+}
+
+loadingEffect(".about-us-button","./about.html");
+loadingEffect(".features-button","./features.html")
+loadingEffect(".faqs-button","./faqs.html")
+loadingEffect(".blog-button","./blog.html")
+loadingEffect(".blog-more-button","./blogMore.html")
+loadingEffect(".contact-button","./contact.html")
+loadingEffect(".home-button","./index.html")
+loadingEffect(".sign-in-button-effect","./login.html")
+loadingEffect(".sign-up-button-effect","./register.html")
+loadingEffect(".basket-button-effect","./basket.html")
+
+//loading effect
+function loadingEffect(element, location){
+    $("body").append(`<div id="loading-effect"><span></span></div>`);
+$(element).click(function (e) {
+    e.preventDefault();
+    $("body").append(`<div id="enlarge"><span></span></div>`);
+
+    $('#loading-effect').css("display", "block").animate({
+        opacity: 1
+    }, 500, "linear", function () {
+        $('#loading-effect span').css("transform", "rotate(360deg)");
+    });
+    
+    setTimeout(() => {
+        window.location.href = location;
+    }, 1000);
+    setTimeout(() => {
+        $('#loading-effect').remove();
+    }, 2000);
+
+})
 }

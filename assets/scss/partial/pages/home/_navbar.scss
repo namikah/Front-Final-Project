@@ -196,7 +196,7 @@
                 .x-close {
                   font-size: 16px;
                   position: absolute;
-				  padding:10px;
+                  padding: 10px;
                   right: 0;
                   top: 0;
                   color: red;
@@ -231,9 +231,9 @@
                   h6 {
                     color: $main-bg-color-light;
                   }
-				  .x-close{
+                  .x-close {
                     color: $main-bg-color-light;
-				  }
+                  }
                 }
               }
             }
@@ -379,7 +379,7 @@
           }
           .profile-image-top-right {
             width: 50px;
-			height: 50px;
+            height: 50px;
             border-radius: 50%;
             padding: 0;
             margin: 0;
@@ -390,10 +390,10 @@
               content: attr(data-id);
               position: absolute;
               align-items: center;
-			  text-align: center;
+              text-align: center;
               width: 20px;
               height: 20px;
-              right:7px;
+              right: 7px;
               top: 7px;
               border-radius: 100%;
               background-color: red;
@@ -418,4 +418,27 @@
   top: 0;
   left: 0;
   right: 0;
+}
+#loading-effect {
+  background-color: $main-bg-color-dark;
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  z-index: 99999999999999999999;
+  display: none;
+  span {
+    width: 100px;
+    height: 100px;
+    background-color: $main-bg-color-light;
+    color: $main-color-light;
+    position: absolute;
+    top: calc(50% - 50px);
+    left:calc(50% - 50px);
+	transition: 2s;
+	border-radius: 5px;
+  }
 }

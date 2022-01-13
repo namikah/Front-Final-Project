@@ -21,143 +21,151 @@
 
   <body>
     <header>
-        <nav class="row navbar">
-          <div class="container">
-            <div class="logo col-md-1">
-              <a href="./index.html">
-                <img src="./assets/images/logo.png" alt="main-logo" />
-              </a>
-            </div>
-            <div class="menu col-md-6">
-              <ul class="d-flex justify-content-md-start align-items-end  ">
-                <li class="home-menu">
-                  <a href="./index.html">Home</a>
-                </li>
-                <li class="discover-menu d-flex justify-content-between align-items-center gap-2">
-                  <a href="#">Discover</a>
-                  <i class="fas fa-chevron-down"></i>
-                  <ul class="sub-menu">
-                    <li class="features-sub-menu">
-                      <a href="#">Features</a>
-                    </li>
-                    <li>
-                      <a href="#">Our team</a>
-                    </li>
-                    <li>
-                      <a href="#">Pricing plans</a>
-                    </li>
-                    <li>
-                      <a href="#">Latests blog</a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="pages-menu d-flex justify-content-between align-items-center gap-2">
-                  <a href="#">Pages</a>
-                  <i class="fas fa-chevron-down"></i>
-                  <ul class="sub-menu">
-                    <li>
-                      <a href="./about.html">About us</a>
-                    </li>
-                    <li>
-                      <a href="./features.html">Features</a>
-                    </li>
-                    <li>
-                      <a href="./faqs.html">FAQ's</a>
-                    </li>
-                    <li>
-                      <a href="./blog.html">Blog</a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="contact-menu">
-                  <a href="./contact.html">Contact</a>
-                </li>
-              </ul>
-            </div>
-            <div class="login col-md-4">
-              <ul class="login-menu d-flex justify-content-md-end align-items-end gap-3">
-                <li>
-                  <a class="sign-in" href="./login.html">SIGN IN</a>
-                </li>
-                <li>
-                  <a class="sign-up" href="./register.html">SIGN UP</a>
-                </li>
-              </ul>
-            </div>
-            <div class="menu-icon col-md-1">
-              <span>___</span>
-              <span>____</span>
-              <span>___</span>
-            </div>
+      <nav class="row navbar">
+        <div class="container">
+          <div class="logo col-md-1 home-button">
+            <a href="#">
+              <img src="./assets/images/logo.png" alt="main-logo" />
+            </a>
           </div>
-        </nav>
-        <div class="menu-responsive">
-          <div class="container">
-            <ul
-              class="d-flex flex-column justify-content-md-center align-items-md-start"
-            >
-              <li class="home-menu">
-                <div class="main-menu">
-                  <a href="./index.html">Home</a>
-                </div>
+          <div class="menu col-md-6">
+            <ul class="d-flex justify-content-md-start align-items-end">
+              <li class="home-menu home-button">
+                <a href="#">Home</a>
               </li>
               <li
-                class="discover-menu drop-menu d-flex justify-content-between align-items-center w-100"
+                class="discover-menu d-flex justify-content-between align-items-center gap-2"
               >
                 <a href="#">Discover</a>
                 <i class="fas fa-chevron-down"></i>
+                <ul class="sub-menu">
+                  <li class="features-sub-menu">
+                    <a href="">Features</a>
+                  </li>
+                  <li class="our-team">
+                    <a href="">Our team</a>
+                  </li>
+                  <li class="pricing-plans">
+                    <a href="">Pricing plans</a>
+                  </li>
+                  <li class="latests-blog">
+                    <a href="">Latests blog</a>
+                  </li>
+                </ul>
               </li>
-              <ul class="sub-menu discover-sub-menu">
-                <li class="features-sub-menu">
-                  <a class="features features-sub-menu" href="">Features</a>
-                </li>
-                <li>
-                  <a class="our-team" href="#">Our Team</a>
-                </li>
-                <li>
-                  <a class="pricing-plans" href="#">Pricing Plans</a>
-                </li>
-                <li>
-                  <a class="latests-blog" href="#">Latests Blog</a>
-                </li>
-              </ul>
               <li
-                class="pages-menu drop-menu d-flex justify-content-between align-items-start w-100"
+                class="pages-menu d-flex justify-content-between align-items-center gap-2"
               >
                 <a href="#">Pages</a>
                 <i class="fas fa-chevron-down"></i>
+                <ul class="sub-menu">
+                  <li class="about-us-button">
+                    <a>About us</a>
+                  </li>
+                  <li class="features-button">
+                    <a href="#">Features</a>
+                  </li>
+                  <li class="faqs-button">
+                    <a href="#">FAQ's</a>
+                  </li>
+                  <li class="blog-button">
+                    <a href="#">Blog</a>
+                  </li>
+                </ul>
               </li>
-              <ul class="sub-menu pages-sub-menu">
-                <li>
-                  <a href="./about.html">About Us</a>
-                </li>
-                <li>
-                  <a href="./features.html">Features</a>
-                </li>
-                <li>
-                  <a href="./faqs.html">FAQ's</a>
-                </li>
-                <li>
-                  <a href="./blog.html">Blog</a>
-                </li>
-              </ul>
-              <li class="contact-menu">
-                <div class="main-menu">
-                  <a href="./contact.html">Contact</a>
-                </div>
+              <li class="contact-menu contact-button">
+                <a href="#">Contact</a>
               </li>
             </ul>
-            <div class="login">
-              <ul  class="login-menu row"
-                id="user-menu" >
-                <li class="col-12 d-flex justify-content-center align-items-center gap-2">
-                  <a class="sign-in" href="./login.html">SIGN IN</a>
-                  <a class="sign-up" href="./register.html">SIGN UP</a>
-                </li>
-              </ul>
-            </div>
+          </div>
+          <div class="login col-md-4">
+            <ul
+              class="login-menu d-flex justify-content-end align-items-center gap-2"
+              id="user-menu"
+            >
+              <li class="sign-in-button-effect">
+                <a class="sign-in" href="#">SIGN IN</a>
+              </li>
+              <li class="sign-up-button-effect">
+                <a class="sign-up" href="#">SIGN UP</a>
+              </li>
+            </ul>
+          </div>
+          <div class="menu-icon col-1">
+            <span>___</span>
+            <span>____</span>
+            <span>___</span>
           </div>
         </div>
+      </nav>
+      <div class="menu-responsive">
+        <div class="container">
+          <ul
+            class="d-flex flex-column justify-content-md-center align-items-md-start"
+          >
+            <li class="home-menu home-button">
+              <div class="main-menu home-button">
+                <a href="#">Home</a>
+              </div>
+            </li>
+            <li
+              class="discover-menu drop-menu d-flex justify-content-between align-items-center w-100"
+            >
+              <a href="#">Discover</a>
+              <i class="fas fa-chevron-down"></i>
+            </li>
+            <ul class="sub-menu discover-sub-menu">
+              <li class="features-sub-menu">
+                <a class="features features-sub-menu" href="#">Features</a>
+              </li>
+              <li>
+                <a class="our-team" href="#">Our Team</a>
+              </li>
+              <li>
+                <a class="pricing-plans" href="#">Pricing Plans</a>
+              </li>
+              <li>
+                <a class="latests-blog" href="#">Latests Blog</a>
+              </li>
+            </ul>
+            <li
+              class="pages-menu drop-menu d-flex justify-content-between align-items-start w-100"
+            >
+              <a href="#">Pages</a>
+              <i class="fas fa-chevron-down"></i>
+            </li>
+            <ul class="sub-menu pages-sub-menu">
+              <li class="about-us-button">
+                <a>About us</a>
+              </li>
+              <li class="features-button">
+                <a href="#">Features</a>
+              </li>
+              <li class="faqs-button">
+                <a href="#">FAQ's</a>
+              </li>
+              <li class="blog-button">
+                <a href="#">Blog</a>
+              </li>
+            </ul>
+            <li class="contact-menu contact-button">
+              <div class="main-menu">
+                <a href="#">Contact</a>
+              </div>
+            </li>
+          </ul>
+          <div class="login">
+            <ul class="login-menu row" id="user-menu">
+              <li
+                class="col-12 d-flex justify-content-center align-items-center gap-2"
+              >
+                <a class="sign-in sign-in-button-effect" href="#">SIGN IN</a>
+                <a class="sign-up sign-up-button-effect" href="#">SIGN UP</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </header>
     <main>
       <!-- Features section start -->
@@ -168,8 +176,8 @@
               class="faqs-context col-md-12 d-flex flex-column justify-content-center align-items-center"
             >
               <h1>FAQ's</h1>
-              <div class="direction">
-                <a href="./index.html">Home > </a>
+              <div class="direction home-button">
+                <a href="#">Home > </a>
                 <span>FAQ's</span>
               </div>
             </div>
@@ -192,7 +200,7 @@
                   ultrices posuere cubilia Curae; Sed finibus faucibus congue.
                   Interdum et malesuada fames ac ante ipsum primis in faucibus.
                 </p>
-                <a href="#" class="btn-more-help">GET MORE HELP</a>
+                <a href="#" class="btn-more-help contact-button">GET MORE HELP</a>
               </div>
             </div>
             <div
@@ -315,7 +323,7 @@
           <div
             class="left-side-logo col-md-5 col-sm-12 d-flex flex-column justify-content-start align-items-md-start align-items-sm-center gap-4"
           >
-            <a href="./index.html">
+            <a href="#" class="home-button">
               <img src="./assets/images/logo-white.png" alt="main-logo" />
             </a>
             <p>
@@ -329,10 +337,10 @@
           >
             <h4>Helpful Links</h4>
             <ul>
-              <li><a href="./about.html">About Us</a></li>
-              <li><a href="./features.html">Features</a></li>
-              <li><a href="./faqs.html">FAQ's</a></li>
-              <li><a href="./blog.html">Blog</a></li>
+              <li class="about-us-button"><a href="#">About Us</a></li>
+              <li class="features-button"><a href="#">Features</a></li>
+              <li class="faqs-button"><a href="#">FAQ's</a></li>
+              <li class="blog-button"><a href="#">Blog</a></li>
             </ul>
           </div>
           <div
@@ -340,10 +348,10 @@
           >
             <h4>Support</h4>
             <ul>
-              <li><a href="">Privacy Policy</a></li>
-              <li><a href="">Terms of Use</a></li>
-              <li><a href="">Support center</a></li>
-              <li><a href="">Contact</a></li>
+              <li class="about-us-button"><a href="#">Privacy Policy</a></li>
+              <li class="about-us-button"><a href="#">Terms of Use</a></li>
+              <li class="about-us-button"><a href="#">Support center</a></li>
+              <li class="contact-button"><a href="#">Contact</a></li>
             </ul>
           </div>
           <div
@@ -353,15 +361,17 @@
             <div class="context">
               <p>455 West Orchard Street<br />Kings Mountain, NC 28086</p>
               <p>Phone: (272) 211-7370</p>
-              <span>E-Mail:<a href="./contact.html">Phone: (272) 211-7370</a></span>
+              <span
+                >E-Mail:<a href="./contact.html">Phone: (272) 211-7370</a></span
+              >
               <div
                 class="social-icons d-flex justify-content-start align-items-center gap-2"
               >
-                <a href="https://www.facebook.com/heydarovnamiq/"><i class="fa fa-facebook-square"></i></a>
-                <a href="https://twitter.com/heydarov_namik"><i class="fa fa-twitter-square"></i></a>
-                <a href="https://www.linkedin.com/in/namik-heydarov-887157221/"><i class="fa fa-linkedin-square"></i></a>
-                <a href="https://myaccount.google.com/"><i class="fa fa-google-plus-square"></i></a>
-                <a href="https://github.com/namikah"><i class="fa fa-github-square"></i></a>
+                <a href="#"><i class="fa fa-facebook-square"></i></a>
+                <a href="#"><i class="fa fa-twitter-square"></i></a>
+                <a href="#"><i class="fa fa-linkedin-square"></i></a>
+                <a href="#"><i class="fa fa-google-plus-square"></i></a>
+                <a href="#"><i class="fa fa-github-square"></i></a>
               </div>
             </div>
           </div>

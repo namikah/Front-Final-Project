@@ -533,6 +533,32 @@
   right: 0;
 }
 
+#loading-effect {
+  background-color: #585ce9;
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  z-index: 99999999999999999999;
+  display: none;
+}
+
+#loading-effect span {
+  width: 100px;
+  height: 100px;
+  background-color: #f5f5f5;
+  color: #fff;
+  position: absolute;
+  top: calc(50% - 50px);
+  left: calc(50% - 50px);
+  -webkit-transition: 2s;
+  transition: 2s;
+  border-radius: 5px;
+}
+
 .bottom-header {
   padding: 80px 0;
 }

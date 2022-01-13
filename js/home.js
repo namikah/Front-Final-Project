@@ -67,3 +67,4 @@ $("[class*='fa-github']").click(function (e) {
     e.preventDefault();
     window.open("https://github.com/namikah", '_blank');
 })
+
