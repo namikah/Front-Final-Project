@@ -9,7 +9,7 @@ $(".blog-images .image img").click(function (e) {
     e.preventDefault();
     imgSrc = $(this).attr("src");
         openPopup(this);
-        // startAutoSlide();
+        startAutoSlide();
     });
 
 //open popup slider for biggest image
@@ -50,6 +50,7 @@ function closePopup() {
 $(".popup .inner .close").click(function () {
     closePopup();
 })
+
 
 //Close popup with side click
 $(".popup").click(function(e) {
@@ -110,4 +111,16 @@ function changePrev(curElement) {
         nextImageSrc = $(".blog-images div").last()
     }
     openPopup(prevImageSrc);
+}
+function startAutoSlide() {
+    autoSlideInterval = setInterval(function () {
+        $(".big-image-slide").parent().css("background-color","black");
+        $(".big-image-slide").css("opacity","0");
+        $(".big-image-slide").css("transition","1.2s");
+        setTimeout(() => {
+            curElement = $(".show-image");
+            changeNext(curElement);
+            $(".big-image-slide").css("opacity","1");
+        }, 1000);
+    }, 3000)
 }
