@@ -1,92 +1,68 @@
-let imageGallery = document.querySelector("#image-gallery");
-let currentImages = document.querySelectorAll(".img-a-source");
-let imagesCards = document.querySelector(".images-cards");
-let popup = document.querySelector(".popup");
-let bigImage = document.querySelector(".popup .inner .slider-image img");
-let closePopupImages = document.querySelector(".popup .inner .close");
-let rightArrow = document.querySelector(".arrows .right-arrow i");
-let leftArrow = document.querySelector(".arrows .left-arrow i")
-let formLogin = document.querySelector("#form-sign-in");
-let loginBtn = document.querySelector(".login-btn");
-let username = document.querySelector(".user-name");
-let uploadIcon = document.querySelector(".upload-icon");
-let uploadBtn = document.querySelector(".upload-btn");
-let picInfo;
+let imgSrc = "";
 let autoSlideInterval;
+let nextImageSrc = ""
+let prevImageSrc = ""
+let curElement;
 
 //add click event for all images
-currentImages.forEach(item => {
-    picInfo = item.getAttribute("href");
-    item.setAttribute("data-value", "filename: " + picInfo);
-    addClickEventForUploadedImages(item);
-});
-
-//choose and upload image
-uploadIcon.addEventListener("click", () => {
-    uploadBtn.click();
-})
-//upload image onloadend
-uploadBtn.addEventListener("change", function (e) {
-    const { files } = e.target;
-
-    for (const file of files) {
-        let fileReader = new FileReader();
-        fileReader.onloadend = function (e) {
-            const { result } = e.target;
-            picInfo = file.name;
-            createNewPictureBox(result);
-        };
-        fileReader.readAsDataURL(file);
-    }
-})
-//create new picture box
-function createNewPictureBox(result) {
-    let aTag = document.createElement("a");
-    let img = document.createElement("img");
-    aTag.classList.add("img-a-source");
-    aTag.setAttribute("alt", picInfo);
-    aTag.setAttribute("data-value", "filename: " + picInfo);
-    aTag.setAttribute("href", result);
-    img.setAttribute("src", result);
-    aTag.appendChild(img);
-    imagesCards.appendChild(aTag);
-    addClickEventForUploadedImages(aTag);
-}
-//add click event for uploaded pictures
-function addClickEventForUploadedImages(item) {
-    item.addEventListener("click", function (e) {
-        e.preventDefault();
+$(".blog-images .image img").click(function (e) {
+    e.preventDefault();
+    imgSrc = $(this).attr("src");
         openPopup(this);
         startAutoSlide();
-    })
-}
+    });
+
 //open popup slider for biggest image
 function openPopup(item) {
     resetClassList();
-    item.classList.add("show-image");
-    let imgSrc = item.getAttribute("href");
-    bigImage.setAttribute("src", imgSrc);
-    popup.style.display = "flex";
+    $(item).addClass("show-image");
+    imgSrc = $(item).attr("src");
+    $(".big-image-slide").attr("src", imgSrc);
+    $(".popup").css("display","flex");
 }
+
+//for change slider slowly
+function changeEffect(func) {
+    $(".big-image-slide").parent().css("background-color","black");
+    $(".big-image-slide").css("opacity","0");
+    $(".big-image-slide").css("transition","0.5s");
+    setTimeout(() => {
+        $(".big-image-slide").css("opacity","1");
+        func();
+    }, 300);
+}
+
+function resetClassList() {
+  $(".show-image").removeClass("show-image");
+}
+
+//stop auto slide with interval
+function stopAutoSlide() {
+    clearInterval(autoSlideInterval);
+}
+
 //close popup
 function closePopup() {
-    popup.style.display = "none";
+    $(".popup").css("display","none");
     stopAutoSlide();
 }
 //close popup with X
-closePopupImages.addEventListener("click", () => {
+$(".popup .inner .close").click(function () {
     closePopup();
 })
+
+
 //Close popup with side click
-popup.addEventListener("click", (e) => {
+$(".popup").click(function(e) {
     if (e.target.classList.contains("popup")) {
         closePopup();
     }
 })
 //add keys for popup
-document.addEventListener("keydown", (e) => {
-    if (popup.style.display !== "flex") return
-    curElement = document.querySelector(".show-image");
+$(document).keydown(function (e) { 
+    
+    if ( $(".popup").css("display") !== "flex") return
+    curElement = $(".show-image");
     switch (e.code) {
         case "ArrowRight":
             stopAutoSlide();
@@ -104,131 +80,47 @@ document.addEventListener("keydown", (e) => {
     }
 })
 //left-arrow click for change image
-leftArrow.addEventListener("click", (e) => {
-    curElement = document.querySelector(".show-image");
+$(".arrows .left-arrow i").click(function (e) {
+    curElement = $(".show-image");
     changeEffect(() => changePrev(curElement));
     stopAutoSlide();
 })
 //right-arrow click for change image
-rightArrow.addEventListener("click", (e) => {
-    curElement = document.querySelector(".show-image");
+$(".arrows .right-arrow i").click(function (e) {
+    curElement = $(".show-image");
     changeEffect(() => changeNext(curElement));
-    stopAutoSlide();
+    // stopAutoSlide();
 })
 //change images next
-function changeNext(currentElement) {
-    if (currentElement.nextElementSibling !== null) {
-        nextImageSrc = currentElement.nextElementSibling;
+function changeNext(curElement) {
+    if ($(curElement).parent().next() !== null) {
+        nextImageSrc = $(curElement).parent().next().children();
     }
     else {
-        nextImageSrc = currentElement.parentElement.children[0];
+        nextImageSrc =$(curElement).parent().parent().first().children()
+        console.log($(curElement).parent().parent().first().children());
     }
     openPopup(nextImageSrc);
 }
-//change images prev
-function changePrev(currentElement) {
-    let length = currentElement.parentElement.children.length;
-
-    if (currentElement.previousElementSibling !== null) {
-        nextImageSrc = currentElement.previousElementSibling;
+//change prev
+function changePrev(curElement) {
+    if ($(curElement).parent().prev() !== null) {
+        nextImageSrc = $(curElement).parent().prev().children();
     }
     else {
-        nextImageSrc = currentElement.parentElement.children[length - 1];
+        nextImageSrc =$(curElement).parent().parent().last().children();
     }
     openPopup(nextImageSrc);
 }
-//for enter gallery page
-loginBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    let welcomeText = document.createElement("h1");
-    welcomeText.classList.add("user-style");
-
-    if (username.value.length < 3) {
-        window.alert("incorrect. Username at least 3 characters");
-        username.value = "";
-        return;
-    }
-    let counter = 0;
-    Array.from(username.value).forEach(element => {
-        if (!isValid(element)) {
-            counter++;
-        }
-    });
-    if (counter == 0) {
-        welcomeText.innerText = "WELCOME, " + username.value.toUpperCase();
-        imageGallery.insertBefore(welcomeText, imageGallery.firstChild);
-        formLogin.style.opacity = "0";
-        formLogin.style.transition = "1s";
-        setTimeout(() => {
-            formLogin.style.display = "none";
-            imageGallery.style.display = "block";
-            imageGallery.style.transition = "2s";
-            imageGallery.style.opacity = "0";
-            imageGallery.style.transform = "scale(0.0)";
-            imageGallery.firstChild.style.color = "rgb(179 69 115)";
-
-            setTimeout(() => {
-                imageGallery.style.opacity = "1";
-                imageGallery.style.transform = "scale(1)";
-            }, 300);
-        }, 800);
-    } else {
-        window.alert("incorrect. please valid username: not use ' ' ! @ # $ % & * () ? \\ / +");
-        username.value = "";
-        return;
-    }
-})
-//reset all active image class
-function resetClassList() {
-    document.querySelectorAll(".show-image").forEach(item => {
-        item.classList.remove("show-image");
-    });
-}
-//start auto slide with interval
 function startAutoSlide() {
     autoSlideInterval = setInterval(function () {
-        bigImage.parentElement.style.backgroundColor = "black";
-        bigImage.style.opacity = "0";
-        bigImage.style.transition = "1.2s";
+        $(".big-image-slide").parent().css("background-color","black");
+        $(".big-image-slide").css("opacity","0");
+        $(".big-image-slide").css("transition","1.2s");
         setTimeout(() => {
-            curElement = document.querySelector(".show-image");
+            curElement = $(".show-image");
             changeNext(curElement);
-            bigImage.style.opacity = "1";
+            $(".big-image-slide").css("opacity","1");
         }, 1000);
     }, 3000)
-}
-//stop auto slide with interval
-function stopAutoSlide() {
-    clearInterval(autoSlideInterval);
-}
-//for change slider slowly
-function changeEffect(func) {
-    bigImage.parentElement.style.backgroundColor = "black";
-    bigImage.style.opacity = "0";
-    bigImage.style.transition = ".5s";
-    setTimeout(() => {
-        bigImage.style.opacity = "1";
-        func();
-    }, 300);
-}
-//check all combination
-function isValid(char) {
-    if (char !== "*" &&
-        char !== "/" &&
-        char !== "/" &&
-        char !== "\\" &&
-        char !== "," &&
-        char !== "+" &&
-        char !== "@" &&
-        char !== "!" &&
-        char !== "#" &&
-        char !== "$" &&
-        char !== "%" &&
-        char !== "&" &&
-        char !== "?" &&
-        char !== "(" &&
-        char !== " " &&
-        char !== ")")
-        return true;
-    return false;
 }
