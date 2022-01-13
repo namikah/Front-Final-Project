@@ -161,11 +161,11 @@ function RefreshList(baskets) {
         }
         RefreshList(basketsList);
     })
-}
-
-$(".my-cart-list >li").click(function (e) {
+    
+$(".my-cart-list li").click(function (e) {
     loadingEffect(".basket-button-effect","./basket.html");
 })
+}
 
 function navbarScrollEffect() {
     $(window).scroll(function (e) {
