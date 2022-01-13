@@ -3261,6 +3261,7 @@ input::-webkit-inner-spin-button {
 }
 
 #solution .container .row .blog-card .blog-images .image {
+  cursor: pointer;
   overflow: hidden;
   border-radius: 5px;
   border-radius: 5px;
